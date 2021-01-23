@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+/* 滚动区域 */
+.scroll-view {
+  /* min-height: 100vh; */
+  min-height: 100vh;
+  /* overscroll-behavior: none; */
+}
+
+/* 外框区域 */
+.scroll-view-outer {
+  transform: translateY(-100rpx);
+  height: 100%;
+}
+/* 加载激活-加载区域 */
+.scroll-view-active .scroll-view-outer {
+  transition: transform 100ms;
+}
+
+/* 加载区域 */
+.scroll-view-loading {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  background-color: #F2F2F2;
+  text-align: center;
+  font-size: 24rpx;
+}
+/* 滚动区域 */
+.scroll-view-inner {
+  height: 100%;
+}

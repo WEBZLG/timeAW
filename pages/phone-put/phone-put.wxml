@@ -1,0 +1,38 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+
+<container id='container' binderror='init'>
+  <view class="phone_top">
+    <view class="phone_top_a"></view>
+    <block wx:if="{{currentPhone}}">
+      <view class="phone_top_b">{{filter.hidePhone(currentPhone)}}</view>
+    </block>
+    <block wx:else>
+      <view class="phone_top_b">未绑定</view>
+    </block>
+  </view>
+  <form id='genggai' bindsubmit="formSubmit">
+    <!---->
+    <view class="phone">
+      <view class="phone_a">手机号</view>
+      <view class="phone_c">
+        <view class="phone_c1">
+          <input class='input2' type="number" maxlength="11" name="phone" placeholder='请输入手机号' />
+        </view>
+        <view class="phone_c2">
+          <button wx:if="{{captcha.status}}" class='btn2'>{{captcha.countdown}}</button>
+          <button class='btn2' form-type='submit' data-submit='getCaptcha'>发送验证码</button>
+        </view>
+      </view>
+    </view>
+    <view class="phone">
+      <view class="phone_a">验证码</view>
+      <view class="phone_b">
+        <input class='input1' type="number" name="captcha" maxlength="4" placeholder='请输入验证码' />
+      </view>
+    </view>
+    <!---->
+    <view class="btn_box">
+      <button form-type='submit' class='btn1' data-submit='putPhone'>确定</button>
+    </view>
+  </form>
+</container>

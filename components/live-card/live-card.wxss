@@ -1,0 +1,178 @@
+/* 清空按钮 */
+.button-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: inherit;
+  border-radius: 0;
+  font-size: inherit;
+  background-color: transparent;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.button-clear::after {
+  display: none;
+}
+
+:host {
+  display: block;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 底部 */
+.live-card-footer {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.live-card-left {
+  flex-grow: 1;
+  width: 0;
+}
+
+.live-card-header {
+  height: 300rpx;
+}
+
+/* 封面 */
+.live-card-cover {
+  border-radius: 10rpx;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.live-card-cover custom-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+/* 标题 */
+.live-card-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 32rpx;
+  margin: 0 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 头像 */
+.live-card-avatar {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+/* 详情 */
+.live-card-detail {
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  color: #CCC;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 订阅 */
+.live-card-subscribe {
+  border-radius: 40rpx;
+  padding: 0 10rpx;
+}
+
+/* 分享 */
+.live-card-share {
+  border-radius: 24rpx;
+  padding: 0 20rpx;
+  height: 48rpx;
+  margin: auto;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+  flex-direction: row;
+  background-image: linear-gradient(90deg, #31bfc3, #3f7ab6);
+  color: #fff;
+  font-size: 24rpx;
+}
+
+/* 分享_图标 */
+.live-card-share-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+/* 状态 */
+.live-card-status {
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 20rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+/* 状态_图标 */
+.live-card-status-icon {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  margin-right: 10rpx;
+}
+
+/* 状态_直播中 */
+.live-card-status_living {
+  background-image: linear-gradient(180deg, #FE7681, #F72E41);
+}
+
+/* 状态_未开播 */
+.live-card-status_preparing {
+  /* background-color: #777; */
+  background-image: linear-gradient(180deg, #31bfc3, #3f7ab6);
+}
+
+/* 状态_回放 */
+.live-card-status_finished {
+  background-image: linear-gradient(180deg, #31bfc3, #3f7ab6);
+}
+
+/* 状态_禁播 */
+.live-card-status_ban {
+  background-color: #777;
+}
+
+/* 状态_暂停 */
+.live-card-status_pause {
+  background-color: #777;
+}
+
+/* 状态_异常 */
+.live-card-status_abnormal {
+  background-color: #777;
+}
+
+/* 状态_过期 */
+.live-card-status_overdue {
+  background-color: #777;
+}

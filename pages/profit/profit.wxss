@@ -1,0 +1,266 @@
+/* pages/profit/profit.wxss */
+#container {
+  padding-bottom: 1px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+.tag {
+  display: flex;
+  background-color: #ffffff;
+}
+.tag-item {
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+  color: #b3b3b3;
+}
+.tag-item text {
+  display: inline-block;
+  line-height: 86rpx;
+}
+.active {
+  padding: 0 34rpx;
+  font-weight: bold;
+  color: #ff6600;
+  border-bottom: 2px solid #ff6600;
+}
+
+/* 收益列表 */
+.list {
+  padding: 0 24rpx;
+  overflow: hidden;
+}
+.list-item {
+  margin-top: 20rpx;
+  padding: 32rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.item-left {
+  display: flex;
+  align-items: center;
+}
+/* 头像 */
+.item-left-avatar {
+  flex-shrink: 0;
+  margin-right: 15rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar {
+  flex-shrink: 0;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+/* 姓名 */
+.item-left-name {
+  display: flex;
+  align-items: center;
+}
+.item-left-name-content {
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.item-left-group {
+  min-width: 106rpx;
+  margin-left: 12rpx;
+  font-size: 20rpx;
+  line-height: 28rpx;
+  text-align: center;
+  border: 1px solid var(--main);
+  border-radius: 4px;
+  color: var(--main);
+}
+.item-left-contro {
+  color: #9c9c9c;
+  font-size: 24rpx;
+}
+/* 日期 */
+.item-left-date {
+  color: #9c9c9c;
+  font-size: 24rpx;
+}
+
+/* 右侧收益 */
+.item-right {
+  font-size: 26rpx;
+  color: #ff3333;
+  font-weight: bold;
+}
+
+/* 没有更多了 */
+.not-more {
+  margin-top: 20rpx;
+  text-align: center;
+  color: #9c9c9c;
+  font-size: 24rpx;
+}
+.load-more {
+  margin-top: 20rpx;
+  text-align: center;
+  color: #9c9c9c;
+  font-size: 24rpx;
+}
+
+.empty {
+  margin-top: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty image {
+  height: 263rpx;
+  width: 508rpx;
+}
+
+/* 提现 */
+.withdrawal {
+  padding: 37rpx 24rpx;
+  background-color: #ffffff;
+}
+.withdrawal-title {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-end;
+}
+.withdrawal-title-left {
+  font-size: 28rpx;
+  color: #b2b2b2;
+}
+.withdrawal-title-right {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.withdrawal-title-right text {
+  color: #ff6600;
+}
+.input-money {
+  display: flex;
+  align-items: center;
+  font-size: 64rpx;
+  color: #1f1f1f;
+  font-weight: bold;
+}
+.input-money input {
+  height: 70rpx;
+}
+
+.balance-wechat {
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.balance {
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.balance text {
+  color: #ff6600;
+}
+.withdrawal-type {
+  display: flex;
+  align-items: center;
+}
+.type-content {
+  display: block;
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.wechat {
+  margin-left: 22rpx;
+  margin-right: 5rpx;
+  height: 25rpx;
+  width: 25rpx;
+}
+.withdrawal-type text {
+  display: block;
+  color: #1f1f1f;
+  font-size: 24rpx;
+}
+.withdrawal-btn {
+  margin: 0 auto;
+  margin-top: 34rpx;
+  width: 600rpx;
+  height: 80rpx;
+  border-radius: 40px;
+  background-image: linear-gradient(to right, #ff6600, #fea254);
+  font-size: 30rpx;
+  color: #fffefe;
+  line-height: 80rpx;
+  text-align: center;
+}
+.placeholder {
+  font-size: 40rpx;
+
+}
+
+
+/* 提现记录 */
+.withdrawal-list {
+  min-height: 700rpx;
+  padding: 0 24rpx;
+  overflow: hidden;
+  /* box-sizing: border-box; */
+}
+.withdrawal-list-item {
+  margin-top: 20rpx;
+  padding: 37rpx 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.withdrawal-money {
+  color: #fc6306;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.withdrawal-date {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #8c8c8c;
+}
+.withdrawal-item-right {
+  font-size: 26rpx;
+  color: #020202;
+}
+
+.withdrawal-not-more {
+  text-align: center;
+  margin: 20rpx 0;
+  color: #8c8c8c;
+  font-size: 24rpx;
+}
+
+/* 暂无数据 */
+.empty {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty image {
+  height: 263rpx;
+  width: 508rpx;
+}
+
+.item-left-name-content-name {
+  max-width: 165rpx;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+}
+.kuohao {
+  display: flex;
+}

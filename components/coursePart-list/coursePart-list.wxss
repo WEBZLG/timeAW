@@ -1,0 +1,69 @@
+:host {
+  display: block;
+}
+
+/* 课程-元素 */
+.course-item {
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+
+/* 课程-元素-底部 */
+.course-item-footer {
+  display: flex;
+  align-items: center;
+}
+
+/* 课程-元素-详情 */
+.course-item-detail {
+  margin: 0 40rpx;
+}
+
+/* 课程-元素-标题 */
+.course-item-title {
+}
+.course-item-active .course-item-title {
+  color: var(--main);
+}
+
+/* 课程-元素-预览 */
+.course-item-preview {
+  border-radius: 10rpx;
+  background-color: var(--main);
+  color: #FFF;
+  font-size: 20rpx;
+  height: 32rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+  margin-left: 20rpx;
+}
+
+/* 课程-元素-时间 */
+.course-item-time {
+  font-size: 24rpx;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+.course-item-time custom-image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+
+/* 课程-元素-属性 */
+.course-item-attr {
+  display: flex;
+  align-items: center;
+  margin: 0 40rpx;
+}
+/* 课程-元素-图标 */
+.course-item-attr custom-image {
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 10rpx;
+}

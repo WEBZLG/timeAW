@@ -1,0 +1,32 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<!-- 课程-元素 -->
+<view class='course-item {{index==listIndex?"course-item-active":""}}' wx:for='{{part}}' wx:for-index='listIndex' wx:key='id' bindtap='part' data-index='{{listIndex}}'>
+  <!-- 课程-元素-详情 -->
+  <view class='course-item-detail'>
+    <!-- 课程-元素-标题 -->
+    <view class='course-item-title'>第{{listIndex + 1}}节: {{item.title}}</view>
+    <!-- 课程-元素-底部 -->
+    <view class='course-item-footer'>
+      <!-- 课程-元素-时间 -->
+      <view class='course-item-time'>
+        <custom-image src='https://cm.chineseglory.cn/images/icon33.png' /> {{filter.secondToMinute(item.duration)}}
+      </view>
+      <!-- 课程-元素-预览 -->
+      <view class='course-item-preview' wx:if='{{mainCourse && listIndex<course.test_num}}'>试听</view>
+    </view>
+  </view>
+  <!-- 课程-元素-属性 -->
+  <view class='course-item-attr'>
+    <!-- 媒体音频 -->
+    <custom-image wx:if='{{item.media=="audio"}}' type='icon' src='/images/public/audio.png' />
+    <!-- 媒体视频 -->
+    <custom-image wx:elif='{{item.media=="video"}}' type='icon' src='/images/public/video.png' />
+    <!-- 状态 -->
+    <block wx:if='{{mainCourse}}'>
+      <!-- 锁定 -->
+      <custom-image wx:if='{{course.is_own}}' type='icon' src='https://cm.chineseglory.cn/images/icon34.png' />
+      <!-- 解锁 -->
+      <custom-image wx:else type='icon' src='https://cm.chineseglory.cn/images/icon35.png' />
+    </block>
+  </view>
+</view>

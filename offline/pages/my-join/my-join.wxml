@@ -1,0 +1,23 @@
+<!--offline/pages/my-join/my-join.wxml-->
+<container id='container' binderror='init'>
+  <view class="tab">
+    <view class="tab-item" wx:for="{{tabList}}" wx:key="index" data-index="{{index}}" bindtap="handleTabClick">
+      <view class="tab-name {{active==index?'active':''}}">{{item.name}}</view>
+      <view class="active-line" wx:if="{{active==index}}"></view>
+    </view>
+  </view>
+
+  <!-- 课程列表 -->
+  <view class="course-list">
+    <view class="course-item" wx:for="{{courseList}}" wx:key="index">
+      <view class="item-left">
+        <custom-image class="thumbnail" src="/offline/images/thumbnail.png" />
+      </view>
+      <view class="item-right">
+        <view class="course-title">{{item.name}}</view>
+        <view class="time grey-style">开课时间:{{item.startTime}}~{{item.endTime}}</view>
+        <view class="address grey-style">报名地点:{{item.address}}</view>
+      </view>
+    </view>
+  </view>
+</container>

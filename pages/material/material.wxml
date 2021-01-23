@@ -1,0 +1,38 @@
+<container id='container' binderror='init'>
+  <tab id='tab' bindchange='tabChange1'>
+    <tab-nav id='tab-nav' class='default-nav'>
+      <tab-nav-item class='tab-nav-item' wx:for='{{category.list}}' wx:key='index'>
+        {{item.title}}
+      </tab-nav-item>
+    </tab-nav>
+    <tab-content>
+      <!-- 我的收藏 -->
+      <tab-content-item slot='0'>
+
+        <tab id='tab1' bindchange='tabChange'>
+          <tab-nav id='tagNav'>
+            <tab-nav-item class='tagNav-item' activeBlock='{{true}}' wx:for='{{tag.list}}' wx:key='{{index}}'>
+              <view class='tagNav-item-default' slot='default'>
+                <custom-image src='https://cm.chineseglory.cn/images/icon3.png' />
+                {{item.name}}
+              </view>
+              <view class='tagNav-item-default tagNav-item-active' slot='active'>
+                <custom-image src='https://cm.chineseglory.cn/images/icon3_a.png' />
+                {{item.name}}
+              </view>
+            </tab-nav-item>
+          </tab-nav>
+          <tab-content>
+            <tab-content-item wx:for='{{tag.list}}' wx:key='{{index}}' slot='{{index}}'>
+              <share-material-list class='share-material-list' tag='{{item.id}}' userId='{{userInfo.id}}' />
+            </tab-content-item>
+          </tab-content>
+        </tab>
+      </tab-content-item>
+      <!-- 我的动态 -->
+      <tab-content-item slot='1'>
+        <share-material-list category='my' class='share-material-list1' tag='{{item.id}}' userId='{{userInfo.id}}' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

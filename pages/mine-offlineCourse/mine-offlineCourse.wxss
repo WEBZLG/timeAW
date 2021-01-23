@@ -1,0 +1,95 @@
+/* 外框 */
+#container {
+  min-height: 100vh;
+}
+
+/* 课程-元素 */
+.course-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #F2F2F2;
+  padding: 20rpx 0;
+  margin: 0 20rpx;
+}
+/* 课程-元素-顶部 */
+.course-item-header {
+  display: flex;
+}
+/* 课程-元素-详情 */
+.course-item-detail {
+  flex-grow: 1;
+  width: 0;
+  margin-left: 20rpx;
+  position: relative;
+}
+/* 课程-元素-封面 */
+.course-item-cover {
+  height: 304rpx;
+  width: 234rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+}
+/* 课程-元素-标题 */
+.course-item-title {
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  width: 0;
+}
+/* 课程-元素-导师 */
+.course-item-tutor {
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 28rpx;
+}
+/* 课程-元素-状态 */
+.course-item-status {
+  font-size: 28rpx;
+  color: var(--main);
+}
+/* 课程-元素-行 */
+.course-item-cols {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+/* 课程-元素-行-图标 */
+.course-item-cols-icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+/* 课程-元素-行-文本 */
+.course-item-cols-text {
+  flex-grow: 1;
+  width: 0;
+  font-size: 24rpx;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.log-btn {
+  height: 57rpx;
+  width: 155rpx;
+  border-radius: 24px;
+  background-image: linear-gradient(to bottom, #ffa368, #ed742f);
+  font-size: 26rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 57rpx;
+  position: absolute;
+  right: 0rpx;
+  bottom: 30rpx;
+}
+
+.grey-content {
+  color: #999;
+  font-size: 28rpx;
+}

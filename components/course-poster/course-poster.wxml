@@ -1,0 +1,2 @@
+<!--components/course-poster/course-poster.wxml-->
+<rich-text class='tab-item' nodes="{{poster}}"></rich-text>

@@ -1,0 +1,230 @@
+@import "../../styles/iconfont.wxss";
+
+#container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+
+  box-sizing: border-box;
+  position: relative;
+}
+
+.box {
+  padding: 24rpx;
+}
+
+/* 顶部地址 */
+.choose-address {
+  padding: 30rpx 25rpx;
+  background-color: #ffffff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fullname-phone {
+  display: flex;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.phone {
+  margin-left: 64rpx;
+}
+
+.address {
+  margin-top: 20rpx;
+  margin-right: 70rpx;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  color: #7d7d7d;
+}
+
+/* 底部彩带 */
+.coloured-ribbon-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.coloured-ribbon {
+  margin-right: 10px;
+  display: flex;
+}
+
+.choose-address .parallelogram {
+  width: 30rpx;
+  height: 6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transform: skewX(-30deg);
+  overflow: hidden;
+}
+
+.choose-address .parallelogram view {
+  transform: skewX(30deg);
+  overflow: hidden;
+}
+
+.blue {
+  background-color: #8fcaf6;
+}
+
+.red {
+  background-color: #f49090;
+}
+
+/* 跳转地址列表图标 */
+.jump-address-list {
+  height: 20rpx;
+  width: 10rpx;
+  position: absolute;
+  right: 30rpx;
+  bottom: 100rpx;
+}
+
+/* 商品详情 */
+.introduction {
+  margin-top: 20rpx;
+  padding: 30rpx 25rpx;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+/* 左侧缩略图 */
+.introduction-left {
+  height: 218rpx;
+  width: 218rpx;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0
+}
+
+/* 商品缩略图 */
+.thumb {
+  height: 100%;
+  width: 100%;
+}
+
+/* 右侧商品详情 */
+.introduction-right {
+  flex: 1;
+  margin-left: 18rpx;
+  overflow: hidden;
+}
+
+/* 商品名称 */
+.product-name {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #1d1d1d;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+}
+
+/* 规格 */
+.product-specs {
+  margin-top: 10rpx;
+  color: #bcbcbc;
+  font-size: 22rpx;
+}
+
+/* 价格-数量 */
+.money-number {
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #38bcd1;
+}
+
+.money-number .number {
+  color: #bcbcbc;
+  font-size: 24rpx;
+}
+
+/* 微信支付 */
+.wechat-pay {
+  margin-top: 20rpx;
+  padding: 25rpx;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.wechat-pay .iconfont {
+  color: #42b138;
+}
+
+.wechat-pay-content {
+  margin-left: 12rpx;
+  font-size: 24rpx;
+}
+
+/* 费用 */
+.money {
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.money-item {
+  padding: 20rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+
+.need-money {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.need-money-right,
+.freight-right {
+  font-weight: bold;
+  color: #38bcd1;
+}
+
+
+/* 底部按钮 */
+.bottom {
+  padding: 18rpx 24rpx;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.bottom-left {
+  color: #38bcd1;
+  font-weight: bold
+}
+
+#totle {
+  color: #1d1d1d;
+  font-weight: 400;
+}
+
+.bottom-right {
+  width: 170rpx;
+  height: 60rpx;
+  background-color: #38bcd1;
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #ffffff;
+}

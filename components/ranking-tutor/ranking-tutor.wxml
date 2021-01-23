@@ -1,0 +1,75 @@
+<container class='container' binderror='init'>
+  <!-- 导师-顶部 -->
+  <view class='tutor-header'>
+    <!-- 导师-顶部-背景 -->
+    <image src='./images/background.png' class='tutor-header-background' />
+    <!-- 导师-顶部-前景 -->
+    <view class='tutor-header-foreground'>
+      <!-- 导师-阶梯 -->
+      <view class='tutor-ladder'>
+        <!-- 导师-亚军 -->
+        <navigator url='/pages/tutor-home/tutor-home?id={{tutor.runnerUp.id}}' class='tutor-ladder-item tutor-runnerUp'>
+          <image class='tutor-ladder-item-crown' src='./images/runner-up.png' mode='aspectFit' />
+          <custom-image type='cover' class='tutor-ladder-item-avatar' src='{{tutor.runnerUp.thumb}}' />
+          <view class='tutor-ladder-item-hot'>
+            <image class='tutor-ladder-item-crown-icon' src='./images/hot.png' mode='aspectFit' />{{tutor.runnerUp.hot}}
+          </view>
+          <view class='tutor-ladder-item-nickname'>{{tutor.runnerUp.name}}</view>
+          <view class='tutor-ladder-item-label'>{{tutor.runnerUp.label}}</view>
+        </navigator>
+        <!-- 导师-季军 -->
+        <navigator url='/pages/tutor-home/tutor-home?id={{tutor.thirdPlace.id}}' class='tutor-ladder-item tutor-thirdPlace'>
+          <image class='tutor-ladder-item-crown' src='./images/third-place.png' mode='aspectFit' />
+          <custom-image type='cover' class='tutor-ladder-item-avatar' src='{{tutor.thirdPlace.thumb}}' />
+          <view class='tutor-ladder-item-hot'>
+            <image class='tutor-ladder-item-crown-icon' src='./images/hot.png' mode='aspectFit' />{{tutor.thirdPlace.hot}}
+          </view>
+          <view class='tutor-ladder-item-nickname'>{{tutor.thirdPlace.name}}</view>
+          <view class='tutor-ladder-item-label'>{{tutor.thirdPlace.label}}</view>
+        </navigator>
+        <!-- 导师-冠军 -->
+        <navigator url='/pages/tutor-home/tutor-home?id={{tutor.thirdPlace.id}}' class='tutor-ladder-item tutor-champion'>
+          <image class='tutor-ladder-item-crown' src='./images/champion.png' mode='aspectFit' />
+          <custom-image type='cover' class='tutor-ladder-item-avatar' src='{{tutor.champion.thumb}}' />
+          <view class='tutor-ladder-item-hot'>
+            <image class='tutor-ladder-item-crown-icon' src='./images/hot.png' mode='aspectFit' /> {{tutor.champion.hot}}
+          </view>
+          <view class='tutor-ladder-item-nickname'>{{tutor.champion.name}}</view>
+          <view class='tutor-ladder-item-label'>{{tutor.champion.label}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 导师-列表 -->
+  <view class='tutor-list'>
+    <!-- 导师-元素 -->
+    <navigator url='/pages/tutor-home/tutor-home?id={{item.id}}' class='tutor-item' wx:for='{{tutor.list}}' wx:key='id'>
+      <!-- 导师-元素-序号 -->
+      <view class='tutor-item-index'>{{index + 3}}</view>
+      <!-- 导师-元素-头像 -->
+      <custom-image type='cover' class='tutor-item-avatar' src='{{item.thumb}}' />
+      <!-- 导师-元素-详情 -->
+      <view class='tutor-item-detail'>
+        <!-- 导师-元素-昵称 -->
+        <view class='tutor-item-nickname'>
+          {{item.name}}
+        </view>
+        <!-- 导师-元素-标签 -->
+        <view class='tutor-item-label'>
+          {{item.label}}
+        </view>
+      </view>
+      <!-- 导师-元素-热度 -->
+      <view class='tutor-item-hot'>
+        <!-- 导师-元素-热度-内容 -->
+        <view class='tutor-item-hot-content'>
+          {{item.hot}}
+        </view>
+        <!-- 导师-元素-热度-文本 -->
+        <view class='tutor-item-hot-text'>
+          热度
+        </view>
+      </view>
+    </navigator>
+  </view>
+</container>

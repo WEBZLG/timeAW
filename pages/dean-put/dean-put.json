@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "院长信息编辑",
+	"usingComponents": {
+    "chosePicture": "/components/chosePicture/chosePicture"
+  }
+}

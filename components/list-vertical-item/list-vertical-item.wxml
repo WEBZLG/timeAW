@@ -1,0 +1,26 @@
+<!-- 顶部 -->
+<view class='item-header'>
+  <!-- 封面 -->
+  <custom-image type='cover' src='{{course.top_thumb}}' class='item-cover' />
+  <!-- 更新 -->
+  <view class='item-update' wx:if='{{is_update}}'>课程更新</view>
+</view>
+
+<!-- 详情 -->
+<view class='item-detail'>
+  <!-- 标题 -->
+  <view class='item-title'>{{course.name}}</view>
+  <!-- 简介 -->
+  <view class='item-description'>{{course.description}}</view>
+  <!-- 标签 -->
+  <tag class='item-tag' list='{{course.label}}' />
+  <!-- 左右布局 -->
+  <view class='item-wing'>
+    <!-- 导师 -->
+    <view catchtap='enterTutor' data-id='{{course.author.id}}' class='item-author'>{{course.author.name}} | {{course.author.label}}</view>
+    <!-- 参加人数 -->
+    <view class='item-join'>
+      <custom-image class='item-join-icon' src='https://cm.chineseglory.cn/images/icon2.png' mode='icon' /> {{course.join_num}}
+    </view>
+  </view>
+</view>

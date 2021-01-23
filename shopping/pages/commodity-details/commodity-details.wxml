@@ -1,0 +1,119 @@
+<!-- 商品详情页 -->
+<container id='container' binderror='init'>
+  <!-- 顶部导航 -->
+  <view class="top" wx:if="{{false}}">
+    <view class="top-left go-back" bindtap="goBack">
+      <view class="iconfont icon-gengduo-left"></view>
+    </view>
+    <!-- <view class="top-center">
+      <view class="" data-id="0" bindtap="tabClick">商品</view>
+      <view class="" data-id="1" bindtap="tabClick">详情</view>
+    </view> -->
+    <view class="top-right share" bindtap="share">
+      <view class="iconfont icon-fenxiang"></view>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" bindchange="swiperChange" interval="{{3000}}" duration="{{500}}">
+      <block wx:for="{{details.pics}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- <view class="img-left">
+      <text class="iconfont icon-changan"></text>
+      <text class="img-left-content">长按保存图片</text>
+    </view> -->
+    <view class="img-right">{{current+1}}/{{details.pics.length}}</view>
+  </view>
+  <!-- 商品描述 -->
+  <view class="description">
+    <!-- 商品名称 -->
+    <view class="commodity-name">{{details.name}}</view>
+    <!-- 商品简介 -->
+    <view class="introduction">{{details.slogan}}</view>
+    <!-- 分割线 -->
+    <view class="line"></view>
+    <!-- 价格 -->
+    <view class="price">零售价:￥{{money}}</view>
+    <!-- 库存 - 运费 -->
+    <view class="stock-postage">
+      <view class="stock">剩余库存: {{details.stock}}件</view>
+      <view class="postage">运费: {{details.is_postage=='1'?'免运费':'￥'+details.post_money}}</view>
+    </view>
+  </view>
+  <!-- 选规格 -->
+  <view class="choose-norm" bind:tap="chooseNorm" data-type="0">
+    <view class="norm">规格：{{specsContent}}</view>
+    <view class="iconfont icon-gengduo-left-copy"></view>
+  </view>
+  <!-- 产品详情 -->
+  <view class="product-details">
+    <view class="product-details-top">
+      <view class="product-details-title">产品详情</view>
+      <!-- <view class="product-details-remarks">(长按图片可保存详情图)</view> -->
+      <view class="product-details-img">
+        <rich-text bindlongpress="saveImage" data-url="{{details.body}}" nodes="{{details.body}}"></rich-text>
+      </view>
+    </view>
+  </view>
+  <!-- 立即购买 -->
+  <view class="out-buy-now">
+    <view class="go-cart" catchtap="onCart">
+      <image src="../../images/cart.png"></image>
+    </view>
+    <view class="flex">
+      <view class="add-cart-btn" bind:tap="chooseNorm"  data-type="1">加入购物车</view>
+      <view class="buy-now-btn" bind:tap="chooseNorm"  data-type="2">立即购买</view>
+    </view>
+  </view>
+  <!-- 底部弹出层 -->
+  <van-popup show="{{show}}" position="bottom" safe-area-inset-bottom="{{true}}" class="popup" bind:close="onClose">
+    <view class="popup-top">
+      <view class="popup-top-left">
+        <image class="thumb" src="{{details.thumb}}"></image>
+      </view>
+      <view class="popup-top-right">
+        <view class="popup-name">{{details.name}}</view>
+        <view class="popup-specs">剩余库存：{{priceStork}}件</view>
+        <view class="popup-money-number">
+          <view class="popup-money">零售价：￥{{money}}</view>
+          <view class="popup-number iconfont icon-cheng">{{details.siglebuyleast}}</view>
+        </view>
+      </view>
+      <view class="iconfont icon-cheng close-icon" bind:tap="handleCloseClick"></view>
+    </view>
+    <!-- 选择规格 -->
+    <view class="popup-center choice-specs">
+      <view class="choice-specs" wx:for="{{details.size_list}}" wx:key="index">
+        <view class="choice-specs-title">{{item.name}}</view>
+        <choice-specs bind:choiceSpecs="handleChoiceSpecs" bind:tap="choiceSpecs" data-idx="{{index}}"
+          specs="{{item.value}}"></choice-specs>
+      </view>
+      <!-- 选择数量 -->
+      <view class="choice-number">
+        <view class="choice-number-title">选择数量</view>
+        <van-stepper value="{{number}}" min="{{details.siglebuyleast}}" max="{{priceStork}}" integer="{{true}}"
+          bind:change="chiceNumber" />
+      </view>
+    </view>
+    <view class="popup-bottom">
+      <view class="total">
+        <text id="total-1">总价:</text>
+        <text id="total-2">￥{{unitPrice*number}}</text>
+      </view>
+    </view>
+    <view class="buy-now flex" wx:if="{{type==0}}">
+      <view class="add-cart-btn" bind:tap="addCart">加入购物车</view>
+      <view class="buy-now-btn" bind:tap="buyNow">立即购买</view>
+    </view>
+    <view class="buy-now"  wx:if="{{type==1}}">
+      <view class="add-btn" bind:tap="addCart">加入购物车</view>
+    </view>
+    <view class="buy-now"  wx:if="{{type==2}}">
+      <view class="buy-btn" bind:tap="buyNow">立即购买</view>
+    </view>
+  </van-popup>
+</container>

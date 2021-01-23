@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "代理商详情",
+  "usingComponents": {
+    "popup": "/components/popup/popup",
+    "chosePicture": "/components/chosePicture/chosePicture",
+    "table": "/components/table/table",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

@@ -1,0 +1,21 @@
+<!-- 背景音频 -->
+<background-audio-popup />
+
+<!-- 引导 -->
+<guide />
+
+<container id='container' binderror='init'>
+  <tab id='tab' bindchange='tabChange'>
+    <tab-nav id='tab-nav' class='default-nav'>
+      <tab-nav-item class='tab-nav-item' wx:for='{{category.list}}' wx:key='*this'>{{item.title}}</tab-nav-item>
+    </tab-nav>
+    <tab-content>
+      <tab-content-item slot='0'>
+        <ranking-tutor class='ranking-item' />
+      </tab-content-item>
+      <tab-content-item slot='1'>
+        <ranking-course class='ranking-item' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

@@ -1,0 +1,103 @@
+:host {
+  display: block;
+  overflow: auto;
+}
+
+/* 选择器 */
+.radio {
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 20rpx;
+  display: block;
+  align-self: center;
+}
+
+/* 分类-元素 */
+.category-item {
+  border-bottom: 2rpx solid #F2F2F2;
+  margin: 20rpx 0;
+}
+
+/* 分类-元素-顶部 */
+.category-item-header {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+/* 课程-元素 */
+.course-item,.course-item1 {
+  margin: 20rpx 0;
+  display: flex;
+  position: relative;
+}
+.course-item1 {
+  width: 90%;
+}
+
+/* 课程-元素-详情 */
+.course-item-detail {
+  padding: 10rpx 0;
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 0;
+}
+
+/* 课程-元素-封面 */
+.course-item-cover {
+  width: 234rpx;
+  height: 304rpx;
+  display: block;
+  border-radius: 20rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* 课程-元素-标题 */
+.course-item-title {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 课程-元素-简介 */
+.course-item-description {
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  line-height: 40rpx;
+  height: 80rpx;
+}
+
+/* 课程-元素-导师 */
+.course-item-author {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+/* 课程-元素-热度 */
+.course-item-hot {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.course-item-hot-icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/* 课程-元素-左右布局 */
+.course-item-wing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

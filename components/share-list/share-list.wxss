@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.container {
+  background-color: #F2F2F2;
+  flex-grow: 1;
+  overflow: auto;
+}

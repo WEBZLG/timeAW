@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  border-radius: 10rpx;
+  box-shadow: 0 0 40rpx 0 rgba(0, 0, 0, 0.4)
+}
+/* 顶部 */
+.panel-header {
+  width: 500rpx;
+  padding: 40rpx 0;
+  margin: auto;
+}
+
+.panel-title {
+  width: 100%;
+  display: block;
+}
+

@@ -1,0 +1,92 @@
+<!-- 自定义提示框（申请） -->
+<custom-popup class='form-popup course-apply'>
+  <form bindsubmit='submit' report-submit='{{true}}'>
+    <!-- 自定义提示框（申请）-外框 -->
+    <view class='form-apply-container'>
+      <image class='form-success-background' mode='widthFix' src='./images/apply-background.png' />
+      <view class='btn' bindtap='close'>
+        <image src='./images/close.png'></image>
+      </view>
+      <view class='userItem'>
+        <!-- 出卡级别 -->
+        <view class='userName'>
+          <view class='userLeft'>出卡人级别:</view>
+          <view class='userRight'>{{sender.group_name}}</view>
+        </view>
+        <view class='userName'>
+          <view class='userLeft'>出卡人姓名:</view>
+          <view class='userRight'>{{sender.nickname}}</view>
+        </view>
+        <view class='userName'>
+          <view class='userLeft'>出卡人电话:</view>
+          <view class='userRight'>{{sender.mobile}}</view>
+        </view>
+        <view class='userName'>
+          <view class='userLeft'>提交卡数:</view>
+          <view class='userRight'>{{count}}张</view>
+        </view>
+      </view>
+      <button class='form-success-button' form-type='submit'>
+        <image class='form-success-button-image' mode='aspectFit' src='./images/apply-submit.png' />
+      </button>
+    </view>
+  </form>
+</custom-popup>
+
+<!-- 自定义提示框（成功） -->
+<custom-popup class='form-popup form-success'>
+  <!-- 自定义提示框（成功）-外框 -->
+  <view class='form-success-container'>
+    <image class='form-success-background' mode='widthFix' src='./images/success-background.png' />
+    <image class='form-success-button' src='./images/success-submit.png' bindtap='close' />
+  </view>
+</custom-popup>
+
+<!-- 自定义提示框（失败） -->
+<custom-popup class='form-popup form-fail'>
+  <!-- 自定义提示框（失败）-外框 -->
+  <view class='form-success-container'>
+    <image class='form-success-background' mode='widthFix' src='./images/fail-background.png' />
+    <image class='form-success-button' src='./images/success-submit.png' bindtap='close' />
+  </view>
+</custom-popup>
+
+<!-- 确认扣卡 -->
+<custom-popup class='form-popup deduction-card'>
+  <view class='form-success-container'>
+    <image class='vip-popup-bg' src='./images/deduction-card.png' />
+    <!-- <image class='form-success-button' src='./images/success-submit.png' bindtap='close' /> -->
+    <view class="confirm-study-btn" bind:tap="confirmDeduction">确定学习</view>
+  </view>
+</custom-popup>
+
+<!-- 立即支付 -->
+<custom-popup class='form-popup pay-now'>
+  <view class='form-success-container'>
+    <image class='vip-popup-bg' src='./images/pay-now.png' />
+    <view class="confirm-study-btn" bind:tap="confirmPayNow">立即支付</view>
+  </view>
+</custom-popup>
+
+<!-- 支付成功 -->
+<custom-popup class='form-popup pay-success'>
+  <!-- 自定义提示框（失败）-外框 -->
+  <view class='form-success-container'>
+    <image class='vip-popup-bg' src='./images/pay-success.png' />
+    <view class="confirm-study-btn" bind:tap="complete">完成</view>
+  </view>
+</custom-popup>
+
+<!-- 立即支付 -->
+<custom-popup class='form-popup no-stock'>
+  <!-- 自定义提示框（失败）-外框 -->
+  <view class='form-success-container'>
+    <image class='vip-popup-bg' src='./images/no-stock.png' />
+    <view class="confirm-study-btn-group">
+      <!-- 实心按钮 -->
+      <view class="short-btn-solid" bind:tap="replacement">去补卡</view>
+      <!-- 空心按钮 -->
+      <view class="short-btn-empty" bind:tap="purchase">原价购买</view>
+    </view>
+  </view>
+</custom-popup>

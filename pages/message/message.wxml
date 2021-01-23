@@ -1,0 +1,28 @@
+<!-- 背景音频 -->
+<background-audio-popup />
+
+<!-- 引导 -->
+<guide />
+
+<container id='container' binderror='init'>
+  <tab id='tab'  bindchange='tabChange'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item activeBlock='{{true}}' wx:for='{{category.list}}' wx:key='{{index}}'  data-id="{{item.id}}">
+        <view class='tab-nav-item' slot='default'>
+          <view class='tab-nav-attention' wx:if='{{item.attention}}'></view>
+          <custom-image type='icon' class='tab-nav-icon' src='{{item.icon.normal}}' />
+          <view class='tab-nav-title'>{{item.title}}</view>
+        </view>
+        <view class='tab-nav-active' slot='active'>
+          <custom-image type='icon' class='tab-nav-icon' src='{{item.icon.active}}' />
+          <view class='tab-nav-title'>{{item.title}}</view>
+        </view>
+      </tab-nav-item>
+    </tab-nav>
+    <tab-content class="tab-content">
+      <tab-content-item wx:for='{{category.list}}' wx:key='{{index}}' slot='{{index}}'>
+        <message-list class='message-list' category='{{item.id}}' bindunread='unread' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

@@ -1,0 +1,266 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 20rpx;
+}
+.container {
+  background-color: #FFF;
+  flex-grow: 1;
+}
+
+/* 导师-顶部 */
+.tutor-header {
+  width: 100%;
+  height: 440rpx;
+  position: relative;
+}
+/* 导师-阶梯-背景 */
+.tutor-header-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+/* 导师-阶梯-前景 */
+.tutor-header-foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+
+
+/* 导师-阶梯 */
+.tutor-ladder {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+}
+/* 导师-阶梯-元素 */
+.tutor-ladder-item {
+  text-align: center;
+  background-color: #FFF;
+  position: relative;
+  padding: 10rpx 0;
+}
+/* 导师-阶梯-元素-遮罩 */
+.tutor-ladder-item-mask {
+  width: 10rpx;
+  height: 140rpx;
+  position: absolute;
+  top: 0;
+}
+/* 导师-阶梯-元素-王冠 */
+.tutor-ladder-item-crown {
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 5rpx;
+}
+/* 导师-阶梯-元素-头像 */
+.tutor-ladder-item-avatar {
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2rpx solid;
+}
+/* 导师-阶梯-元素-热门 */
+.tutor-ladder-item-hot {
+  margin: 10rpx 0;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999;
+}
+/* 导师-阶梯-元素-热门-图标 */
+.tutor-ladder-item-crown-icon {
+  width: 24rpx;
+  height: 24rpx;
+}
+/* 导师-阶梯-元素-昵称 */
+.tutor-ladder-item-nickname {
+  margin: 10rpx 0;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  font-weight: bold;
+}
+/* 导师-阶梯-元素-昵称 */
+.tutor-ladder-item-label {
+  margin: 10rpx 0;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999;
+}
+
+
+
+/* 冠军 */
+.tutor-champion {
+  width: 280rpx;
+  order: 2;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  position: relative;
+  z-index: 1001;
+}
+.tutor-champion .tutor-ladder-item-crown {
+  width: 70rpx;
+  height: 50rpx;
+}
+.tutor-champion .tutor-ladder-item-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-color: #ffda13;
+}
+
+/* 亚军 */
+.tutor-runnerUp {
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  order: 1;
+  width: 200rpx;
+}
+.tutor-runnerUp::before {
+  display: block;
+  content: '';
+  width: 50%;
+  height: 130rpx;
+  box-shadow: -10px 0 0 0 rgba(255, 103, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: calc(100% + 5px);
+  transform: skew(4deg, 0deg);
+  transform-origin: top left;
+}
+.tutor-runnerUp .tutor-ladder-item-mask {
+  right: 0;
+}
+.tutor-runnerUp .tutor-ladder-item-crown {
+  width: 60rpx;
+  height: 40rpx;
+}
+.tutor-runnerUp .tutor-ladder-item-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border-color: #ebe9f4;
+}
+
+/* 季军 */
+.tutor-thirdPlace {
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  width: 200rpx;
+  order: 3;
+}
+.tutor-thirdPlace::after {
+  display: block;
+  content: '';
+  width: 50%;
+  height: 130rpx;
+  box-shadow: 10px 0 0 0 rgba(255, 103, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: calc(100% + 5px);
+  transform: skew(-4deg, 0deg);
+  transform-origin: top right;
+}
+.tutor-thirdPlace .tutor-ladder-item-mask {
+  left: 0;
+}
+.tutor-thirdPlace .tutor-ladder-item-crown {
+  width: 60rpx;
+  height: 40rpx;
+}
+.tutor-thirdPlace .tutor-ladder-item-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border-color: #f8a76f;
+}
+
+
+
+/* 导师-列表 */
+.tutor-list {
+  
+}
+/* 导师-元素 */
+.tutor-item {
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+/* 导师-元素-序号 */
+.tutor-item-index {
+  padding: 0 15rpx;
+  font-size: 28rpx;
+}
+/* 导师-元素-头像 */
+.tutor-item-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 10rpx;
+}
+/* 导师-元素-详情 */
+.tutor-item-detail {
+  flex-grow: 1;
+  width: 0;
+}
+/* 导师-元素-昵称 */
+.tutor-item-nickname {
+  font-size: 32rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+/* 导师-元素-标签 */
+.tutor-item-label {
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #999;
+}
+/* 导师-元素-热度 */
+.tutor-item-hot {
+  width: 180rpx;
+  text-align: center;
+}
+/* 导师-元素-热度-内容 */
+.tutor-item-hot-content {
+  font-size: 32rpx;
+}
+/* 导师-元素-热度-文本 */
+.tutor-item-hot-text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+
+
+
+
+
+
+
+
+

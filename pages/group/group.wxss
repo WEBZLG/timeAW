@@ -1,0 +1,27 @@
+#container {
+  min-height: 100vh;
+}
+#tab {
+  min-height: 100vh;
+}
+#tab-nav {
+  height: 80rpx;
+  color: #999;
+  border-bottom: 2rpx solid #F2F2F2;
+  background-color: #FFF;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+.tab-nav-inner {
+  width: fit-content;
+  margin: auto;
+}
+.tab-nav-item {
+  padding: 0 10rpx;
+}
+.tab-nav-underline {
+  height: 4rpx!important;
+  width: 40%!important;
+  border-radius: 2rpx;
+}

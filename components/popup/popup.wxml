@@ -1,0 +1,35 @@
+<block wx:if='{{status}}'>
+	<!-- 蒙版 -->
+	<view class='popup-mask' bindtap="close"></view>
+	<block wx:if="{{type=='cart'}}">
+		<!-- 外框 -->
+		<view class='popup-cart-container'>
+			<!-- 顶部 -->
+			<view class='popup-header'>
+				<!-- 顶部-标题 -->
+				<view class='popup-header-title'>{{title}}</view>
+				<!-- 顶部-关闭 -->
+				<!-- <view class='popup-header-close' bindtap='close'>
+					<image class='popup-header-close-icon' src='./images/close.png' />
+				</view> -->
+			</view>
+			<!-- 中部 -->
+			<view class='popup-body'>
+				<slot></slot>
+			</view>
+		</view>
+	</block>
+	<block wx:if="{{type=='center'}}">
+		<!-- 外框 -->
+		<view class='popup-center-container'>
+			<!-- 顶部-关闭 -->
+			<view class='popup-close' bindtap='close'>
+				<image class='popup-close-icon' src='./images/close-w.png' />
+			</view>
+			<!-- 中部 -->
+			<view class='popup-body'>
+				<slot></slot>
+			</view>
+		</view>
+	</block>
+</block>

@@ -1,0 +1,59 @@
+<!-- 用户信息 -->
+<view class='userInfo' bindtap='tutorDetail'>
+  <!-- 用户信息-头像 -->
+  <avatar class='userInfo-avatar' src='{{share.author.thumb}}' />
+  <!-- 用户信息-详情 -->
+  <view class='userInfo-detail'>
+    <!-- 用户信息-昵称 -->
+    <view class='userInfo-nickname'>{{share.author.name}}</view>
+    <!-- 用户信息-分类 -->
+    <view class='userInfo-share'>
+      <block wx:for='{{share.share_name}}' wx:key='*this'>#{{item}}# </block>
+    </view>
+  </view>
+</view>
+<!-- 分享-元素-中部 -->
+<view class='share-item-body'>
+  <!-- 分享-元素-内容 -->
+  <custom-text class='share-item-content' text='{{share.share_content}}' line='3' />
+  <!-- 分享-元素-视频 -->
+  <custom-video class='share-item-video' cover='{{share.share_images[0]}}' src='{{share.video}}' wx:if='{{share.is_video==1}}' />
+  <!-- 分享-元素-图片 -->
+  <view class='share-item-picture' wx:else>
+    <image class='share-item-picture-type1' bindtap='preview' data-preview='{{share.share_images[0]}}' mode='aspectFill' src='{{share.share_images_thumb[0]}}' wx:if='{{share.share_images_thumb.length==1}}' />
+    <picture-list class='share-item-picture-type2' preview='{{share.share_images || false}}' value='{{share.share_images_thumb}}' size='6' wx:elif='{{share.share_images_thumb.length==4}}' />
+    <picture-list class='share-item-picture-type3' preview='{{share.share_images || false}}' value='{{share.share_images_thumb}}' size='4' wx:else />
+  </view>
+
+  <!-- 分享-元素-时间 -->
+  <view class='share-item-date' wx:if="{{share.mtype==1}}">收藏时间：{{share.share_time}}</view>
+  <view class='share-item-date' wx:else>发布时间：{{share.share_time}}</view>
+</view>
+<!-- 菜单-列表 -->
+<view class='menu-list'>
+  <view class='menu-item' bindtap='saveVideo' wx:if='{{share.is_video==1}}'>
+    <image class='menu-item-icon' mode='aspectFit' src='./images/down.png' />视频下载
+  </view>
+  <view class='menu-item' bindtap='saveImage' wx:else>
+    <image class='menu-item-icon' mode='aspectFit' src='./images/down.png' />图片下载
+  </view>
+  <view class='menu-item' bindtap='copy'>
+    <image class='menu-item-icon' mode='aspectFit' src='./images/copy.png' />文字复制
+  </view>
+  <block wx:if='{{type=="list"}}'>
+    <view class='menu-item' bindtap='favorite' wx:if='{{share.is_collect}}'>
+      <image class='menu-item-icon' mode='aspectFit' src='./images/favorites.png' />素材收藏
+    </view>
+    <view class='menu-item' bindtap='favorite' wx:else>
+      <image class='menu-item-icon' mode='aspectFit' src='./images/un-favorites.png' />素材收藏
+    </view>
+  </block>
+  <block wx:elif='{{type=="my"}}'>
+    <view class='menu-item' wx:if='{{share.status==0}}'>
+      <image class='menu-item-icon' mode='aspectFit' src='./images/favorites.png' />待审核
+    </view>
+    <view class='menu-item' wx:else>
+      <image class='menu-item-icon' mode='aspectFit' src='./images/un-favorites.png' />已发布
+    </view>
+  </block>
+</view>

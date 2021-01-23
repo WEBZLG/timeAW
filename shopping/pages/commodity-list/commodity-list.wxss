@@ -1,0 +1,15 @@
+@import '../../styles/iconfont.wxss';
+
+#container {
+  padding: 24rpx;
+  /* padding-bottom: 1px; */
+  min-height: 100vh;
+  /* box-sizing: border-box; */
+}
+
+.no-more {
+  margin-top: 45rpx;
+  text-align: center;
+  color: #B5B6B6;
+  font-size: 22rpx;
+}

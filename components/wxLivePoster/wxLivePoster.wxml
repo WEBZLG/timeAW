@@ -1,0 +1,5 @@
+<view class="poster-loading" wx:if="{{!src}}">
+	<custom-loading />
+</view>
+<image show-menu-by-longpress class="poster-image" mode="widthFix" wx:if="{{src}}" src="{{src}}"></image>
+<canvas style="width: {{options.width}}; height: {{options.height}}" canvas-id="poster" class="poster-canvas"></canvas>

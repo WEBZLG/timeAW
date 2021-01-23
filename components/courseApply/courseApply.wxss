@@ -1,0 +1,137 @@
+:host {
+  position: fixed;
+  z-index: 9001;
+}
+
+/* 自定义提示框（申请） */
+.form-apply-container {
+  position: relative;
+}
+/* 表单-成功-背景 */
+.form-apply-background {
+  width: 526rpx;
+}
+/* 表单-成功-按钮 */
+.form-apply-button {
+  margin: auto;
+  width: 457rpx;
+  height: 104rpx;
+}
+
+/* 自定义提示框（成功） */
+.form-success-container {
+  position: relative;
+}
+/* 自定义提示框（成功）-背景 */
+.form-success-background {
+  width: 526rpx;
+}
+/* 自定义提示框（成功）-按钮 */
+.form-success-button {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  width: 457rpx;
+  height: 104rpx;
+  padding: 0;
+  background-color: transparent;
+}
+.form-success-button::after {
+  display: none;
+}
+.form-success-button-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.userItem {
+  margin: auto;
+  width:100%;
+  /* padding: 0 20rpx; */
+  position: absolute;
+  top: 95rpx;
+  left: 0;
+}
+
+.userName {
+  width: fill-available;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 15rpx;
+  border-bottom: 2rpx solid #e1d2c6;
+  font-size: 24rpx;
+}
+.userLeft,.userRight {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.userLeft {
+  color: #868686;
+}
+.userRight {
+  font-weight: 600;
+}
+.btn {
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 22rpx;
+  right: 20rpx;
+}
+.btn image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 确认扣卡 */
+.vip-popup-bg {
+  height: 647rpx;
+  width: 526rpx;
+}
+.confirm-study-btn {
+  width: 435rpx;
+  line-height: 80rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -217rpx;
+  bottom: 50rpx;
+  /* margin: auto; */
+  z-index: 9999;
+  text-align: center;
+  /* display: inline-block; */
+  background-image: linear-gradient(to right, #262a35, #3b4054);
+  border-radius: 34px;
+  color: #dbac92;
+  font-size: 26rpx;
+}
+
+.confirm-study-btn-group {
+  width: 100%;
+  line-height: 80rpx;
+  position: absolute;
+  bottom: 50rpx;
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.confirm-study-btn-group view {
+  width: 205rpx;
+  border-radius: 34px;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.short-btn-solid {
+  background-image: linear-gradient(to right, #262a35, #3b4054);
+  color: #dbac92;
+}
+.short-btn-empty {
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  border: 1px solid #262a35;
+  color: #262a35;
+}

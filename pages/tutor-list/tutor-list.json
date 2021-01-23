@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "导师列表",
+  "usingComponents": {
+    "tutor-list": "/components/tutor-list/tutor-list"
+  }
+}

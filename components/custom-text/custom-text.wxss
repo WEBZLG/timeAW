@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+/* 自定义文本-外框 */
+.custom-text-outer {
+  overflow: hidden;
+  position: relative;
+}
+/* 自定义文本-内容 */
+.custom-text-content {
+  display: block;
+  overflow: hidden;
+  color: #2f2f2f;
+  font-size: 30rpx;
+}
+/* 自定义文本-按钮 */
+.custom-text-button {
+  color: var(--main);
+  height: 40rpx;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+}
+/* 自定义文本-按钮-图标 */
+.custom-text-button-icon {
+  width: 24rpx;
+  height: 24rpx;
+  display: block;
+  margin-left: 10rpx;
+}

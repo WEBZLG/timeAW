@@ -1,0 +1,22 @@
+<!-- 播放器 -->
+<view class='player' hidden='{{status=="stop"}}'>
+  <!-- 播放器-封面 -->
+  <view class='player-cover {{status=="play"?"player-active":""}}' bindtap='course'>
+    <image class='fill' src='{{course.top_thumb}}' />
+  </view>
+  <!-- 播放器-按钮-列表 -->
+  <view class='player-button-list'>
+    <!-- 播放器-播放 -->
+    <view class='player-button' bindtap='play' hidden='{{!(status=="pause")}}'>
+      <image class='fill' src='./images/play.png' />
+    </view>
+    <!-- 播放器-暂停 -->
+    <view class='player-button' bindtap='pause' hidden='{{!(status=="play")}}'>
+      <image class='fill' src='./images/pause.png' />
+    </view>
+    <!-- 播放器-停止 -->
+    <view class='player-button' bindtap='stop' hidden='{{!(status=="pause")}}'>
+      <image class='fill' src='./images/stop.png' />
+    </view>
+  </view>
+</view>

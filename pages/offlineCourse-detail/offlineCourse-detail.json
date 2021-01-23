@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "custom-popup": "/components/custom-popup/custom-popup",
+    "tab": "/components/tab/tab",
+    "tab-nav": "/components/tab/tab-nav",
+    "tab-nav-item": "/components/tab/tab-nav-item",
+    "tab-content": "/components/tab/tab-content",
+    "tab-content-item": "/components/tab/tab-content-item",
+    "rich": "/components/rich/rich"
+  }
+}

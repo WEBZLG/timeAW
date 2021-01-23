@@ -1,0 +1,102 @@
+:host {
+  display: block;
+}
+
+
+/* 评论-元素 */
+.comment-item {
+  border-bottom: 2rpx solid #F2F2F2;
+  display: grid;
+  padding: 20rpx;
+  grid-gap: 20rpx;
+  grid-template-columns: 80rpx auto min-content;
+}
+
+/* 评论-底部 */
+.comment-item-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999;
+  grid-column: 2 / 4
+}
+
+/* 评论-元素-详情 */
+.comment-item-detail {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 / 3;
+  justify-content: center;
+  align-self: center;
+}
+
+/* 评论-元素-头像 */
+.comment-item-avatar {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 评论-元素-标题 */
+.comment-item-title {
+  font-size: 28rpx;
+}
+
+/* 评论-元素-昵称 */
+.comment-item-nickname {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+/* 评论-元素-时间 */
+.comment-item-date {
+  font-size: 20rpx;
+  color: #999;
+}
+
+/* 评论-元素-点赞 */
+.comment-item-likes {
+  grid-column: 3 / 4;
+  font-size: 24rpx;
+  align-self: flex-end;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+.comment-item-likes-icon {
+  display: block;
+  width: 24rpx;
+  height: 24rpx;
+  margin: 0 10rpx;
+}
+
+/* 评论-元素-内容 */
+.comment-item-contect {
+  grid-column: 2 / 4;
+  font-size: 28rpx;
+}
+
+/* 评论-元素-更多 */
+.comment-item-more {
+  display: flex;
+  align-items: center;
+}
+.comment-item-more-icon {
+  width: 20rpx;
+  height: 20rpx;
+  display: block;
+  margin: 0 10rpx;
+}
+
+/* 评论-元素-回复 */
+.comment-item-reply {
+  display: flex;
+  align-items: center;
+}
+.comment-item-reply-icon {
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+  margin: 0 10rpx;
+}

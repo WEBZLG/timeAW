@@ -1,0 +1,3 @@
+<container id='container' binderror='init'>
+  <list-vertical list='{{course.list}}' />
+</container>

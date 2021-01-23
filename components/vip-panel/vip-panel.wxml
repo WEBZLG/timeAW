@@ -1,0 +1,8 @@
+<!-- 顶部 -->
+<view class='panel-header'>
+  <image class='panel-title' mode='widthFix' src='{{title}}' />
+</view>
+<!-- 中部 -->
+<view class='panel-body'>
+  <slot></slot>
+</view>

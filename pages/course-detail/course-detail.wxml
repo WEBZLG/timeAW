@@ -1,0 +1,242 @@
+<container id='container' binderror='init'>
+	<!-- 课程-分享 -->
+	<navigator url='/pages/poster/poster?type=course&id={{course.id}}' class='course-poster'>
+		分享
+	</navigator>
+	<!-- 课程-顶部 -->
+	<view class='course-header'>
+		<!-- 播放器 -->
+		<player-controller list='{{part.list}}' course='{{course}}' id='player' />
+	</view>
+	<!-- 课程-中部 -->
+	<view class='course-body'>
+		<!-- 课程-左右布局 -->
+		<view class='course-wing'>
+			<!-- 课程-价格 -->
+			<view class='course-price' wx:if='{{course.is_package==1}}'>{{course.money}}</view>
+			<view class='course-price course-price-disabled' wx:else>{{course.money}}</view>
+			<!-- 课程-标签-列表 -->
+			<view class='course-tag-list'>
+				<view class='course-tag-item' wx:if='{{course.is_package==1}}'>时间与崇尚主营课</view>
+				<view class='course-tag-item' wx:else>会员福利课</view>
+			</view>
+		</view>
+		<!-- 课程-左右布局 -->
+		<view class='course-wing'>
+			<!-- 课程-标题 -->
+			<view class='course-title'>{{course.name}}</view>
+			<!-- 课程-参与 -->
+			<view class='course-join'>
+				<custom-image src='https://cm.chineseglory.cn/images/icon4.png' />
+				{{course.join_num}}已参与
+			</view>
+		</view>
+		<!-- 课程-简介 -->
+		<view class='course-intro'>{{course.description}}</view>
+		<!-- 课程-左右布局 -->
+		<view class='course-wing'>
+			<!-- 导师 -->
+			<navigator url='/pages/tutor-home/tutor-home?id={{tutor.id}}' class='tutor'>
+				<!-- 导师-头像 -->
+				<avatar class='tutor-avatar' src='{{tutor.thumb}}' />
+				<!-- 导师-详情 -->
+				<view class='tutor-detail'>
+					<!-- 导师-昵称 -->
+					<view class='tutor-nickname'>{{tutor.name}}</view>
+					<!-- 导师-标签 -->
+					<view class='tutor-label'>{{tutor.label}}</view>
+				</view>
+				<!-- 导师-进入 -->
+				<custom-image class='tutor-enter' src='https://cm.chineseglory.cn/images/icon31.png' />
+			</navigator>
+			<!-- 是否为公开课 -->
+			<block wx:if='{{mainCourse}}'>
+				<view wx:if="{{course.is_package== 1}}"> 
+					<!-- 课程-状态 -->
+					<view class='course-status course-status-active'  bindtap='openCdkey' wx:if='{{course.is_own==0}}'>
+						<!-- 课程-状态-图标 -->
+						<custom-image class='course-status-icon' src='https://cm.chineseglory.cn/images/icon32.png' />
+						<!-- 课程-状态-标题 -->
+						<view class='course-status-title'>课程兑换</view>
+					</view>
+					<view class='course-status' wx:else>
+						<!-- 课程-状态-图标 -->
+						<custom-image class='course-status-icon' src='https://cm.chineseglory.cn/images/icon62.png' />
+						<!-- 课程-状态-标题 -->
+						<view class='course-status-title'>已拥有</view>
+					</view>
+				</view>
+			</block>
+			<block wx:if='{{mainCourse}}'>
+				<view wx:if="{{course.is_package != 1}}"> 
+					<!-- 课程-状态 -->
+					<view class='course-status course-status-active' bindtap='openCdkey' wx:if='{{course.is_own==0}}'>
+						<!-- 课程-状态-图标 -->
+						<custom-image class='course-status-icon' src='https://cm.chineseglory.cn/images/icon32.png' />
+						<!-- 课程-状态-标题 -->
+						<view class='course-status-title'>课程兑换</view>
+					</view>
+					<view class='course-status' wx:else>
+						<!-- 课程-状态-图标 -->
+						<custom-image class='course-status-icon' src='https://cm.chineseglory.cn/images/icon62.png' />
+						<!-- 课程-状态-标题 -->
+						<view class='course-status-title'>已拥有</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 选项卡 -->
+	<tab id='tab' bindchange='tabChange'>
+		<tab-nav id='tab-nav' class='default-nav'>
+			<tab-nav-item class='default-nav-item'>课程详情</tab-nav-item>
+			<tab-nav-item class='default-nav-item'>课程目录</tab-nav-item>
+			<tab-nav-item class='default-nav-item'>评价({{comment.count}})</tab-nav-item>
+		</tab-nav>
+		<tab-content id='tab-content'>
+			<!-- 课程详情 -->
+			<tab-content-item slot='0'>
+				<course-poster class='tab-item' content="{{course.content}}"></course-poster>
+			</tab-content-item>
+			<tab-content-item slot='1'>
+				<!-- 课程小节-列表 -->
+				<coursePart-list class='tab-item' part='{{part.list}}' course='{{course}}' tutor='{{tutor}}' />
+			</tab-content-item>
+			<tab-content-item slot='2'>
+				<!-- 评价-列表 -->
+				<comment-list class='tab-item' courseId='{{course.id}}' />
+			</tab-content-item>
+		</tab-content>
+	</tab>
+	<!-- 课程-底部 -->
+	<view class='course-footer' wx:if='{{mainCourse}}'>
+		<!-- 菜单-列表 -->
+		<view class='menu-list'>
+			<!-- 想听 -->
+			<button class='button-clear menu-item' bindtap='wish'>
+				<custom-image wx:if='{{course.is_want}}' type='icon' class='menu-item-icon' src='/images/course-detail/wish-active.png' />
+				<custom-image wx:else='{{course.is_want}}' type='icon' class='menu-item-icon' src='/images/course-detail/wish.png' />
+				<view class='menu-item-title'>想学</view>
+			</button>
+			<!-- 咨询 -->
+			<button class='button-clear menu-item' open-type='contact'>
+				<custom-image class='menu-item-icon' type='icon' src='/images/course-detail/contact.png' />
+				<view class='menu-item-title'>咨询</view>
+			</button>
+		</view>
+		<!-- 按钮-列表 -->
+		<view class='button-group' wx:if='{{course.go_comment==0}}'>
+			<button bindtap='preview' class='button-clear button-group-start'>试听</button>
+			<button class='button-clear button-group-end'>
+				<!-- <text bindtap="promptlyStudy" wx:if="{{isShow}}">立即学习</text> -->
+				<text bindtap="welfareBuy" wx:if="{{isShow}}">立即购买</text>
+				<text bindtap="promptlyBuy" wx:else>立即购买</text>
+			</button>
+		</view>
+		<view class='button-group' wx:elif='{{course.go_comment==1 && course.is_comment==0}}'>
+			<button bindtap='commentPost' class='button-clear button-group-start'>去评价</button>
+			<button class='button-clear button-group-end' open-type='share'>分享获利</button>
+		</view>
+		<view class='button-group' wx:else>
+			<button class='button-clear button-group-end' open-type='share'>分享获利</button>
+		</view>
+	</view>
+	<!-- cdkey兑换 -->
+	<cdkey id='cdkey' course='{{course.id}}' codenum="{{course.code_num}}" keytype="{{course.is_package}}" bindsuccess='cdkeySuccess' complete='' />
+	<!-- 提示升级VIP -->
+	<custom-popup id='vip-fail' class='popup'>
+		<!-- 自定义提示框-外框 -->
+		<view class='popup-container'>
+			<!-- 自定义提示框-背景 -->
+			<custom-image class='popup-background' type='poster' src='/images/course-detail/popup-background.png' />
+			<!-- 自定义提示框-内容 -->
+			<view class='popup-content'>
+				<view class='group-fail-title'>加入时间与崇尚会员</view>
+				<view class='group-fail-content'>立即享有海量课程</view>
+			</view>
+			<!-- 自定义提示框-按钮-列表 -->
+			<view class='popup-button-list'>
+				<view class='popup-button-item popup-button-cancel' bindtap='popupClose'>取消</view>
+				<navigator url='/pages/vip/vip' class='popup-button-item popup-button-confirm'>
+					确认
+				</navigator>
+			</view>
+		</view>
+	</custom-popup>
+	<!-- 提示升级教练 -->
+	<custom-popup id='coach-fail' class='popup'>
+		<!-- 自定义提示框-外框 -->
+		<view class='popup-container'>
+			<!-- 自定义提示框-背景 -->
+			<custom-image class='popup-background' type='poster' src='/images/course-detail/popup-background.png' />
+			<!-- 自定义提示框-内容 -->
+			<view class='popup-content'>
+				<view class='group-fail-title'>加入时间与崇尚班长</view>
+				<view class='group-fail-content'>立即享有优质课程</view>
+			</view>
+			<!-- 自定义提示框-按钮-列表 -->
+			<view class='popup-button-list'>
+				<view class='popup-button-item popup-button-cancel' bindtap='popupClose'>取消</view>
+				<navigator url='/pages/privilege-detail/privilege-detail?id=3' class='popup-button-item popup-button-confirm'>
+					确认
+				</navigator>
+			</view>
+		</view>
+	</custom-popup>
+
+	<!-- 立即支付 -->
+	<custom-popup id='pay-atonce'>
+		<!-- 自定义提示框-背景 -->
+		<view class="popup-new">
+			<image src='/images/mine/tan.png' />
+			<view class="pay-atonce-content">立即支付</view>
+			<view class="go-pay" bindtap="goPay">去支付</view>
+		</view>
+	</custom-popup>
+	<!-- 福利支付 -->
+	<custom-popup id='pay-welfare'>
+		<!-- 自定义提示框-背景 -->
+		<view class="popup-new">
+			<image src='/images/mine/tan.png' />
+			<view class="pay-atonce-content">立即支付</view>
+			<view class="go-pay" bindtap="goWelfarePay">去支付</view>
+		</view>
+	</custom-popup>
+  <!-- 支付成功 -->
+	<custom-popup id='pay-success'>
+		<!-- 自定义提示框-背景 -->
+		<view class="popup-new">
+			<image src='/images/mine/dui.png' />
+			<view class="pay-atonce-content">支付成功</view>
+			<view class="go-pay" bindtap="complete">完成</view>
+		</view>
+	</custom-popup>
+
+  <!-- 库存不足 -->
+  <custom-popup id='not-stock'>
+		<!-- 自定义提示框-背景 -->
+		<view class="popup-new">
+			<image src='/images/mine/cha.png' />
+			<view class="pay-atonce-content">当前库存不足</view>
+			<view class="btn-list">
+				<view class="go-supply" bindtap="goSupply">去补卡</view>
+        <view class="original-price-pay" bindtap="goPay">原价购买</view>
+      </view>
+		</view>
+	</custom-popup>
+
+  <!-- 使用库存 -->
+  <custom-popup id='use-stock'>
+		<!-- 自定义提示框-背景 -->
+		<view class="popup-new">
+			<image src='/images/mine/tan.png' />
+			<view class="pay-atonce-content">确定扣卡学习此课程吗</view>
+			<view class="btn-list">
+        <view class="go-supply" bindtap="useStock">确定</view>
+        <view class="original-price-pay" bindtap="thinkAgain">再想想</view>
+      </view>
+		</view>
+	</custom-popup>
+	<!-- 申请课程 -->
+	<courseApply id='courseApply' />
+</container>

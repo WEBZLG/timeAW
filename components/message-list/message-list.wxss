@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* 容器 */
+.container {
+  padding-bottom: 1rpx;
+  flex-grow: 1;
+  background-color: #FFF;
+}
+
+
+
+/* 信息-元素 */
+.message-item {
+  display: flex;
+  padding: 20rpx 40rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+/* 信息-元素-图标 */
+.message-item-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+/*  */
+.message-item-detail {
+  flex: 1 1;
+  width: 0;
+}
+/* 信息-元素-标题 */
+.message-item-title {
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+/* 信息-元素-内容 */
+.message-item-content {
+  font-size: 28rpx;
+  color: #999;
+}
+/* 信息-元素-日期 */
+.message-item-date {
+  font-size: 24rpx;
+  color: #999;
+}

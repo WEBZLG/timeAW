@@ -1,0 +1,8 @@
+<block wx:if='{{status}}'>
+  <!-- 蒙版 -->
+  <view class='popup-mask' bindtap='shadow'></view>
+  <!-- 外框 -->
+  <view class='popup-container'>
+    <slot></slot>
+  </view>
+</block>

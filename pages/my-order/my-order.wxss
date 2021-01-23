@@ -1,0 +1,45 @@
+/* pages/my-order/my-order.wxss */
+.list {
+  padding: 0 38rpx;
+  min-height: 100vh;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.item {
+  border-bottom: 1px solid #f0f0f0;
+}
+/* 时间 */
+.date {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  color: #e6e6e6;
+}
+/* 图片 */
+.order-img {
+  height: 300rpx;
+  width: 100%;
+  border-radius: 8px;
+}
+/* 保存图片 */
+.bottom-content {
+  margin: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.save-img {
+  font-size: 24rpx;
+  color: #383838;
+}
+.hand-img image {
+  margin: 0 4rpx;
+  height: 30rpx;
+  width: 20rpx;
+}
+
+.not-more {
+  margin-top: 20rpx;
+  text-align: center;
+  color: #9c9c9c;
+  font-size: 24rpx;
+}

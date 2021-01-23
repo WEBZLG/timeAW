@@ -1,0 +1,15 @@
+<form bindsubmit='submit'>
+  <view class='search-container'>
+    <!-- 搜索-交互 -->
+    <view class='search-scanner'>
+      <!-- 搜索-图标 -->
+      <image class='search-icon' src='https://cm.chineseglory.cn/images/icon1.png' />
+      <!-- 搜索-输入 -->
+      <input class='search-input' name='keyword' value='{{value}}' placeholder='请输入课程名称或导师名称' />
+    </view>
+    <!-- 搜索-按钮 -->
+    <button class='button-clear search-button' form-type='submit' wx:if='{{!disabled}}'>搜索</button>
+    <!-- 搜索-禁用 -->
+    <navigator url='/pages/search/search' class='search-disabled' wx:if='{{disabled}}'></navigator>
+  </view>
+</form>

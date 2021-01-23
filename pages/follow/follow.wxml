@@ -1,0 +1,22 @@
+<container id='container' binderror='init'>
+	<!-- 导师-元素 -->
+	<view class='tutor-item' wx:for='{{tutor.list}}' wx:key='{{index}}'>
+		<!-- 导师-头像 -->
+		<navigator url='/pages/tutor-home/tutor-home?id={{item.id}}'>
+			<avatar class='tutor-avatar' src='{{item.thumb}}' />
+		</navigator>
+
+		<!-- 导师-详情 -->
+		<view class='tutor-detail'>
+			<!-- 导师-昵称 -->
+			<navigator url='/pages/tutor-home/tutor-home?id={{item.id}}'>
+				<view class='tutor-nickname'>{{item.name}}</view>
+			</navigator>
+			<!-- 导师-标签 -->
+			<view class='tutor-label'>{{item.label}}</view>
+		</view>
+		<!-- 导师-按钮 -->
+		<view wx:if='{{item.cancel}}' bindtap='follow' data-index='{{index}}' class='custom-solid-button tutor-button'>关注</view>
+		<view wx:else bindtap='follow' data-index='{{index}}' class='custom-sub-button tutor-button'>已关注</view>
+	</view>
+</container>

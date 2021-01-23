@@ -1,0 +1,3 @@
+<container id='container' binderror='init'>
+  <tutor-list class='tutor-list' list='{{tutor.list}}' />
+</container>

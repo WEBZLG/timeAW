@@ -1,0 +1,7 @@
+<view class="step">
+	<view class="step-item {{active>=index?'step-item_active':''}}" wx:for="{{step}}" wx:key="*this">
+    <view class="step-item-spot"></view>
+    <view wx:if="{{index>0}}" class="step-item-line"></view>
+		{{index+1}}.{{item}}
+	</view>
+</view>

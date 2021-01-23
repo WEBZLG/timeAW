@@ -1,0 +1,4 @@
+<view class='custom-choose-item' bindtap='tap'>
+  <block wx:if='{{_checked}}'><slot name='checked'></slot></block>
+  <block wx:else><slot name='unchecked'></slot></block>
+</view>

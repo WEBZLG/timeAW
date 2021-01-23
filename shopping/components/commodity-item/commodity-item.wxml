@@ -1,0 +1,10 @@
+<view class="item" bind:tap="handleItemClick" data-id="{{info.id}}">
+  <view class="item-left">
+    <image class="thumb" mode="scaleToFill" src="{{info.thumb}}"></image>
+  </view>
+  <view class="item-right">
+    <view class="name">{{info.name}}</view>
+    <view class="introduction">{{info.slogan}}</view>
+    <view class="price">零售价:￥{{info.money}}</view>
+  </view>
+</view>

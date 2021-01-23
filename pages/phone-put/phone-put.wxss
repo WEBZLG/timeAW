@@ -1,0 +1,111 @@
+/* 外框 */
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone_top{
+	width: calc( 100% - 40rpx );
+	height: 80rpx;
+	line-height: 80rpx;
+	padding: 10rpx 20rpx;
+	background: #fef6e6;
+	font-size: 26rpx;
+	color: #ff6600;
+}
+.phone_top_a{
+	width: 80rpx;
+	height: 80rpx;
+	float: left;
+	background: url('https://cm.chineseglory.cn/images/icon60.png') no-repeat center center;
+	background-size: 60%;
+}
+.phone{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+.phone_a{
+	width: 180rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	float: left;
+	padding-left: 40rpx;
+	font-size: 32rpx;
+	color: #272844;
+}
+.phone_b{
+	width: calc( 100% - 260rpx );
+	height: 100rpx;
+	line-height: 100rpx;
+	float: left;
+	padding-right: 40rpx;
+}
+.input1{
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 32rpx;
+	color: #272844;
+}
+.input2{
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 32rpx;
+	color: #272844;
+}
+.phone_c{
+	width: calc( 100% - 220rpx );
+	height: 100rpx;
+	line-height: 100rpx;
+	float: left;
+}
+.phone_c1{
+	width: calc( 100% - 220rpx );
+	height: 100rpx;
+	float: left;
+	box-sizing: border-box;
+	border-right: 1px solid #eee;
+}
+.phone_c2{
+	width: 220rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	text-align: center;
+	font-size: 30rpx;
+	color: #ff6600;
+	float: left;
+}
+.btn2{
+	width: 220rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 28rpx;
+	color: #ff6600;
+	border: 0;
+	background: none;
+	padding: 0;
+}
+.btn2::after{
+	border: 0;
+}
+.btn_box{
+	padding: 60rpx 20rpx;
+	overflow: hidden;
+}
+.btn1{
+	width: 100%;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	background: #ff6600;
+	font-size: 34rpx;
+	color: #fff;
+	border-radius: 34rpx; 
+}
+.btn1::after{
+	border: 0;
+}

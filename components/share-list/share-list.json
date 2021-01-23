@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "share-item": "/components/share-item/share-item",
+    "custom-scroll": "/components/custom-scroll/custom-scroll",
+    "dynamic-item": "/components/dynamic-item/dynamic-item"
+  }
+}

@@ -1,0 +1,53 @@
+#container {
+  min-height: 100vh;
+}
+
+/* 标签-海报 */
+.label-poster {
+  width: 100%;
+}
+
+/* 标签-列表 */
+.label-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20rpx;
+}
+
+/* 标签-元素-图标 */
+.label-item-icon {
+  margin-left: 20rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+
+/* 通用按钮 */
+
+.button {
+  margin: 20rpx;
+  border-radius: 40rpx;
+  overflow: hidden;
+  height: 80rpx;
+  font-size: 32rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.4);
+}
+.button-checked {
+  color: #FFF;
+  background-color: var(--main);
+}
+.button-unchecked {
+  color: #404040;
+  background-color: #FFF;
+}
+
+/* 表单-提交 */
+.form-submit {
+  padding: 0 50rpx;
+  width: fit-content;
+  margin: 100rpx auto;
+}

@@ -1,0 +1,10 @@
+<wxs src='../../../utils/filter.wxs' module='filter' />
+
+<!-- 当前时间 -->
+<view class='time'>{{filter.secondToMinute(drag.status?drag.time:current)}}</view>
+
+<!-- 进度 -->
+<slider class='slider' value='{{drag.status?drag.time:current}}' max='{{duration}}' disabled='{{disabled}}' bindchanging='onChanging' bindchange='onChange' activeColor='#FF6600' block-color='#FF6600' block-size='20rpx' />
+
+<!-- 总时间 -->
+<view class='time'>{{filter.secondToMinute(duration)}}</view>

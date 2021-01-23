@@ -1,0 +1,4 @@
+<container class='container' binderror='init'>
+  <!-- <share-item share='{{item}}' wx:for='{{list}}' wx:key='id' /> -->
+  <dynamic-item share='{{item}}' wx:for='{{list}}' wx:key='id'></dynamic-item>
+</container>

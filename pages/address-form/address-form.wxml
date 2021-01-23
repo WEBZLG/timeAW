@@ -1,0 +1,66 @@
+<container binderror='init' id='container'>
+  <form bindsubmit='submit'>
+
+    <view class='address-form'>
+      <!-- 地址-列表 -->
+      <view class='address-list'>
+        <!-- 联系人 -->
+        <view class='address-item'>
+          <view class='address-title'>
+            收货人
+          </view>
+          <view class='address-input'>
+            <input name='contact' placeholder='请输入收货人' maxlength='15' value='{{address.name}}' type='text'></input>
+          </view>
+        </view>
+
+        <!-- 手机号码 -->
+        <view class='address-item'>
+          <view class='address-title'>
+            联系电话
+          </view>
+          <view class='address-input'>
+            <input name='phone' placeholder='请输入联系电话' data-rule='^\\d{0,11}$' value='{{address.mobile}}' maxlength='11' type='number'></input>
+          </view>
+        </view>
+
+        <!-- 选择地区 -->
+        <view class='address-item'>
+          <view class='address-title'>
+            所在地区
+          </view>
+          <view class='address-input'>
+            <picker mode='region' name='region' bindchange='regionChange' value='{{region}}'>
+              <view class='picker-content' wx:if='{{region.length}}'>
+                <block wx:for='{{region}}' wx:key='index'>
+                  {{item}}
+                </block>
+              </view>
+              <view class='picker-placeholder' wx:else>
+                请选择省市区
+              </view>
+            </picker>
+          </view>
+        </view>
+
+        <!-- 详细地址 -->
+        <view class='address-item'>
+          <view class='address-title'>
+            详细地址
+          </view>
+          <view class='address-input'>
+            <textarea name='address' placeholder='请输入详细地址' value='{{address.address}}'></textarea>
+          </view>
+        </view>
+      </view>
+
+      <!-- 默认地址 -->
+      <view class='address-default'>
+        <custom-radio name='status' value='{{address.status==1?true:false}}' /> 设为默认地址
+      </view>
+
+      <!-- 提交 -->
+      <button class='custom-solid-button address-post' form-type='submit'>确定</button>
+    </view>
+  </form>
+</container>

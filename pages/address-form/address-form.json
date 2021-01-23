@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "地址管理",
+  "usingComponents": {
+    "custom-radio": "/components/custom-radio/custom-radio"
+  }
+}

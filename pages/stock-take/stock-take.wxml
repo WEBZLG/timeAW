@@ -1,0 +1,44 @@
+<block wx:if="{{addressdata}}">
+  <view class="address_box" bindtap='goAddress'>
+    <view class="address_a">
+      <view class="address_a1">收货人：{{addressdata.name}}</view>
+      <view class="address_a2">{{addressdata.mobile}}</view>
+    </view>
+    <view class="address_b">收货地址：{{addressdata.region}}{{addressdata.city}}{{addressdata.xian}}{{addressdata.address}}</view>
+  </view>
+</block>
+<block wx:else>
+  <view class="address_box" bindtap='goAddress'>
+    <view class="address_c">暂无收货地址</view>
+  </view>
+</block>
+<view class="line2">
+  <image src="https://cm.chineseglory.cn/images/line2.png" mode='widthFix'></image>
+</view>
+<view class='cart_box'>
+  <!---->
+  <block wx:for="{{carddata}}" wx:key="{{index}}">
+    <view class='cart'>
+      <image class='cart_background' src='/images/card-apply/card-apply.png' />
+      <view class='cart_foreground'>
+        <view class='cart_a'>
+          <image src="{{item.thumb}}" mode='aspectFill'></image>
+        </view>
+        <view class='cart_b'>
+          <view class='cart_b_a'>{{item.name}}</view>
+          <view class='cart_b_b'>
+            <view class='cart_b_b_in'>
+              <view class='jian' bindtap='reduce' data-index='{{index}}'>-</view>
+              <view class='num'>{{item.goods_num}}</view>
+              <view class='jia' bindtap='add' data-index='{{index}}'>+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!---->
+</view>
+<view class='btn_box'>
+  <button class='custom-solid-button btn' bindtap='take_submit'>确认（{{all_card_num}}张）</button>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "课程列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "list-vertical": "/components/list-vertical/list-vertical",
+    "list-horizontal": "/components/list-horizontal/list-horizontal"
+  }
+}

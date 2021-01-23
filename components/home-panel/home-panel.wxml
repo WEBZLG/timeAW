@@ -1,0 +1,14 @@
+<view class="home-panel-top">
+  <view class='home-panel-line'></view>
+  <!-- 顶部 -->
+  <view class='home-panel-header'>
+    <!-- 标题 -->
+    <view class='home-panel-title'>{{title}}</view>
+    <!-- 更多 -->
+    <navigator wx:if='{{more}}' url='{{more}}' class='home-panel-more'>更多>></navigator>
+  </view>
+</view>
+<!-- 内容 -->
+<view class='home-panel-body'>
+  <slot></slot>
+</view>

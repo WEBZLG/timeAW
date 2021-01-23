@@ -1,0 +1,47 @@
+#container {
+  min-height: 100vh;
+  padding: 1rpx 24rpx;
+}
+
+.title {
+  margin-top: 33rpx;
+  display: flex;
+  align-items: center;
+}
+
+.title-icon {
+  height: 40rpx;
+  width: 8rpx;
+  background-color: #ff6600;
+}
+
+.title-content {
+  margin-left: 10rpx;
+  font-size: 34rpx;
+  color: #ff6600;
+}
+
+/* 课程列表 */
+.course-list {
+  height: 100%;
+  margin-top: 12rpx;
+}
+
+.before {
+  margin-top: 30rpx;
+}
+.before-title {
+  display: flex;
+  align-items: center;
+}
+.before-title .line {
+  flex: 1;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.before-title-content {
+  margin: 0 38rpx;
+  font-size: 30rpx;
+  color: #010101;
+  font-weight: bold;
+}

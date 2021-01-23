@@ -1,0 +1,30 @@
+<view class='kecheng_box'>  
+    <!---->
+	<block wx:for="{{data_arr}}" wx:key="{{index}}">
+    <view class='kecheng'>
+        <view class='kecheng_a'>
+            <image src="{{item.course.thumb}}" mode='aspectFill'></image>
+			<view></view>
+        </view>
+        <view class='kecheng_b'>
+            <view class='kecheng_b1'>{{item.course.name}}</view>
+			<view class='kecheng_b_tag'><view>{{item.course.label[0].name}}</view></view>
+			<view class='kecheng_b_p'>
+				<view class='kecheng_b_p1'>
+					<view class='kecheng_b_p1a'>{{item.author.name}} | {{item.author.label}}</view>
+					<view class='kecheng_b_p1b'>{{item.author.hot}}</view>
+				</view>
+				<view class='kecheng_b_p2'>
+					<block wx:if="{{item.is_jigsaw==0}}">
+						<view class='kecheng_btn' bindtap='goPinKeDetails' data-id="{{item.jigsaw.id}}">发起拼课</view>
+					</block>
+					<block wx:else>
+						<view class='kecheng_btn'>已参与</view>
+					</block>
+				</view>
+			</view>
+        </view>
+    </view>
+	</block>
+    <!---->
+</view>

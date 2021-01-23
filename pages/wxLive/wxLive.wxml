@@ -1,0 +1,24 @@
+<container id="container" wx:if="{{isOpen}}" class="vip-node" binderror='init'>
+	<!-- 顶部 -->
+	<view class="home-header">
+		<view class="home-header-button" bindtap="applicationAuthority">申请直播权限</view>
+		<view class="home-header-button" bindtap="applicationSession">创建直播间</view>
+	</view>
+	<!-- 直播-列表 -->
+	<view class="live-list">
+		<block wx:if="{{live.list.length}}">
+			<live-card class="live-card" detail="{{item}}" bindshare="poster" wx:for="{{live.list}}" wx:key="id" />
+		</block>
+		<block wx:else>
+			<view class="live-list-empty">暂无直播</view>
+		</block>
+	</view>
+	<!-- 海报 -->
+	<popup id="poster" type="center">
+		<poster class="poster-detail" options="{{poster.options}}" data="{{poster.params}}" />
+	</popup>
+</container>
+
+<view wx:if="{{!isOpen}}" class="await">	
+	<image src="https://tc.chineseglory.cn/assets/img/livezwkf.png"> </image>
+</view>

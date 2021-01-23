@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "直播列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "popup": "/components/popup/popup",
+    "live-card": "/components/live-card/live-card",
+    "poster": "/components/wxLivePoster/wxLivePoster"
+  }
+}

@@ -1,0 +1,39 @@
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* 搜索 */
+#search {
+  margin: 20rpx;
+}
+#tab {
+  flex: 1;
+}
+#tab-nav {
+  min-height: 80rpx;
+  color: #999;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+.tab-nav-inner {
+  width: fit-content;
+  margin: auto;
+}
+.tab-nav-item {
+  padding: 0 40rpx;
+}
+.tab-nav-underline {
+  height: 4rpx!important;
+  width: 40%!important;
+  border-radius: 2rpx;
+}
+
+
+
+/* 搜索-列表 */
+.search-list {
+  height: 100%;
+}

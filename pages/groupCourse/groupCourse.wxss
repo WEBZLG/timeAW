@@ -1,0 +1,175 @@
+.kecheng_box{
+	padding: 5rpx 20rpx;
+	height: auto;
+	overflow: hidden;
+}
+.kecheng{
+	width:100%;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 20rpx;
+}
+.kecheng_a{
+	width:190rpx;
+	height:260rpx;
+	float: left;
+	margin-right: 20rpx;
+	position: relative;
+}
+.kecheng_a image{
+	width:190rpx;
+	height:260rpx;
+	border-radius: 10rpx;
+}
+.kecheng_a view{
+	width: 50rpx;
+	height: 50rpx;
+	position: absolute;
+	right: 10rpx;
+	bottom: 10rpx;
+	z-index: 10;
+	background: url('https://cm.chineseglory.cn/images/icon42.png') no-repeat center center;
+	background-size: 100%;
+}
+.kecheng_b{
+	height:260rpx;
+	overflow: hidden;
+}
+.kecheng_b1{
+	width:100%;
+	height: 40rpx;
+	line-height: 40rpx;
+	overflow: hidden;
+	color: #272844;
+	font-size: 36rpx;
+	font-weight:bold;
+	margin-top: 10rpx;
+}
+.kecheng_b1 view{
+	display: block;
+	border: 1px solid #f60;
+	padding: 2px;
+	font-size: 22rpx;
+	line-height: 20rpx;
+	color: #f60;
+	float: left;
+	border-radius: 5rpx;
+	margin-top: 7rpx;
+	margin-right: 5rpx;
+}
+.kecheng_b_tag{
+	width:100%;
+	height: 40rpx;
+	line-height: 40rpx;
+	overflow: hidden;
+	margin-top: 10rpx;
+}
+.kecheng_b_tag view{
+	display: block;
+	border: 1px solid #f60;
+	padding: 2px;
+	font-size: 22rpx;
+	line-height: 20rpx;
+	color: #f60;
+	float: left;
+	border-radius: 5rpx;
+	margin-top: 7rpx;
+	margin-right: 5rpx;
+}
+.kecheng_b2{
+	width:100%;
+	height: 76rpx;
+	line-height: 38rpx;
+	overflow: hidden;
+	color: #686877;
+	font-size: 28rpx;
+	padding-top:10rpx;
+}
+.kecheng_b3{
+	width:100%;
+	height: 24rpx;
+	line-height: 24rpx;
+	overflow: hidden;
+	color: #686877;
+	font-size: 28rpx;
+	box-sizing: border-box;
+	margin-top: 100rpx; 
+}
+.kecheng_b3a{
+	width: 50%;
+	height: 24rpx;
+	overflow: hidden;
+	float: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.kecheng_b3b{
+	width: 40%;
+	height: 24rpx;
+	overflow: hidden;
+	font-size: 22rpx;
+	color: #686877;
+	float: right;
+	text-align:right;
+}
+.kecheng_b3b view{
+	width: 24rpx;
+	height: 24rpx;
+	display: inline-block;
+	background: url('https://cm.chineseglory.cn/images/icon4.png') no-repeat center center;
+	background-size: 100%;
+}
+.kecheng_b_status{
+	width:100%;
+	height: 30rpx;
+	line-height: 30rpx;
+	overflow: hidden;
+	color: #ff6600;
+	font-size: 30rpx;
+	box-sizing: border-box;
+	margin-top: 20rpx;
+}
+.kecheng_b_p{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-top: 65rpx;
+}
+.kecheng_b_p1{
+	width: calc( 100% - 150rpx );
+	height: auto;
+	float: left;
+}
+.kecheng_b_p1a{
+	width: 100%;
+	height: 50rpx;
+	line-height: 50rpx;
+	font-size: 32rpx;
+	color: #525369;
+}
+.kecheng_b_p1b{
+	width: 100%;
+	height: 32rpx;
+	box-sizing: border-box;
+	padding-left: 32rpx;
+	background: url('https://cm.chineseglory.cn/images/icon2.png') no-repeat left center;
+	background-size: 28rpx;
+	font-size: 24rpx;
+	color: #525369;
+}
+.kecheng_b_p2{
+	width: 150rpx;
+	height: auto;
+	overflow: hidden;
+	float: right;
+}
+.kecheng_btn{
+	width: 150rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	background: #f60;
+	border-radius: 10rpx;
+	font-size: 30rpx;
+	color: #fff;
+}

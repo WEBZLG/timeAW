@@ -1,0 +1,29 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<container class='container' binderror='init'>
+  <!-- 团队-元素 -->
+  <view class='group-item' wx:for='{{group.list}}' wx:key='id' bindtap='navigateTo' data-index='{{index}}'>
+    <!-- 团队-元素-头像 -->
+    <view class='group-item-avatar'>
+      <custom-image class='group-item-avatar-image' src='{{item.avatar}}' type='icon' />
+    </view>
+    <!-- 团队-元素-详情 -->
+    <view class='group-item-detail'>
+      <!-- 团队-元素-昵称 -->
+      <!--<view class='group-item-nickname'>{{item.nickname}}</view>-->
+      <view class='group-item-nickname-box'>
+        <view class='group-item-nickname'>{{item.nickname}}</view>  
+        <view class="group-item-group-name">{{item.group_name}}</view>  
+      </view>
+      <!-- 团队-元素-统计 -->
+      <view class='group-item-count'>
+        <image class='group-item-count-image' src='./images/count.png' /> {{item.count_son}}
+      </view>
+      <!-- 团队-元素-日期 -->
+      <view class='group-item-date'>加入时间 {{filter.date(item.createtime)}}</view>
+    </view>
+    <!-- 团队-元素-按钮 -->
+    <view class='group-item-button' wx:if='{{enter}}'>
+      TA的团队
+    </view>
+  </view>
+</container>

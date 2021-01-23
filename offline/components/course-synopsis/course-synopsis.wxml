@@ -1,0 +1,13 @@
+<!-- offline/components/course-synopsis/course-synopsis.wxml -->
+<view class="course-item">
+  <view class="item-left">
+    <custom-image class="thumbnail" src="{{synopsis.thumb}}"></custom-image>
+  </view>
+  <view class="item-right">
+    <view class="item-right-content">
+      <view class="course-name">{{synopsis.title}}</view>
+      <view class="course-detail">{{synopsis.description}}</view>
+    </view>
+    <view class="item-right-btn" data-id="{{synopsis.id}}" bind:tap="signUp">预约席位</view>
+  </view>
+</view>

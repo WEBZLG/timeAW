@@ -1,0 +1,73 @@
+#container {
+  min-height: 100vh;
+  padding-bottom: 102rpx;
+  box-sizing: border-box;
+}
+
+/* 愿望单-列表 */
+.wish-list {
+  padding: 0 20rpx;
+}
+
+/* 愿望单-底部 */
+.wish-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  border-top: 2rpx solid #F2F2F2;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+}
+
+/* 按钮-列表 */
+.button-list {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+/* 按钮-元素 */
+.button-item {
+  padding: 0 20rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+/* 愿望单-结算 */
+.wish-settlement {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* 愿望单-结算-统计 */
+.wish-settlement-count {
+  color: #999;
+  font-size: 24rpx;
+}
+
+/* 愿望单-结算-价格 */
+.wish-settlement-price {
+  color: var(--main);
+  font-size: 44rpx;
+  margin: 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+.wish-settlement-price::before {
+  content: '¥';
+  font-size: 24rpx;
+}
+
+/* 愿望单-结算-提交 */
+.wish-settlement-submit {
+  margin: initial;
+  border-radius: 0;
+  box-shadow: initial;
+  height: 100rpx;
+}

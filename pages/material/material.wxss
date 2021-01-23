@@ -1,0 +1,75 @@
+#container {
+  min-height: 100vh;
+  width: 750rpx;
+  overflow-x: hidden;
+}
+#tab {
+  min-height: 100vh;
+}
+
+/* 标签-导航 */
+#tagNav {
+  padding: 10rpx;
+  position: sticky;
+  top: 0;
+  background-color: #FFF;
+  z-index: 1001;
+}
+#tagNav .tab-nav-underline {
+  display: none;
+}
+#tagNav .tab-nav-list-inner {
+  height: initial!important;
+  flex-wrap: wrap!important;
+}
+.tagNav-item {
+  padding: 0;
+  flex: 0;
+}
+.tagNav-item-default {
+  margin: 10rpx;
+  font-size: 24rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 12rpx;
+  border-radius: 20rpx;
+  width: fit-content;
+  background-color: #F2F2F2;
+}
+.tagNav-item-default custom-image {
+  width: 24rpx;
+  height: 24rpx;
+}
+.tagNav-item-active {
+  background-color: var(--main);
+  color: #FFF;
+}
+
+/* 自定义选择 */
+.custom-choose-group {
+  padding: 10rpx;
+}
+.custom-choose {
+  margin: 10rpx;
+  font-size: 24rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 12rpx;
+  border-radius: 20rpx;
+  width: fit-content;
+}
+.custom-choose custom-image {
+  width: 24rpx;
+  height: 24rpx;
+}
+/* 自定义选择-未选中 */
+.custom-choose-unchecked {
+  background-color: #F2F2F2;
+}
+/* 自定义选择-选中 */
+.custom-choose-checked {
+  background-color: var(--main);
+  color: #FFF;
+}

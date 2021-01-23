@@ -1,0 +1,97 @@
+:host {
+  display: block;
+  overflow: auto;
+}
+
+
+
+/* 元素 */
+.item {
+  margin: 20rpx 0;
+  display: flex;
+  position: relative;
+}
+/* 元素-左右布局 */
+.item-wing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 元素-详情 */
+.item-detail {
+  padding: 10rpx 0;
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 0;
+}
+/* 元素-顶部 */
+.item-header {
+  width: 190rpx;
+  height: 260rpx;
+  display: block;
+  border-radius: 20rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+/* 元素-封面 */
+.item-cover {
+  width: 100%;
+  height: 100%;
+}
+/* 元素-标题 */
+.item-title {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 元素-简介 */
+.item-description {
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  line-height: 40rpx;
+  height: 80rpx;
+}
+/* 元素-更新 */
+.item-update {
+  background-color: var(--main);
+	color: #FFF;
+	font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  position: absolute;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.4);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* 元素-标签 */
+.item-tag {
+}
+/* 元素-导师 */
+.item-author {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+/* 元素-参加人数 */
+.item-join {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.item-join-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 4rpx;
+}

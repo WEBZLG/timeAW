@@ -1,0 +1,56 @@
+<wxs module="filter">
+	module.exports = {
+		status: function(value) {
+			if (value == 1) {
+				return '已报名'
+			} else if (value == 2) {
+				return '进行中'
+			} else if (value == 3) {
+				return '已结束'
+			} else if (value == 4) {
+				return '已预约'
+			}
+		}
+	}
+</wxs>
+<container id='container' binderror='init'>
+	<!-- 课程-列表 -->
+	<view class='course-list'>
+		<!-- 课程-元素 -->
+		<navigator url='/pages/offlineCourse-detail/offlineCourse-detail?id={{item.id}}' class='course-item' wx:for='{{course.list}}' wx:key='id'>
+			<!-- 课程-元素-封面 -->
+			<custom-image type='cover' class='course-item-cover' src='{{item.course.thumb}}' />
+			<!-- 课程-元素-详情 -->
+			<view class='course-item-detail'>
+				<!-- 课程-元素-顶部 -->
+				<view class='course-item-header'>
+					<!-- 课程-元素-标题 -->
+					<view class='course-item-title'>{{item.course.title}}</view>
+					<!-- 课程-元素-状态 -->
+					<view class="{{item.course.ap_status==3?'grey-content':'course-item-status'}}">{{filter.status(item.course.ap_status)}}</view>
+				</view>
+				<!-- 课程-元素-导师 -->
+				<view class='course-item-tutor'>课程导师：{{item.course.author.name}}</view>
+				<!-- 课程-元素-地址 -->
+				<view class='course-item-cols'>
+					<custom-image type='icon' class='course-item-cols-icon' src='/images/offlineCourse/address.png' />
+					<view class='course-item-cols-text'>{{item.course.address}}</view>
+				</view>
+				<!-- 课程-元素-日期 -->
+				<view class='course-item-cols'>
+					<custom-image type='icon' class='course-item-cols-icon' src='/images/offlineCourse/date.png' />
+					<view class='course-item-cols-text'>{{item.course.open}}</view>
+				</view>
+				<!-- 课程-元素-人数 -->
+				<view class='course-item-cols'>
+					<custom-image type='icon' class='course-item-cols-icon' src='/images/offlineCourse/count.png' />
+					<view class='course-item-cols-text'>{{item.course.pnum}}</view>
+				</view>
+				<!-- 核销记录按钮 -->
+        <navigator url="/pages/write-off/write-off?id={{item.id}}">
+          <view class="log-btn" bindtap="writeOff" wx:if="{{item.course.ap_status==2||item.course.ap_status==3}}">核销记录</view>
+        </navigator>
+			</view>
+		</navigator>
+	</view>
+</container>

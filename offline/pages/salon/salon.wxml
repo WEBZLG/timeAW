@@ -1,0 +1,20 @@
+<container id='container' binderror='init'>
+  <view class="title">
+    <view class="title-icon"></view>
+    <view class="title-content">全国沙龙巡回</view>
+  </view>
+
+  <!-- 课程列表 -->
+  <view class="course-list">
+    <course-synopsis wx:for="{{courseList}}"  synopsis="{{item}}" wx:key="index"></course-synopsis>
+  </view>
+  <!-- 以往课程 -->
+  <!-- <view class="before">
+    <view class="before-title">
+      <view class="line"></view>
+      <view class="before-title-content">以往课程</view>
+      <view class="line"></view>
+    </view>
+     <course-synopsis wx:for="{{beforeList}}" synopsis="{{item}}" wx:key="index"></course-synopsis>
+  </view> -->
+</container>

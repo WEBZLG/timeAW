@@ -1,0 +1,240 @@
+<container id='container' binderror='init'>
+  <view class="stock_box">
+    <view class="stock">
+      <view class="stock_a">库存数量：{{count}}张</view>
+      <view class="stock_b">
+        <!---->
+        <view class="stock_b_a" bindtap='goGetCard'>
+          <view class="stock_b_a1">
+            <image src="/images/stock/stock-replenish.png" mode='aspectFill'></image>
+          </view>
+          <view class="stock_b_a2">补卡申请</view>
+        </view>
+        <view class="stock_b_a" bindtap='goTakeCard'>
+          <view class="stock_b_a1">
+            <image src="/images/stock/stock-take.png" mode='aspectFill'></image>
+          </view>
+          <view class="stock_b_a2">提卡申请</view>
+        </view>
+        <view class="stock_b_a" bindtap='goStockCount'>
+          <view class="stock_b_a1">
+            <image src="/images/stock/stock-count.png" mode='aspectFill'></image>
+          </view>
+          <view class="stock_b_a2">库存统计</view>
+        </view>
+        <view class="stock_b_a" bindtap='goMyCdkey'>
+          <view class="stock_b_a1">
+            <image style="width:74rpx; height:60rpx;" src="/images/stock/study-cdkey.png" mode='aspectFill'></image>
+          </view>
+          <view class="stock_b_a2">我的学习码</view>
+        </view>
+        <!---->
+      </view>
+    </view>
+  </view>
+  <!---->
+  <!-- 选择 待审核 预期拒绝 拒绝 已同意 -->
+  <view class='tab_box'>
+    <view class="tab {{currentTab==0?'active':''}}" bindtap="cardTab" data-id="0">待审核</view>
+    <view class="tab {{currentTab==3?'active':''}}" bindtap="cardTab" data-id="3">逾期拒绝</view>
+    <view class="tab {{currentTab==2?'active':''}}" bindtap="cardTab" data-id="2">拒绝</view>
+    <view class="tab {{currentTab==1?'active':''}}" bindtap="cardTab" data-id="1">已同意</view>
+  </view>
+  <!-- 待审核 -->
+  <view class="card_box {{currentTab==0?'show':'hidden'}}">
+    <!---->
+    <view wx:if="{{stock.list.length != 0}}">
+
+      <block wx:for="{{stock.list}}" wx:key="{{index}}" wx:if="{{item.status == 0}}">
+        <view class='card' bindtap='goCard_details' data-id='{{item.id}}'>
+          <view class='card_a'>
+            <block wx:if="{{item.type==1}}">
+              <view class='card_a1'>类型：提卡申请</view>
+            </block>
+            <block wx:elif="{{item.type==2}}">
+              <view class='card_a1'>类型：代理补卡</view>
+            </block>
+            <block wx:elif="{{item.type==3}}">
+              <view class='card_a1'>类型：申请代理</view>
+            </block>
+            <block wx:elif="{{item.type==4}}">
+              <view class='card_a1'>类型：卡片零售</view>
+            </block>
+            <block wx:else>
+              <view class='card_a1'>类型：卡片零售</view>
+            </block>
+            <block>
+              <view class='card_a2 status'>待审核</view>
+            </block>
+          </view>
+          <view class="daoshi">
+            <view class="daoshi_a">
+              <image src="{{item.receiver.avatar}}" mode='aspectFill'></image>
+            </view>
+            <view class="daoshi_b">
+              <view class="daoshi_b_a">
+                <view>{{item.receiver.nickname}}</view>
+                <text>{{item.receiver_group.name}}</text>
+              </view>
+              <view class="daoshi_b_b">数量：{{item.stock_num}}张</view>
+              <view class="daoshi_b_b">时间：{{item.createtime}}</view>
+            </view>
+            <view class="daoshi_c">查看>></view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view wx:else class="noneImg">
+      <image src="/images/none/list.png"></image>
+    </view>
+    <!---->
+  </view>
+  <!-- 逾期拒绝 -->
+  <view class="card_box {{currentTab==3?'show':'hidden'}}">
+    <!---->
+    <view wx:if="{{stock.list.length != 0}}">
+    <block wx:for="{{stock.list}}" wx:key="{{index}}">
+      <view class='card' bindtap='goCard_details' data-id='{{item.id}}' wx:if="{{item.status == 3}}">
+        <view class='card_a'>
+          <block wx:if="{{item.type==1}}">
+            <view class='card_a1'>类型：提卡申请</view>
+          </block>
+          <block wx:elif="{{item.type==2}}">
+            <view class='card_a1'>类型：代理补卡</view>
+          </block>
+          <block wx:elif="{{item.type==3}}">
+            <view class='card_a1'>类型：申请代理</view>
+          </block>
+          <block wx:elif="{{item.type==4}}">
+            <view class='card_a1'>类型：卡片零售</view>
+          </block>
+          <block wx:else>
+            <view class='card_a1'>类型：卡片零售</view>
+          </block>
+          <block>
+            <view class='card_a2 status3'>逾期拒绝</view>
+          </block>
+        </view>
+        <view class="daoshi">
+          <view class="daoshi_a">
+            <image src="{{item.receiver.avatar}}" mode='aspectFill'></image>
+          </view>
+          <view class="daoshi_b">
+            <view class="daoshi_b_a">
+              <view>{{item.receiver.nickname}}</view>
+              <text>{{item.receiver_group.name}}</text>
+            </view>
+            <view class="daoshi_b_b">数量：{{item.stock_num}}张</view>
+            <view class="daoshi_b_b">时间：{{item.createtime}}</view>
+          </view>
+          <view class="daoshi_c">查看>></view>
+        </view>
+      </view>
+    </block>
+    </view>
+   <view wx:else class="noneImg">
+      <image src="/images/none/list.png"></image>
+    </view>
+    <!---->
+  </view>
+  <view class="card_box {{currentTab==2?'show':'hidden'}}">
+    <!---->
+     <view wx:if="{{stock.list.length != 0}}">
+
+    <block wx:for="{{stock.list}}" wx:key="{{index}}">
+      <view class='card' bindtap='goCard_details' data-id='{{item.id}}' wx:if="{{item.status == 2}}">
+        <view class='card_a'>
+          <block wx:if="{{item.type==1}}">
+            <view class='card_a1'>类型：提卡申请</view>
+          </block>
+          <block wx:elif="{{item.type==2}}">
+            <view class='card_a1'>类型：代理补卡</view>
+          </block>
+          <block wx:elif="{{item.type==3}}">
+            <view class='card_a1'>类型：申请代理</view>
+          </block>
+          <block wx:elif="{{item.type==4}}">
+            <view class='card_a1'>类型：卡片零售</view>
+          </block>
+          <block wx:else>
+            <view class='card_a1'>类型：卡片零售</view>
+          </block>
+
+          <block>
+            <view class='card_a2 status2'>拒绝</view>
+          </block>
+
+        </view>
+        <view class="daoshi">
+          <view class="daoshi_a">
+            <image src="{{item.receiver.avatar}}" mode='aspectFill'></image>
+          </view>
+          <view class="daoshi_b">
+            <view class="daoshi_b_a">
+              <view>{{item.receiver.nickname}}</view>
+              <text>{{item.receiver_group.name}}</text>
+            </view>
+            <view class="daoshi_b_b">数量：{{item.stock_num}}张</view>
+            <view class="daoshi_b_b">时间：{{item.createtime}}</view>
+          </view>
+          <view class="daoshi_c">查看>></view>
+        </view>
+      </view>
+    </block>
+     </view>
+    <view wx:else class="noneImg">
+      <image src="/images/none/list.png"></image>
+    </view>
+    <!---->
+  </view>
+  <view class="card_box {{currentTab==1?'show':'hidden'}}">
+    <!---->
+    <view wx:if="{{stock.list.length != 0}}">
+    
+    <block wx:for="{{stock.list}}" wx:key="{{index}}" wx:if="{{item.status == 1}}">
+      <view class='card' bindtap='goCard_details' data-id='{{item.id}}'>
+        <view class='card_a'>
+          <block wx:if="{{item.type==1}}">
+            <view class='card_a1'>类型：提卡申请</view>
+          </block>
+          <block wx:elif="{{item.type==2}}">
+            <view class='card_a1'>类型：代理补卡</view>
+          </block>
+          <block wx:elif="{{item.type==3}}">
+            <view class='card_a1'>类型：申请代理</view>
+          </block>
+          <block wx:elif="{{item.type==4}}">
+            <view class='card_a1'>类型：卡片零售</view>
+          </block>
+          <block wx:else>
+            <view class='card_a1'>类型：卡片零售</view>
+          </block>
+
+          <block>
+            <view class='card_a2 status1'>已同意</view>
+          </block>
+
+        </view>
+        <view class="daoshi">
+          <view class="daoshi_a">
+            <image src="{{item.receiver.avatar}}" mode='aspectFill'></image>
+          </view>
+          <view class="daoshi_b">
+            <view class="daoshi_b_a">
+              <view>{{item.receiver.nickname}}</view>
+              <text>{{item.receiver_group.name}}</text>
+            </view>
+            <view class="daoshi_b_b">数量：{{item.stock_num}}张</view>
+            <view class="daoshi_b_b">时间：{{item.createtime}}</view>
+          </view>
+          <view class="daoshi_c">查看>></view>
+        </view>
+      </view>
+    </block>
+    </view>
+    <view wx:else class="noneImg">
+      <image src="/images/none/list.png"></image>
+    </view>
+    <!---->
+  </view>
+</container>

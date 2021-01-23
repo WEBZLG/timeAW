@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+/* 元素 */
+.item {
+  margin: 20rpx 0;
+  margin-bottom: 26rpx;
+}
+
+/* 元素-中部 */
+.item-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: -15rpx;
+}
+
+/* 封面 */
+.item-cover {
+  height: 300rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+/* 顶部 */
+.item-header {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+  margin-top: 14rpx
+}
+
+/* 标题 */
+.item-title {
+  flex: 1;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  font-weight: bold;
+}
+
+/* 标签 */
+.item-tag {
+  border-radius: 10rpx;
+  border: 2rpx solid currentColor;
+  color: var(--main);
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+  padding: 0 10rpx;
+  margin: 0 5rpx;
+}
+
+
+
+/* 用户 */
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+/* 用户-头像 */
+.userInfo-avatar {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 用户-昵称 */
+.userInfo-nickname {
+  margin-left: 10rpx;
+}
+
+
+
+/* 用户-加入 */
+.item-join {
+  display: flex;
+  align-items: center;
+}
+.item-join-icon {
+  width: 30rpx;
+  height: 30rpx;
+  /* margin-right: 10rpx; */
+}

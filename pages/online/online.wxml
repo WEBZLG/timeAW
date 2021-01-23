@@ -1,0 +1,26 @@
+<!--pages/online/online.wxml-->
+<container id='container' binderror='init'>
+  <view class="server">
+    <image src="../../images/online-server/customer-service.png" />
+
+    <view class="list">
+      <view class="item" wx:for="{{serviceList}}" wx:key="{{index}}">
+        <view class="item-left">
+          <view class="item-left-icon">
+            <image class="icon" wx:if="{{item.type=='top'}}" src="../../images/online-server/online-time.png" />
+            <image class="icon" wx:if="{{item.type=='phone'}}" src="../../images/online-server/phone.png" />
+            <image class="icon" wx:if="{{item.type=='wechat'}}" src="../../images/online-server/wechat.png" />
+          </view>
+          <view class="item-left-content">
+            <view class="content-name">{{item.name}}</view>
+            <view class="content-detail">{{item.wechat}}</view>
+          </view>
+        </view>
+        <view class="item-right" wx:if="{{item.type!='top'}}">
+          <text class="item-right-content" data-phone="{{item.wechat}}" bind:tap="call" wx:if="{{item.type=='phone'}}">一键拨打</text>
+          <text class="item-right-content" data-detail="{{item.wechat}}" bind:tap="copy" wx:if="{{item.type=='wechat'}}">一键复制</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</container>

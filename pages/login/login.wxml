@@ -1,0 +1,30 @@
+<container id='container' binderror='init'>
+
+  <!-- 顶部 -->
+  <view class='header'>
+    <!-- LOGO -->
+    <custom-image class='header-logo' src='{{logo}}' type='icon' />
+    <!-- 标题 -->
+    <view class='header-title'>{{title}}</view>
+  </view>
+
+  <!-- 主体 -->
+  <view class='body'>
+
+    <!-- 授权 -->
+    <view class='auth'>
+      <!-- 授权-标题 -->
+      <view class='auth-title'>{{title}}申请获得以下权限</view>
+      <!-- 授权-列表 -->
+      <view class='auth-list'>
+        <view class='auth-item'>获取你的公开信息（昵称、头像等）</view>
+      </view>
+    </view>
+
+    <!-- 按钮 -->
+    <button class='button' type='primary' open-type='getUserInfo' bindgetuserinfo='getUserInfo' bindtap='beforeOpenType'>
+      <custom-image type='icon' src='/images/public/wechat.png' />
+      <view>微信登录</view>
+    </button>
+  </view>
+</container>

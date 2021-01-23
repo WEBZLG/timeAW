@@ -1,0 +1,16 @@
+<container class='container' binderror='init'>
+  <!-- 信息-元素 -->
+  <view class='message-item' wx:for='{{message.list}}' wx:key='{{index}}' data-id="{{item.id}}" bind:tap="handleMessage">
+    <!-- 信息-元素-图标 -->
+    <image class='message-item-icon' type='icon' src='/images/message/system-active.png' />
+    <!-- 信息-元素-详情 -->
+    <view class='message-item-detail'>
+      <!-- 信息-元素-标题 -->
+      <view class='message-item-title'>{{item.title}}</view>
+      <!-- 信息-元素-内容 -->
+      <view class='message-item-content'>{{item.content}}</view>
+      <!-- 信息-元素-日期 -->
+      <view class='message-item-date'>{{item.createtime}}</view>
+    </view>
+  </view>
+</container>

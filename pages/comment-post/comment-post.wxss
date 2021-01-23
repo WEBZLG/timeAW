@@ -1,0 +1,27 @@
+/* 表单 */
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* 评论内容 */
+.comment {
+  width: auto;
+  margin: 20rpx;
+  border: 2rpx solid #F2F2F2;
+  border-radius: 10rpx;
+  display: block;
+  height: 300rpx;
+  padding: 20rpx;
+  font-size: 24rpx;
+}
+/* 提交 */
+.submit {
+  margin: 20rpx;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  background-color: var(--main);
+  color: #FFF;
+  height: 80rpx;
+}

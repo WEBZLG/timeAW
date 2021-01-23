@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "动态",
+  "enablePullDownRefresh": true,
+	"usingComponents": {
+    "guide": "/components/guide/guide",
+    "share-list": "/components/share-list/share-list",
+    "background-audio-popup": "/components/course-player/popup-controller/popup-controller",
+    "tab": "/components/tab/tab",
+    "tab-nav": "/components/tab/tab-nav",
+    "tab-nav-item": "/components/tab/tab-nav-item",
+    "tab-content": "/components/tab/tab-content",
+    "tab-content-item": "/components/tab/tab-content-item",
+    "custom-popup": "/components/custom-popup/custom-popup"
+  }
+}

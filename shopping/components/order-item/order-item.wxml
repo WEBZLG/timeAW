@@ -1,0 +1,63 @@
+<view class="order" bind:tap="checkOrder">
+  <!-- 编号和订单状态 -->
+  <view class="order-top">
+    <view class="order-top-left">订单编号：{{order.order_id}}</view>
+    <view class="order-top-right">
+      <view class="order-status {{statusObj[order.status].statusColor}}">
+        {{statusObj[order.status].statusContent}}
+      </view>
+    </view>
+  </view>
+  <!-- 中部商品信息 -->
+  <view class="order-center">
+    <!-- 左侧缩略图 -->
+    <view class="order-center-left">
+      <image src="{{order.goods[0].thumb}}" />
+    </view>
+    <!-- 右侧商品信息 -->
+    <view class="order-center-right">
+      <view class="name">{{order.goods[0].name}}</view>
+      <view class="specs">规格: {{order.size_name}}</view>
+      <view class="money-number">
+        <view class="money">零售价:￥{{order.goods[0].money}}</view>
+        <view class="number iconfont icon-cheng">{{order.buy_num}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部统计信息 -->
+  <view class="order-bottom">
+    <view class="freight">快递运费: ￥{{order.postage}}</view>
+    <view class="totle-number">共计{{order.buy_num}}件商品</view>
+    <view class="totle-money">
+      合计:
+      <text class="blue-text">￥{{order.money}}</text>
+    </view>
+  </view>
+  <!-- 底部按钮  全部-1 待付款0 代配送1 待签收2 已完成6 退货中4 -->
+  <!-- 待签收 -->
+  <view class="button-group" wx:if="{{order.status==2}}">
+    <view class="btn solid-btn" catch:tap="confirmReceipt">确认收货</view>
+    <view class="btn hollow-btn" catch:tap="checkLogistics">查看物流</view>
+  </view>
+  <!-- 待付款 -->
+  <view class="button-group" wx:if="{{order.status==0}}">
+    <view class="btn solid-btn" catch:tap="payNow">立即支付</view>
+    <view class="btn hollow-btn" catch:tap="cancelOrder">取消订单</view>
+  </view>
+  <!-- 待配送 -->
+  <view class="button-group" wx:if="{{order.status==1}}">
+    <view class="btn solid-btn" catch:tap="checkOrder">查看订单</view>
+  </view>
+  <!-- 已完成 -->
+  <view class="button-group" wx:if="{{order.status==6}}">
+    <view class="btn solid-btn" catch:tap="checkOrder">查看订单</view>
+  </view>
+  <!-- 已取消 -->
+  <view class="button-group" wx:if="{{order.status==-1}}">
+    <view class="btn solid-btn" catch:tap="checkOrder">查看订单</view>
+  </view>
+  <!-- 退货中 -->
+  <view class="button-group" wx:if="{{order.status==4}}">
+    <view class="btn solid-btn" catch:tap="checkOrder">查看订单</view>
+  </view>
+</view>

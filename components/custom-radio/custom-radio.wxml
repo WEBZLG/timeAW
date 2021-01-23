@@ -1,0 +1,3 @@
+<view class='custom-radio {{value?"custom-radio-checked":""}}' bindtap='checked'>
+  <view class='custom-radio-inner'></view>
+</view>

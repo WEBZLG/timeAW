@@ -1,0 +1,7 @@
+{
+	"usingComponents": {},
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTextStyle": "black",
+	"navigationBarTitleText": "代理商列表",
+	"enablePullDownRefresh": true
+}

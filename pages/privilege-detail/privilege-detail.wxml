@@ -1,0 +1,41 @@
+<container id='container' binderror='init' style='background-image: url({{background}})'>
+
+  <!-- 海报 -->
+  <custom-image class='privilege-poster' type='poster' src='{{poster}}' />
+
+  <!-- 底部 -->
+  <button class='button-clear privilege-footer' bindtap='openPopup'>
+    <custom-image class='privilege-footer-fixed' src='/images/privilege-detail/footer.png' />
+  </button>
+
+  <!-- 申请 -->
+  <popup id='popup'>
+    <form bindsubmit='submit'>
+      <!-- 申请 -->
+      <view class='apply'>
+        <table>
+          <tbody>
+            <tr>
+              <td>学习卡数量</td>
+              <td>{{card}}</td>
+            </tr>
+            <tr>
+              <td>打款截图</td>
+              <td>
+                <chosePicture name='picture' />
+              </td>
+            </tr>
+            <tr>
+              <td>审核人姓名</td>
+              <td>{{superior.nickname}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- 申请-按钮 -->
+        <button form-type='submit' class='apply-submit'>
+          <custom-image src='/images/privilege-detail/apply-submit.png' />
+        </button>
+      </view>
+    </form>
+  </popup>
+</container>

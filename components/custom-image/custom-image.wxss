@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+
+
+:host {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* 传入图片 */
+.normal {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 缺省图片 */
+.default {
+  max-width: 100rpx;
+  max-height: 100rpx;
+}
+
+/* 错误图片 */
+.error {
+  max-width: 100rpx;
+  max-height: 100rpx;
+}
+
+/* 加载图片 */
+.load {
+  background-color: #F2F2F2;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

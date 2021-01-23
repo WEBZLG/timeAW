@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  overflow: hidden;
+}
+
+/* 标签 */
+.tag-item {
+  border-radius: 10rpx;
+  border: 2rpx solid currentColor;
+  color: var(--main);
+  font-size: 24rpx;
+  line-height: 24rpx;
+  align-items: center;
+  display: inline-flex;
+  height: 34rpx;
+  padding: 0 6rpx;
+  white-space: nowrap;
+}
+.tag-item:not(:last-of-type) {
+  margin-right: 10rpx;
+}

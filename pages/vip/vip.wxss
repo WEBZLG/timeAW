@@ -1,0 +1,197 @@
+#container {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 100rpx;
+}
+
+/* 顶部 */
+.vip-header {
+  position: relative;
+}
+
+/* 横幅 */
+.vip-banner {
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+/* vip-板块 */
+.vip-panel {
+  margin: 24rpx;
+  margin-bottom: 80rpx;
+}
+.about .panel-header {
+  padding-bottom: 0rpx;
+}
+
+/* 关于 */
+.vip-about {
+  display: block;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+  padding: 0rpx 36rpx 36rpx 36rpx;
+}
+
+/* 获取 */
+.vip-obtain {
+  position: absolute;
+  top: 310rpx;
+  right: 100rpx;
+  width: 250rpx;
+  height: 100rpx;
+  background-color: inherit !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0;
+}
+.vip-share{
+  width: 250rpx;
+  height: 100rpx;
+}
+
+/* 底部 */
+.vip-footer {
+  width: 650rpx;
+  height: 94rpx;
+  position: fixed;
+  margin: 40rpx auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 47rpx;
+  overflow: hidden;
+  box-shadow: 0 0 40rpx 0 rgba(0, 0, 0, 0.4);
+}
+.vip-footer-fixed {
+  height: 100%;
+  width: 100%;
+}
+.vip-footer-price {
+  color: #EAC9B8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  width: 220rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+}
+.vip-footer-price::before {
+  content: '¥';
+  font-size: 20rpx;
+}
+
+
+
+/* 自定义提示框（申请） */
+.form-apply-container {
+  position: relative;
+}
+/* 表单-成功-背景 */
+.form-apply-background {
+  width: 526rpx;
+}
+/* 表单-成功-按钮 */
+.form-apply-button {
+  margin: auto;
+  width: 457rpx;
+  height: 104rpx;
+}
+
+/* 自定义提示框（成功） */
+.form-success-container {
+  position: relative;
+}
+/* 自定义提示框（成功）-背景 */
+.form-success-background {
+  width: 526rpx;
+}
+/* 自定义提示框（成功）-按钮 */
+.form-success-button {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  width: 457rpx;
+  height: 104rpx;
+}
+
+.userItem {
+  margin: auto;
+  width:100%;
+  /* padding: 0 20rpx; */
+  position: absolute;
+  top: 95rpx;
+  left: 0;
+}
+
+.userName {
+  width: fill-available;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 15rpx;
+  border-bottom: 2rpx solid #e1d2c6;
+  font-size: 24rpx;
+}
+.userLeft,.userRight {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.userLeft {
+  color: #868686;
+}
+.userRight {
+  font-weight: 600;
+}
+.btn {
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 22rpx;
+  right: 20rpx;
+}
+.btn image {
+  width: 100%;
+  height: 100%;
+}
+
+.form-success-container {
+  position: relative;
+}
+/* 526 × 647 */
+.vip-popup-bg {
+  height: 647rpx;
+  width: 526rpx;
+}
+.vip-popup-btn {
+  width: 457rpx;
+  height: 104rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -228rpx;
+  bottom: 40rpx;
+  /* margin: auto; */
+  z-index: 9999;
+}
+.purchased {
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  bottom: 300rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #020100;
+  text-align: center;
+}
+button::after{
+
+  border: none;
+
+}

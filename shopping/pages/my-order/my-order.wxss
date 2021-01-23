@@ -1,0 +1,54 @@
+#container {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.tabs {
+  padding: 10rpx 24rpx;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.tab {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #b1b1b1;
+}
+.tab-line {
+  display: inline;
+  padding-bottom: 10rpx;
+}
+
+.active {
+  border-bottom: 2px solid #33bcc6;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+
+.order-container {
+  padding: 24rpx;
+}
+
+/* 暂无数据 */
+.empty {
+  margin-top: 50%;
+  box-sizing: border-box;
+  padding: 30rpx 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img {
+  height: 302rpx;
+  width: 489rpx;
+}
+/* 底线 */
+.baseline {
+  text-align: center;
+  color: #B5B6B6;
+  font-size: 24rpx;
+  font-weight: 400;
+  margin-top: 40rpx;
+}

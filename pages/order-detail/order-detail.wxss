@@ -1,0 +1,30 @@
+#container {
+  min-height: 100vh;
+  overflow: auto;
+}
+
+
+
+/* 课程详情 */
+.courseInfo {
+  margin: 40rpx;
+}
+
+
+
+/* 订单详情 */
+.orderInfo {
+  width: calc(100% - 80rpx);
+  border: 2rpx solid #F2F2F2;
+  box-sizing: border-box;
+  padding: 10rpx;
+  margin: 40rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+}
+.orderInfo td:first-of-type {
+  width: 180rpx;
+}
+.orderInfo td {
+  padding: 10rpx;
+}

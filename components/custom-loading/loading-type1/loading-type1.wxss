@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 加载-元素 */
+.loading-item {
+  height: 20rpx;
+  width: 20rpx;
+  margin: 0 10rpx;
+  border-radius: 10rpx;
+  background-color: #FFF;
+
+  animation-name: loading;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-duration: 600ms;
+}
+
+
+
+/* 加载动画 */
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "../../components/vant-weapp/search/index",
+    "goods-type": "../../components/goods-type/goods-type"
+  },
+  "navigationBarTitleText": "优选商品",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,12 @@
+<!-- 引导 -->
+<view class='guide' wx:if='{{status=="open"}}'>
+  <!-- 箭头 -->
+  <view class='guide-arrow' style='right: {{right}}px;'></view>
+  <!-- 内容 -->
+  <view class='guide-content'>
+    <view>点击“<image src='./images/menu.png' mode='aspectFit' class='guide-content-icon' />”添加到我的小程序</view>
+    <view>微信首页下拉即可快速访问时间与崇尚</view>
+  </view>
+  <!-- 关闭 -->
+  <image class='guide-close' bindtap='close' src='./images/close.png' mode='aspectFit' />
+</view>

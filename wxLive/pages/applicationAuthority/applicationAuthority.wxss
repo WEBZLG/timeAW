@@ -1,0 +1,110 @@
+/* 步骤 */
+.step {
+  height: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.applicationAuthority {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.applicationAuthority-list {
+  flex-grow: 1;
+}
+
+.applicationAuthority-item {
+  border-bottom: 1px solid #f2f2f2;
+  min-height: 100rpx;
+  margin: 0 20rpx;
+  padding: 0 10rpx;
+}
+
+.applicationAuthority-item-header {}
+
+.applicationAuthority-item-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.applicationAuthority-item-footer {
+  margin: 0 10rpx;
+  font-size: 24rpx;
+  color: #ccc;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 20rpx;
+}
+
+.applicationAuthority-item-title {
+  margin: 0 10rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  white-space: nowrap;
+}
+
+.applicationAuthority-item-scanner {
+  flex-grow: 1;
+  height: 100rpx;
+  margin: 0 10rpx;
+  font-size: 30rpx;
+}
+
+.applicationAuthority-item-qr {
+  width: 400rpx;
+  height: 400rpx;
+  display: block;
+  margin: 40rpx auto;
+}
+
+.applicationAuthority-item-upload {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.applicationAuthority-item_radioGroup {
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin-bottom: 20rpx;
+}
+
+.applicationAuthority-item_radio {
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.applicationAuthority-item_input {
+  text-align: right;
+}
+
+.applicationAuthority-button-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.applicationAuthority-submit {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-radius: 10rpx;
+  margin: 20rpx;
+  position: sticky;
+  bottom: 20rpx;
+  z-index: 1001;
+  flex-grow: 1;
+  width: 0;
+  background-image: linear-gradient(-90deg, #31bfc3, #3f7ab6);
+}

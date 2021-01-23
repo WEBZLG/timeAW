@@ -1,0 +1,112 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/share/share",
+    "pages/ranking/ranking",
+    "pages/mine/mine",
+    "pages/message/message",
+    "pages/login/login",
+    "pages/phone/phone",
+    "pages/interest/interest",
+    "pages/phone-post/phone-post",
+    "pages/phone-put/phone-put",
+    "pages/poster/poster",
+    "pages/setup/setup",
+    "pages/vip/vip",
+    "pages/web-view/web-view",
+    "pages/share-post/share-post",
+    "pages/stock/stock",
+    "pages/stock-take/stock-take",
+    "pages/stock-replenish/stock-replenish",
+    "pages/stock-count/stock-count",
+    "pages/stock-detail/stock-detail",
+    "pages/privilege/privilege",
+    "pages/privilege-list/privilege-list",
+    "pages/privilege-detail/privilege-detail",
+    "pages/address/address",
+    "pages/address-form/address-form",
+    "pages/course-own/course-own",
+    "pages/material/material",
+    "pages/follow/follow",
+    "pages/order/order",
+    "pages/order-detail/order-detail",
+    "pages/wish/wish",
+    "pages/groupCourse/groupCourse",
+    "pages/groupCourse-detail/groupCourse-detail",
+    "pages/course-detail/course-detail",
+    "pages/comment-post/comment-post",
+    "pages/about/about",
+    "pages/agreement/agreement",
+    "pages/dean-home/dean-home",
+    "pages/dean-put/dean-put",
+    "pages/tutor-home/tutor-home",
+    "pages/tutor-detail/tutor-detail",
+    "pages/course-list/course-list",
+    "pages/tutor-list/tutor-list",
+    "pages/group/group",
+    "pages/search/search",
+    "pages/search-list/search-list",
+    "pages/mine-offlineCourse/mine-offlineCourse",
+    "pages/offlineCourse-detail/offlineCourse-detail",
+    "pages/recommender/recommender",
+    "pages/online/online",
+    "pages/my-cdkey/my-cdkey",
+    "pages/withdrawal/withdrawal",
+    "pages/record/record",
+    "pages/profit/profit",
+    "pages/my-order/my-order"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "usingComponents": {
+    "container": "/components/container/container",
+    "custom-image": "/components/custom-image/custom-image"
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "时间与崇尚学院",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#272844",
+    "selectedColor": "#FF6600",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/public/home.png",
+        "selectedIconPath": "images/public/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "iconPath": "images/public/share.png",
+        "selectedIconPath": "images/public/share-active.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "iconPath": "images/public/ranking.png",
+        "selectedIconPath": "images/public/ranking-active.png",
+        "text": "排行榜"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "images/public/message.png",
+        "selectedIconPath": "images/public/message-active.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/public/mine.png",
+        "selectedIconPath": "images/public/mine-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,26 @@
+<!--pages/write-off/write-off.wxml-->
+<container id='container' binderror='init'>
+  <!-- 暂无数据 -->
+  <view class="empty" wx:if="{{empty}}">
+    <image src="../../images/public/empty.png"></image>
+  </view>
+
+  <view class="record" wx:else>
+  <!-- 核销人员 -->
+    <view class="person">
+      <view class="left">
+        <image class="left-img" src="../../images/mine/person.png"></image>
+        <text>核销人员</text>
+      </view>
+      <view class="right">{{log.nickname}}</view>
+    </view>
+    <!-- 核销时间 -->
+    <view class="person">
+      <view class="left">
+        <image class="left-img" src="../../images/mine/time.png"></image>
+        <text>核销时间</text>
+      </view>
+      <view class="right">{{log.createtime}}</view>
+    </view>
+  </view>
+</container>

@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  overflow: auto;
+}
+
+.home-panel-line {
+	width: 60rpx;
+	height: 8rpx;
+	border-radius: 4rpx;
+	background-color: var(--main);
+  margin: 14rpx 0;
+}
+/* 顶部 */
+.home-panel-header {
+  display: flex;
+  align-items: center;
+  height: 36rpx;
+  justify-content: space-between;
+ 
+}
+/* 标题 */
+.home-panel-title {
+	color: var(--main);
+	font-weight: bold;
+	font-size: 36rpx;
+  line-height: 36rpx;
+}
+
+/* 更多 */
+.home-panel-more {
+  color: #999;
+  font-size: 28rpx;
+}
+
+/* 内容 */
+.home-panel-body {
+  /* padding-bottom: 14rpx; */
+}

@@ -1,0 +1,4 @@
+<container class='container' binderror='init'>
+  <list-vertical class='list-vertical' list='{{list}}' wx:if='{{category=="course"}}' />
+  <tutor-list class='tutor-list' list='{{list}}' wx:if='{{category=="author"}}' />
+</container>

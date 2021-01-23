@@ -1,0 +1,42 @@
+#container {
+  min-height: 100vh;
+  overflow: auto;
+}
+
+/* 导师-元素 */
+.tutor-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #F2F2F2;
+  margin: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+/* 导师-详情 */
+.tutor-detail {
+  flex: 1;
+  margin: 0 20rpx;
+}
+
+/* 导师-昵称 */
+.tutor-nickname {
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+
+/* 导师-标签 */
+.tutor-label {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+
+/* 导师-按钮 */
+.tutor-button {
+  font-size: 24rpx;
+  width: 120rpx;
+  height: 50rpx;
+  padding: 0;
+}

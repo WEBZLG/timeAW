@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-item {
+  width: 200rpx;
+  color: #cfcfcf;
+  font-size: 24rpx;
+  text-align: center;
+  position: relative;
+}
+
+.step-item-line {
+  position: absolute;
+  top: 11rpx;
+  right: 50%;
+  width: calc(100% - 12rpx);
+  height: 2rpx;
+  background-color: currentColor;
+}
+
+.step-item_active {
+  color: #33BDC7;
+} 
+
+.step-item-spot {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 10rpx;
+  background-color: currentColor;
+}

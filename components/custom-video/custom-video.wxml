@@ -1,0 +1,8 @@
+<!-- 播放 -->
+<view class='fill' hidden='{{status!="stop"}}' bindtap='play'>
+  <!-- <custom-image src='{{cover}}' class='fill' type='icon' /> -->
+  <image src='{{cover}}' class='fill' mode='scaleToFill' />
+  <image src='./images/play.png' class='button' mode='aspectFill' />
+</view>
+<!-- 视频 -->
+<video wx:if='{{status!="stop"}}' id='video' class='fill' bindplay='onPlay' bindended='onStop' src='{{src}}' controls autoplay />

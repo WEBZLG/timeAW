@@ -1,0 +1,56 @@
+:host {
+  display: block;
+  padding: 0 40rpx;
+}
+
+
+
+/* 媒体-封面 */
+.course-cover {
+  width: 475rpx;
+  height: 650rpx;
+  margin: auto;
+}
+
+
+
+/* 播放器-顶部 */
+.player-header {
+  height: 80rpx;
+}
+/* 播放器-进度 */
+.player-progress {
+  width: 100%;
+}
+
+
+
+/* 播放器-中部 */
+.player-body {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-body image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 播放器-按钮-中 */
+.player-button-middle {
+  width: 60rpx;
+  height: 30rpx;
+  padding: 35rpx 20rpx;
+}
+/* 播放器-按钮-大 */
+.player-button-large {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 40rpx;
+}
+/* 播放器-按钮-禁用 */
+.player-button-disabled {
+  opacity: 0.4;
+  filter: grayscale(1);
+}

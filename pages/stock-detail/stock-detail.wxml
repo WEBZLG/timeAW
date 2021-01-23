@@ -1,0 +1,57 @@
+<!--提示框-->
+<popup id='popup'></popup>
+<!--提示框END-->
+<view class="big">
+  <view class='card_a'>
+    <view class='card_a1'>订单号id：</view>
+    <view class='card_a2'>{{data_arr.id}}</view>
+  </view>
+  <view class='card_a'>
+    <view class='card_a1'>姓名：</view>
+    <view class='card_a2'>{{data_arr.receiver.nickname}}</view>
+  </view>
+  <view class='card_a'>
+    <view class='card_a1'>手机号：</view>
+    <view class='card_a2'>{{data_arr.receiver.mobile}}</view>
+  </view>
+  <view class='card_a'>
+    <view class='card_a1'>申请时间：</view>
+    <view class='card_a2'>{{data_arr.createtime}}</view>
+  </view>
+  <view class='card_a'>
+    <view class='card_a1'>数量：</view>
+    <view class='card_a2'>{{data_arr.stock_num}}张</view>
+  </view>
+  <view class='card_a'>
+    <view class='card_a1'>出卡类型：</view>
+    <view class='card_a2'>{{data_arr.type_text}}</view>
+  </view>
+  <block wx:if="{{data_arr.type!=4 && data_arr.type!=1}}">
+    <view class='card_b'>
+      <view class='card_b1'>打款截图：</view>
+      <view class='card_b2 card_b2_img'>
+        <custom-image type='poster' src='{{data_arr.photo_buy}}' />
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{data_arr.status==0}}">
+    <view class='card_b'>
+      <view class='card_b1'>备注：</view>
+      <view class='card_b2'>
+        <textarea name="liyou" bindinput='text_val_fuc' placeholder='如驳回需解释理由哦！'></textarea>
+      </view>
+    </view>
+    <view class='card_c'>
+      <button bindtap='auditing_fail'>驳回</button>
+      <button bindtap='auditing_agree'>同意</button>
+    </view>
+  </block>
+  <block wx:if="{{data_arr.status==2}}">
+    <view class='card_b'>
+      <view class='card_b1'>备注：</view>
+      <view class='card_b2'>
+        {{data_arr.refuse_message}}
+      </view>
+    </view>
+  </block>
+</view>

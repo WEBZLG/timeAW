@@ -1,0 +1,203 @@
+#container {
+  background: #f2f2f2;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+/* 顶部课程简介 */
+.course-top {
+  padding: 30rpx 26rpx;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e6e6e6;
+  background-color: #ffffff;
+}
+.thumbnail {
+  height: 358rpx;
+  width: 268rpx;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: #efecec 0px 0px 6px 4rpx;
+}
+.course-top-right {
+  margin-left: 29rpx;
+  
+}
+.course-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 42rpx;
+  color: #010101;
+
+}
+/* 课程简介 */
+.course-synopsis {
+  margin-top: 28rpx;
+  color: #a7a7a7;
+  font-size: 24rpx;
+  line-height: 34rpx;
+}
+
+
+/* 底部课程详情 */
+.course-details {
+  margin-top: 15rpx;
+  height: 100%;
+  background-color: #ffffff;
+  padding-bottom: 100rpx;
+}
+.course-details-title {
+  padding: 32rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 1px solid #f2f2f2;
+}
+.course-details-body {
+  padding: 26rpx;
+}
+
+/* 底部按钮 */
+.course-bottom {
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f2f2f2;
+  border-top: 1px solid #f2f2f2;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-btn {
+  width: 670rpx;
+  height: 72rpx;
+  background-image: linear-gradient(to right, #ee792f, #eb5f2a);
+  border-radius: 34px;
+  text-align: center;
+  line-height: 72rpx;
+  color: #ffffff;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+
+/* 底部弹出层 */
+.popup {
+  position: relative;
+}
+.van-popup {
+  overflow-y: visible !important;
+}
+.to-top-overflow {
+  position: absolute;
+  left: 24rpx;
+  top: -28rpx
+}
+.popup-thumbnail {
+  height: 320rpx;
+  width: 240rpx;
+  border-radius: 4px;
+  overflow: hidden;
+} 
+.popup-course-title {
+  margin-top: 72rpx;
+  margin-left: 280rpx;
+}
+/* 剩余席位 */
+.surplus {
+  margin-top: 64rpx;
+  margin-left: 280rpx;
+  display: flex;
+  align-items: center;
+}
+.surplus-icon {
+  margin-right: 10rpx;
+  height: 22rpx;
+  width: 20rpx;
+}
+.surplus text {
+  color: #848484;
+  font-size: 24rpx;
+}
+
+/* 选择时间 */
+.choice {
+  margin-left: 24rpx;
+  margin-top: 96rpx;
+}
+.choice-content {
+  font-size: 26rpx;
+  color: #282828;
+}
+/* 时间列表 */
+.time-list {
+  margin-top: 30rpx;
+  width: 100%; 
+  white-space: nowrap;
+}
+
+/* 时间规格 */
+.time-item {
+  margin-right: 24rpx;
+  height: 54rpx;
+  width: 210rpx;
+  display: inline-block;
+  border: 1px solid #ff6600;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #ff6600;
+  line-height: 54rpx;
+}
+
+.time-item {
+  box-sizing: border-box;
+}
+
+/* 时间选中 */
+.active {
+  background: #ff6600;
+  color: #ffffff;
+}
+.time-disable {
+  color: #d8d8d8;
+  border: 1px solid #d8d8d8;
+}
+
+/* 上课地址 */
+.location {
+  margin-top: 38rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #848484;
+}
+
+.appointment-btn {
+  margin: 40rpx auto 0;
+  width: 655rpx;
+  height: 90rpx;
+  border-radius: 40px;
+  background-image: linear-gradient(to right, #ee792f, #eb5f2a);
+  text-align: center;
+  line-height: 90rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+/* 备注 */
+.remarks {
+  margin-top: 20rpx;
+  text-align: right;
+  margin-right: 24rpx;
+  color: #282828;
+  font-size: 24rpx;
+}

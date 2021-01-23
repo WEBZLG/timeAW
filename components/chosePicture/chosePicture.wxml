@@ -1,0 +1,6 @@
+<view class='chouse chouse-picture' bindtap='increase' wx:if='{{value}}'>
+  <custom-image class='chouse-image' type='icon' src='{{value}}' />
+</view>
+<view class='chouse chouse-increase' bindtap='increase' wx:else>
+  <image class='chouse-image' mode='aspectFit' src='./images/increase.png' />
+</view>

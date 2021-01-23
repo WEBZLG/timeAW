@@ -1,0 +1,40 @@
+/* 外框 */
+.popup-cart-container {
+  background-color: #FFF;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  touch-action: none;
+}
+
+/* 顶部 */
+.popup-cart-container .popup-header {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+/* 顶部-标题 */
+.popup-cart-container .popup-header-title {
+  flex: 1;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+/* 顶部-关闭 */
+.popup-cart-container .popup-header-close {
+  height: 80rpx;
+  width: 80rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.popup-cart-container .popup-header-close-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 中部 */
+.popup-cart-container .popup-body {}

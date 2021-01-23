@@ -1,0 +1,57 @@
+#container {
+  overflow: auto;
+}
+
+/* 顶部 */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx 0;
+}
+
+/* 顶部-按钮 */
+.home-header-button {
+  width: 290rpx;
+  margin: 0 20px;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  color: #FFF;
+  font-size: 30rpx;
+  background-image: linear-gradient(90deg, #31bfc3, #3f7ab6);
+  border-radius: 10rpx;
+}
+
+.live-list {
+
+}
+
+.live-card {
+  width: 710rpx;
+  margin: 20rpx;
+  margin-bottom: 26rpx;
+}
+
+.poster-detail {
+  width: 500rpx;
+}
+
+.live-list-empty {
+  text-align: center;
+  color: #ccc;
+  line-height: 40rpx;
+}
+
+/* 暂未开放 */
+.await{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.await image{
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,57 @@
+<wxs module="filter">
+  module.exports = {
+    more: function(plateType, showType, id) {
+
+      var url = [
+        '/pages/course-list/course-list?mode=' + showType + '&link=panel&id=' + id,
+        '/pages/tutor-list/tutor-list'
+      ]
+
+      return url[parseInt(plateType)]
+    }
+  }
+</wxs>
+
+<!-- 背景音频 -->
+<background-audio-popup />
+
+<!-- 引导 -->
+<guide />
+
+<container id='container' binderror='init'>
+
+  <!-- 搜索 -->
+  <search id='search' disabled='{{true}}' />
+
+  <!-- 轮播 -->
+  <swiper class='swiper' previous-margin='50rpx' next-margin='50rpx' autoplay='{{swiper.options.autoplay}}' circular='{{swiper.options.circular}}' indicator-dots='{{swiper.options.indicatorDots}}' indicator-color='{{swiper.options.indicatorColor}}' indicator-active-color='{{swiper.options.indicatorActiveColor}}'
+    bindchange='swiperChange'>
+    <swiper-item wx:for='{{swiper.list}}' wx:key='id' bindtap='swiperTap' data-index='{{index}}'>
+      <custom-image type='cover' class='fill swiper-inner {{swiper.index == index ? "swiper-active" : ""}}' src='{{item.thumb}}' mode='aspectFill' />
+    </swiper-item>
+  </swiper>
+
+  <!-- 导航 -->
+  <view class='nav'>
+    <!-- 导航-元素 -->
+    <navigator url='/pages/course-list/course-list?mode=1&link=nav&id={{item.id}}' class='nav-item' wx:for='{{nav.list}}' wx:key='id'>
+      <!-- 导航-图标 -->
+      <custom-image mode='icon' class='nav-item-icon' src='{{item.thumb}}' />
+      <!-- 导航-标题 -->
+      <view class='nav-item-title'>{{item.name}}</view>
+    </navigator>
+  </view>
+
+  <!-- 会员专区 -->
+  <navigator class='vip' url='/pages/vip/vip' wx:if='{{mainCourse && groupId<2}}'>
+    <custom-image type='poster' class='fill' src='/images/home/vip.png' />
+  </navigator>
+
+  <!-- 推荐课程 -->
+  <home-panel title='{{item.name}}' more='{{filter.more(item.type, item.show_type, item.id)}}' wx:for='{{panel}}' wx:key='index' wx:if="{{item.list.length>0}}">
+    <list-horizontal list='{{item.list}}' wx:if='{{item.show_type==0}}' />
+    <list-vertical list='{{item.list}}' wx:elif='{{item.show_type==1}}' />
+    <list-roll-course list='{{item.list}}' wx:elif='{{item.show_type==2}}' />
+    <list-roll-tutor list='{{item.list}}' wx:elif='{{item.show_type==3}}' />
+  </home-panel>
+</container>

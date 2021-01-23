@@ -1,0 +1,121 @@
+/* 外框 */
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F2F2;
+}
+
+/* 课程-顶部 */
+.course-header {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #FFF;
+}
+/* 课程-中部 */
+.course-body {
+  background-color: #FFF;
+  margin-top: 20rpx;
+  flex-grow: 1;
+}
+/* 课程-底部 */
+.course-footer {
+  bottom: 0;
+  position: sticky;
+  background-color: #FFF;
+}
+/* 课程-交互 */
+.course-action {
+  width: 700rpx;
+  height: 80rpx;
+  margin: 20rpx auto;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+  background-color: var(--main);
+  color: #FFF;
+}
+.course-action-disabled {
+  background-color: #ecb69a;
+}
+/* 课程-左右布局 */
+.course-wing {
+  display: flex;
+}
+/* 课程-详情 */
+.course-detail {
+  flex-grow: 1;
+  width: 0;
+  margin-left: 20rpx;
+}
+/* 课程-封面 */
+.course-cover {
+  height: 260rpx;
+  width: 200rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+}
+/* 课程-标题 */
+.course-title {
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 课程-导师 */
+.course-tutor {
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 28rpx;
+}
+/* 课程-状态 */
+.course-status {
+  font-size: 28rpx;
+  color: var(--main);
+}
+/* 课程-行 */
+.course-cols {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+/* 课程-行-图标 */
+.course-cols-icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+/* 课程-行-文本 */
+.course-cols-text {
+  flex-grow: 1;
+  width: 0;
+  font-size: 24rpx;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 选项卡 */
+#tab {
+  background-color: #FFF;
+}
+#tab-content {
+  font-size: 28rpx;
+}
+
+/* 二维码-图片 */
+.qrcode-image {
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #FFF;
+}
+.qrcode-image custom-image {
+  width: 400rpx;
+  height: 400rpx;
+}

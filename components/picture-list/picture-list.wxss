@@ -1,0 +1,59 @@
+:host {
+  display: block;
+}
+/* 图片-列表 */
+.pictrue-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 图片-元素 */
+.pictrue-item {
+  width: 0;
+  height: 0;
+  position: relative;
+}
+/* 图片-元素-内部 */
+.pictrue-item .pictrue-item-inner {
+  width: calc(100% - 10rpx);
+  height: calc(100% - 10rpx);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  font-size: 24rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 图片-选择 */
+.pictrue-choose .pictrue-item-inner {
+  border: 4rpx dashed #F2F2F2;
+  box-sizing: border-box;
+}
+/* 图片-元素-封面 */
+.pictrue-item-cover {
+  width: 100%;
+  height: 100%;
+}
+/* 图片-元素-删除 */
+.pictrue-item-delete {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+}
+/* 图片-元素-图标 */
+.pictrue-item-icon {
+  height: 50%;
+  width: 100%;
+  margin: 10rpx 0;
+  display: block;
+}

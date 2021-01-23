@@ -1,0 +1,49 @@
+<!-- 状态初始化 -->
+<block wx:if='{{status=="init"}}'>
+  <view class='init-container'>
+    <custom-loading class='init-content' />
+  </view>
+</block>
+
+<!-- 状态空数据 -->
+<block wx:elif='{{status=="empty"}}'>
+  <view class='empty-container'>
+    <image mode='widthFix' class='empty-content' src='{{text.custom || text.list.empty}}' />
+  </view>
+</block>
+
+<!-- 状态缺省 -->
+<block wx:elif='{{status=="default"}}'>
+  <slot></slot>
+</block>
+
+<!-- 状态错误 -->
+<block wx:elif='{{status=="error"}}'>
+  <view class='retry-container'>
+    <!-- 重试 -->
+    <view class='retry'>
+      <!-- 重试-标题 -->
+      <view class='retry-title'>{{text.custom || text.list.error}}</view>
+      <!-- 重试-按钮 -->
+      <view class='retry-button' bindtap='retry'>重试</view>
+    </view>
+  </view>
+</block>
+
+<!-- 状态可加载 -->
+<block wx:elif='{{status=="canload"}}'>
+  <slot></slot>
+  <view class='footer'>{{text.custom || text.list.canload}}</view>
+</block>
+
+<!-- 状态加载中 -->
+<block wx:elif='{{status=="loading"}}'>
+  <slot></slot>
+  <view class='footer'>{{text.custom || text.list.loading}}</view>
+</block>
+
+<!-- 状态完成 -->
+<block wx:elif='{{status=="complete"}}'>
+  <slot></slot>
+  <view class='footer'>{{text.custom || text.list.complete}}</view>
+</block>

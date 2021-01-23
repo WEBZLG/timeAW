@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+
+
+/* 播放器-容器 */
+.player-container {
+	width: 100%;
+	height: 120rpx;
+	border-radius: 20rpx;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* border: 2rpx solid rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 0 2rpx rgba(255, 255, 255, 0.4); */
+  display: flex;
+  align-items: center;
+}
+
+/* 播放器-按钮 */
+.player-button {
+	width: 80rpx;
+	height: 80rpx;
+  margin: 0 20rpx;
+}
+.player-button-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 播放器-进度 */
+.player-progress {
+  flex: 1;
+}
+
+/* 播放器-时间 */
+.player-time {
+  width: 80rpx;
+  margin: 0 20rpx;
+  text-align: right;
+  color: #FFF;
+  font-size: 24rpx;
+}

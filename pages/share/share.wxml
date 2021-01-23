@@ -1,0 +1,45 @@
+<!-- 背景音频 -->
+<background-audio-popup />
+
+<!-- 引导 -->
+<guide />
+
+<container id='container' binderror='init'>
+  <tab id='tab' bindchange='tabChange'>
+    <tab-nav class='tab-nav'>
+      <tab-nav-item activeBlock='{{true}}' wx:for='{{tag.list}}' wx:key='id'>
+        <view class='tab-nav-item' slot='default'>
+          <custom-image src='https://cm.chineseglory.cn/images/icon3.png' /> {{item.name}}
+        </view>
+        <view class='tab-nav-item tab-nav-active' slot='active'>
+          <custom-image src='https://cm.chineseglory.cn/images/icon3_a.png' /> {{item.name}}
+        </view>
+      </tab-nav-item>
+    </tab-nav>
+    <tab-content item='{{tag.list.length}}'>
+      <tab-content-item slot='{{index}}' wx:for='{{tag.list}}' wx:key='id'>
+        <share-list class='share-list' tag='{{item.id}}' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+
+  <!-- 发布 -->
+  <view class='release' bindtap='postShare' wx:if='{{mainCourse}}'>
+    <custom-image src='https://cm.chineseglory.cn/images/icon64.png' />
+  </view>
+
+  <!-- 自定义提示框（失败） -->
+  <custom-popup id='form-failed' class='form-popup'>
+    <!-- 自定义提示框（失败）-外框 -->
+    <view class='form-success-container'>
+      <custom-image class='form-success-background' type='poster' src='/images/course-detail/popup-background.png' />
+      <!-- 中间文字部分 -->
+      <view class="form-msg">
+        <view class="form-msg-title">提示</view>
+        <view class="form-msg-toast">请购买礼包后再发布动态</view>
+      </view>
+      <view class="form-msg-btn" bindtap='closePopup'>我知道了</view>
+      <custom-image class='form-success-button' src='/images/course-detail/popup-button.png' bindtap='closePopup' />
+    </view>
+  </custom-popup>
+</container>

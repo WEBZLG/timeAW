@@ -1,0 +1,13 @@
+
+<container id='container' binderror='init'>
+  <tab id='tab' bindchange='tabChange'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item class='tab-nav-item' wx:for='{{group.list}}' wx:key='id'>{{item.title}}({{item.count}})</tab-nav-item>
+    </tab-nav>
+    <tab-content>  
+      <tab-content-item wx:for='{{group.list}}' wx:key='id' slot='{{index}}' >
+        <group-list bindcount='count' class='group-list' userId='{{options.id}}' maxPage='{{options.maxPage}}' groupId='{{item.id}}'/>
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

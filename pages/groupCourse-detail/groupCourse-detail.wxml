@@ -1,0 +1,57 @@
+<view class="bg">
+	<view class="pin_box">
+		<view class='pin_a'>
+			<!---->
+			<view class='kecheng'>
+				<view class='kecheng_a'>
+					<image src="{{data_arr.course.thumb}}" mode='aspectFill'></image>
+					<view></view>
+				</view>
+				<view class='kecheng_b'>
+					<view class='kecheng_b1'>{{data_arr.course.name}}</view>
+					<view class='kecheng_b_tag'><view>{{data_arr.course.label[0].name}}</view></view>
+					<view class='kecheng_b2'></view>
+					<view class='kecheng_b3'>
+						<view class='kecheng_b3b'><view></view>{{data_arr.course.join_num}}</view>
+					</view>
+				</view>
+			</view>
+			<!---->
+			<view class='pin_a_a'>邀请5人拼团就可以领取课程啦，快去邀请吧！</view>
+			<view class='pin_a_b'>
+				<button class='pin_btn' open-type="share" data-type="1">邀请拼团</button>
+			</view>
+		</view>
+	</view>
+	<view class="pin1_box">
+		<view class='pin1_a'>距离结束时间还剩：{{clock}}</view>
+		<!--<view class='pin1_b'>
+			<view class='pin1_b1'></view>
+			<view class='pin1_b2'>已有一位小伙伴参加了拼团！</view>
+		</view>-->
+		<view class='pin1_c'>
+			<!---->
+			<!--
+			<view>
+				<image src="https://cm.chineseglory.cn/images/img2.png" mode='aspectFill'></image>
+			</view>
+			-->
+			<view>
+				<image src="https://cm.chineseglory.cn/images/icon50.png" mode='aspectFill'></image>
+			</view>
+			<view>
+				<image src="https://cm.chineseglory.cn/images/icon50.png" mode='aspectFill'></image>
+			</view>
+			<view>
+				<image src="https://cm.chineseglory.cn/images/icon50.png" mode='aspectFill'></image>
+			</view>
+			<view>
+				<image src="https://cm.chineseglory.cn/images/icon50.png" mode='aspectFill'></image>
+			</view>
+			<view>
+				<image src="https://cm.chineseglory.cn/images/icon50.png" mode='aspectFill'></image>
+			</view>
+			<!---->
+		</view>
+	</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "选择你喜欢的课程",
+  "usingComponents": {
+    "custom-multiple-choose-group": "/components/custom-multiple-choose-group/custom-multiple-choose-group",
+    "custom-multiple-choose": "/components/custom-multiple-choose/custom-multiple-choose"
+  }
+}

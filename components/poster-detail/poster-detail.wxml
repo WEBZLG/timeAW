@@ -1,0 +1,3 @@
+<container class='container' binderror='init'>
+  <custom-image type='icon' class='poster' src='{{poster}}' menu />
+</container>

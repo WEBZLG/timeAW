@@ -1,0 +1,27 @@
+<!-- 顶部 -->
+<view class='header'>
+  <!-- LOGO -->
+  <custom-image class='header-logo' src='https://cm.chineseglory.cn/images/logo.png' type='icon' />
+  <!-- 标题 -->
+  <view class='header-title'>时间与崇尚学院</view>
+</view>
+
+<!-- 主体 -->
+<view class='body'>
+
+  <!-- 授权 -->
+  <view class='auth'>
+    <!-- 授权-标题 -->
+    <view class='auth-title'>时间与崇尚学院申请获得以下权限</view>
+    <!-- 授权-列表 -->
+    <view class='auth-list'>
+      <view class='auth-item'>获取你的手机号码</view>
+    </view>
+  </view>
+
+  <!-- 按钮 -->
+  <button class='button' type='primary' open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber' bindtap='beforeOpenType'>
+    <custom-image type='icon' src='/images/public/phone.png' />
+    <view>绑定手机</view>
+  </button>
+</view>

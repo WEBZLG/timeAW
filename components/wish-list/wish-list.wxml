@@ -1,0 +1,43 @@
+<!-- 分类-元素 -->
+<view class='category-item' wx:for='{{value}}' wx:key='id' wx:for-item='categoryItem' wx:for-index='categoryIndex'>
+
+  <!-- 分类-元素-顶部 -->
+  <view class='category-item-header'>
+    <!-- 分类-选择器 -->
+    <custom-image class='radio' wx:if='{{categoryItem.checked}}' src='https://cm.chineseglory.cn/images/icon55.png' bindtap='categoryChange' data-category-index='{{categoryIndex}}' />
+    <custom-image class='radio' wx:else src='https://cm.chineseglory.cn/images/icon54.png' bindtap='categoryChange' data-category-index='{{categoryIndex}}' />
+    <!-- 分类-元素-标题 -->
+    <view class='category-item-title'>{{categoryItem.column.name}}</view>
+  </view>
+  <!-- 课程-列表 -->
+  <view class='course-list'>
+    <!-- 课程-元素 -->
+    <view class='course-item' wx:for='{{categoryItem.courses}}' wx:key='id' wx:for-index='courseIndex'>
+      <!-- 课程-选择器 -->
+      <custom-image class='radio' wx:if='{{item.checked}}' src='https://cm.chineseglory.cn/images/icon55.png' bindtap='courseChange' data-category-index='{{categoryIndex}}' data-course-index='{{courseIndex}}' />
+      <custom-image class='radio' wx:else src='https://cm.chineseglory.cn/images/icon54.png' bindtap='courseChange' data-category-index='{{categoryIndex}}' data-course-index='{{courseIndex}}' />
+      <navigator url='/pages/course-detail/course-detail?id={{item.course.id}}'  class='course-item1'>
+        <!-- 课程-封面 -->
+        <custom-image type='cover' src='{{item.course.top_thumb}}' class='course-item-cover' />
+        <!-- 课程-详情 -->
+        <view class='course-item-detail'>
+          <!-- 课程-标题 -->
+          <view class='course-item-title'>{{item.course.name}}</view>
+          <!-- 课程-简介 -->
+          <view class='course-item-description'>{{item.course.description}}</view>
+          <!-- 课程-标签 -->
+          <tag class='course-item-tag' list='{{item.label}}' />
+          <!-- 课程-左右布局 -->
+          <view class='course-item-wing'>
+            <!-- 课程-导师 -->
+            <view class='course-item-author'>{{item.author.name}} | {{item.author.label}}</view>
+            <!-- 课程-热度 -->
+            <view class='course-item-hot'>
+              <custom-image class='course-item-hot-icon' src='https://cm.chineseglory.cn/images/icon2.png' /> {{item.course.hot_true}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

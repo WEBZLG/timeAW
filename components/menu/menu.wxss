@@ -1,0 +1,142 @@
+:host {
+  display: block;
+}
+
+/* 清空按钮 */
+.button-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: inherit;
+  border-radius: 0;
+  font-size: inherit;
+  background-color: transparent;
+  padding: 0;
+  box-sizing: content-box;
+}
+.button-clear::after {
+  display: none;
+}
+
+/* 板块 */
+.block {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+/* 板块-元素 */
+.block-item {
+  flex-grow: 1;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 板块-元素-标题 */
+.block-item-title {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+/* 板块-元素-图标 */
+.block-item-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto;
+}
+
+/* 板块-元素-未读 */
+.block-item-unread {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 110rpx;
+  background: #b50404;
+  border-radius: 50%;
+  z-index: 1001;
+}
+
+/* 垂直 */
+.vertical {
+}
+
+/* 垂直-元素 */
+.vertical-item {
+  height: 100rpx;
+  padding: 0 40rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+  display: flex;
+  align-items: center;
+}
+
+/* 垂直-元素-图标 */
+.vertical-item-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 垂直-元素-标题 */
+.vertical-item-title {
+  margin: 0 20rpx;
+  font-size: 28rpx;
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* 垂直-元素-进入 */
+.vertical-item-enter {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+
+
+/* 分段 */
+.paragraph {
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+/* 分段-元素 */
+.paragraph-item {
+  padding: -5rpx;
+  text-align: center;
+  flex-grow: 1;
+  flex-direction: column;
+  position: relative;
+}
+.paragraph-item:not(:last-of-type)::before {
+  content: '';
+  display: block;
+  height: 40rpx;
+  width: 4rpx;
+  background-color: var(--main);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(50%);
+  margin: auto;
+  opacity: 0.1;
+}
+
+/* 分段-元素-标题 */
+.paragraph-item-title {
+  margin: 10rpx 0;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+/* 分段-元素-内容 */
+.paragraph-item-content {
+  margin: 10rpx 0;
+  color: var(--main);
+  line-height: 40rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}

@@ -1,0 +1,7 @@
+<view class="switch" wx:if="{{checked==true}}" bindtap="change">
+	<image mode="aspectFit" src="./images/checked.png"></image>
+</view>
+<view class="switch" wx:else bindtap="change">
+	<image mode="aspectFit" src="./images/unchecked.png"></image>
+</view>
+<slot></slot>

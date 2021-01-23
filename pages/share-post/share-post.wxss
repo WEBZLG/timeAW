@@ -1,0 +1,178 @@
+/* 容器 */
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+}
+
+/* 头部 */
+.header {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+/* 中部 */
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 10rpx;
+}
+
+/* 标签-列表 */
+.tag-list {
+  padding: 10rpx;
+}
+
+/* 标签-元素 */
+.tag-item {
+  margin: 10rpx;
+  font-size: 24rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 12rpx;
+  border-radius: 20rpx;
+  width: fit-content;
+  background-color: #f2f2f2;
+}
+.tag-item custom-image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+/* 标签-元素-选中 */
+.tag-item-checked {
+  background-color: var(--main);
+  color: #fff;
+}
+
+/* 标签-元素-未选中 */
+.tag-item-unchecked {
+  background-color: #f2f2f2;
+}
+
+/* 文本 */
+.content {
+  width: auto;
+  height: 220rpx;
+  margin: 10rpx;
+}
+
+/* 图片列表 */
+.picture-list {
+  margin: 10rpx;
+}
+
+/* 视频列表 */
+.video-list {
+  margin: 10rpx;
+}
+
+/* 选择 */
+.choose {
+  border: 4rpx dashed #f2f2f2;
+  box-sizing: border-box;
+  width: 224rpx;
+  height: 224rpx;
+  margin: 30rpx;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 选择-图标 */
+.choose-icon {
+  height: 50%;
+  width: 100%;
+  margin: 10rpx 0;
+  display: block;
+}
+
+/* 发布提交 */
+.submit {
+  background-color: #44b549;
+  height: 60rpx;
+  width: fit-content;
+  padding: 0 20rpx;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  margin: 10rpx;
+  align-self: flex-end;
+}
+
+/* 自定义提示框（成功） */
+.form-success-container {
+  position: relative;
+}
+
+/* 自定义提示框（成功）-背景 */
+.form-success-background {
+  width: 526rpx;
+}
+
+/* 自定义提示框（继续，完成）-按钮 */
+.form-cancel-button, .form-success-button {
+  margin: auto;
+  position: absolute;
+  bottom: 20rpx;
+  width: 250rpx;
+  height: 104rpx;
+}
+.form-cancel-button {
+  left: 20rpx;
+}
+.form-success-button {
+  right: 20rpx;
+}
+.form-content, .form-btn {
+  position: absolute;
+}
+.form-content {
+  top: 270rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 48rpx;
+  color: #fd4e00;
+  font-weight: 600;
+}
+
+.form-msg {
+  font-size: 32rpx;
+  margin-top: 28rpx;
+}
+
+.form-btn {
+  bottom: 20rpx;
+  font-size: 28rpx;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.goOnBtn, .finishBtn {
+  position: absolute;
+  top: -70rpx;
+  text-align: center;
+  top: -70rpx;
+  width: 210rpx;
+}
+
+.goOnBtn {
+  color: #f72;
+  left: 40rpx;
+}
+
+.finishBtn {
+  color: white;
+  right: 40rpx;
+}

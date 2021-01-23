@@ -1,0 +1,24 @@
+.specs {
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.specs-item {
+  margin-top: 38rpx;
+  min-width: 127rpx;
+  padding: 0 25rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #EDEDED;
+  color: #1F1F1F;
+  font-size: 28rpx;
+  margin-right: 30rpx;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.active {
+  background-color: var(--mainblue);
+  color: #ffffff;
+}

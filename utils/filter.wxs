@@ -1,0 +1,75 @@
+module.exports = {
+  /**
+   * 隐藏手机号
+   */
+  hidePhone: function(phone) {
+    var reg = getRegExp('(\d{3})\d{4}(\d{4})')
+    return phone.replace(reg, '$1****$2')
+  },
+
+  /**
+   * 整数
+   */
+  int: function(num) {
+    return parseInt(num)
+  },
+
+  /**
+   * 分钟转秒
+   */
+  minuteToSecond: function(time) {
+    var minute = Math.floor(time / 60).toString()
+    var second = Math.floor(time % 60).toString()
+    return (minute.length <= 1 ? '0' + minute : minute) + ':' + (second.length <= 1 ? '0' + second : second)
+  },
+
+  /**
+   * 秒转分钟
+   */
+  secondToMinute: function(time) {
+    var minute = Math.floor(time / 60).toString()
+    var second = Math.floor(time % 60).toString()
+    return (minute.length <= 1 ? '0' + minute : minute) + ':' + (second.length <= 1 ? '0' + second : second)
+  },
+
+  /**
+   * 时间戳转日期
+   */
+  date: function(value) {
+    var date = getDate(value * 1000)
+    return date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2) + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2)
+  },
+
+  /**
+   * 支付方式
+   */
+  payType: function(value) {
+    if (value == 'wechat') {
+      return '微信'
+    } else if (value == 'alipay') {
+      return '支付宝'
+    } else {
+      return '其他'
+    }
+  },
+
+  /**
+   * 订单状态
+   */
+  orderType: function(value) {
+    switch (value) {
+      case '0':
+        return '未支付'
+      case '1':
+        return '已支付'
+      case '2':
+        return '已发货'
+      case '6':
+        return '待评价'
+      case '9':
+        return '已完成'
+      default:
+        return '未知'
+    }
+  }
+}

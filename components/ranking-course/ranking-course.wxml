@@ -1,0 +1,70 @@
+<container class='container' binderror='init'>
+  <!--课程榜-->
+  <view class="kecheng_box">
+    <view class='kecheng_a'>
+      <!---->
+      <block wx:for="{{course.list}}" wx:key="{{index}}">
+        <block wx:if="{{index==0}}">
+          <view class='ph' bindtap='courseDetail' data-id='{{item.id}}'>
+            <view class='ph_a fl icon8'></view>
+            <view class='ph_b fl'>
+              <image src='{{item.top_thumb}}' mode='aspectFill'></image>
+            </view>
+            <view class='ph_c fl'>{{item.name}}</view>
+            <view class='ph_d fl'>
+              <view class='ph_d1'>{{item.join_num}}</view>
+              <view class='ph_d2'>热度</view>
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{index==1}}">
+          <view class='ph' bindtap='courseDetail' data-id='{{item.id}}'>
+            <view class='ph_a fl icon9'></view>
+            <view class='ph_b fl'>
+              <image src='{{item.top_thumb}}' mode='aspectFill'></image>
+            </view>
+            <view class='ph_c fl'>{{item.name}}</view>
+            <view class='ph_d fl'>
+              <view class='ph_d1'>{{item.join_num}}</view>
+              <view class='ph_d2'>热度</view>
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{index==2}}">
+          <view class='ph' bindtap='courseDetail' data-id='{{item.id}}'>
+            <view class='ph_a fl icon10'></view>
+            <view class='ph_b fl'>
+              <image src='{{item.top_thumb}}' mode='aspectFill'></image>
+            </view>
+            <view class='ph_c fl'>{{item.name}}</view>
+            <view class='ph_d fl'>
+              <view class='ph_d1'>{{item.join_num}}</view>
+              <view class='ph_d2'>热度</view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <!---->
+    </view>
+    <view class='kecheng_b'>
+      <!---->
+      <block wx:for="{{course.list}}" wx:key="{{index}}">
+        <block wx:if="{{index!=0 && index!=1 && index!=2}}">
+          <view class='ph1' bindtap='courseDetail' data-id='{{item.id}}'>
+            <view class='ph1_a fl'>{{index+1}}</view>
+            <view class='ph1_b fl'>
+              <image src='{{item.top_thumb}}' mode='aspectFill'></image>
+            </view>
+            <view class='ph1_c fl'>{{item.name}}</view>
+            <view class='ph1_d fl'>
+              <view class='ph1_d1'>{{item.join_num}}</view>
+              <view class='ph1_d2'>热度</view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <!---->
+    </view>
+  </view>
+  <!--课程榜END-->
+</container>

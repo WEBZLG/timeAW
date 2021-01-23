@@ -1,0 +1,92 @@
+<!-- 背景音频 -->
+<background-audio-popup />
+
+<!-- 引导 -->
+<guide />
+
+<container id='container' binderror='init'>
+
+  <!-- 用户信息(已登录) -->
+  <view class='userInfo' wx:if='{{userInfo.id}}'>
+    <!-- 用户信息-设置 -->
+    <navigator class='userInfo-setup' url='/pages/setup/setup'>
+      <custom-image src='/images/public/setup.png' />
+    </navigator>
+    <navigator class='userInfo-message' url='/pages/message/message'>
+      <custom-image src='/images/public/msg-icon.png' />
+      <!-- <image src="/images/public/msg-icon.png" /> -->
+    </navigator>
+    <!-- 用户信息-头像 -->
+    <avatar class='userInfo-avatar' src='{{userInfo.avatar}}' bindtap="linkTo"></avatar>
+    <!-- 用户信息-昵称 -->
+    <view class='userInfo-nickname'>{{userInfo.nickname}}</view>
+    <!-- 用户信息-详情 -->
+    <view class='userInfo-detail'>{{userInfo.group_name}} | 推荐码:{{userInfo.invite_code}}</view>
+    <!-- 分段菜单 -->
+    <menu list='{{menu.user}}' mode='paragraph' wx:if='{{mainCourse}}' />
+  </view>
+
+  <!-- 用户信息(未登录) -->
+  <navigator url='/pages/login/login' class='userInfo' wx:else>
+    <!-- 用户信息-头像 -->
+    <avatar class='userInfo-avatar' src="/images/mine/icon.png" />
+    <!-- 用户信息-昵称 -->
+    <view class='userInfo-nickname'>点击头像登录</view>
+    <!-- 分段菜单 -->
+    <menu list='{{menu.user}}' mode='paragraph' wx:if='{{mainCourse}}' />
+  </navigator>
+
+  <!-- 板块菜单 -->
+  <menu list='{{menu.block}}' mode='block' wx:if='{{mainCourse}}' bindstock='stock' bindpiece='piece' binddean='dean' />
+
+  <!-- 权益 -->
+  <!-- <navigator class='privilege' url='/pages/privilege/privilege' wx:if='{{mainCourse}}'>
+    <custom-image class='fill' type='poster' src='/images/mine/privilege.jpg' />
+  </navigator> -->
+  <view class='privilege' bindtap="jumpWhere" url='/pages/privilege/privilege' wx:if='{{mainCourse}}'>
+    <custom-image class='fill' type='poster' src='/images/mine/privilege.jpg' />
+  </view>
+
+  <!-- 团队 -->
+  <navigator class='group' url='/pages/group/group'>
+    <!-- 团队-顶部 -->
+    <view class='group-header'>
+      <!-- 团队-标题 -->
+      <view class='group-title'>
+        <custom-image src='/images/mine/group.png' />我的团队
+      </view>
+      <!-- 团队-列表 -->
+      <view class='group-list'>
+        <avatar class='group-item' wx:for='{{4}}' wx:key='*this' src='{{userInfo.team.son1[index]?userInfo.team.son1[index].avatar:"/images/none/noIcon.png"}}' />
+        <view class="run1"></view>
+      </view>
+    </view>
+    <!-- 团队-统计 -->
+    <view class='group-count'>
+      <view class='group-count-item'>
+        <custom-image src='/images/mine/group-count-1.png' />一级{{userInfo.team_son_1||0}}人
+      </view>
+      <view class='group-count-item'>
+        <custom-image src='/images/mine/group-count-2.png' />二级{{userInfo.team_son_2||0}}人
+      </view>
+    </view>
+  </navigator>
+
+  <!-- 新加-提现 -->
+  <!-- <view class="withdrawal-container">
+    <view class="withdrawal">
+      <view class="left">
+        <view class="my-balance">我的余额（元）</view>
+        <view class="money">￥{{userInfo.money}}</view>
+        <view class="accumulate">累积收益（元）￥{{userInfo.income_all}}</view>
+      </view>
+      <view class="right">
+        <view class="btn-immediately" bind:tap="jumpImmediately">立即提现</view>
+        <view class="btn-record" bind:tap="jumpRecord">提现记录</view>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 垂直菜单 -->
+  <menu list='{{menu.vertical}}' mode='vertical' bindpiece='piece'  bindgetScancode='getScancode' bindselect='select' bindcartSelect='cartSelect' bindorderSelect='orderSelect'/>
+</container>

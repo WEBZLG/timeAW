@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "导师首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "rich": "/components/rich/rich",
+    "custom-video": "/components/custom-video/custom-video",
+    "custom-audio": "/components/custom-audio/custom-audio",
+    "avatar": "/components/avatar/avatar",
+    "list-vertical": "/components/list-vertical/list-vertical",
+    "share-material-list": "/components/share-material-list/share-material-list",
+    "tab": "/components/tab/tab",
+    "tab-nav": "/components/tab/tab-nav",
+    "tab-nav-item": "/components/tab/tab-nav-item",
+    "tab-content": "/components/tab/tab-content",
+    "tab-content-item": "/components/tab/tab-content-item"
+  }
+}

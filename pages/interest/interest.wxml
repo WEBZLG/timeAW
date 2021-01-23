@@ -1,0 +1,29 @@
+<container id='container'>
+
+  <!-- 表单 -->
+  <form bindsubmit='submit'>
+
+    <!-- 海报 -->
+    <custom-image type='poster' class='label-poster' src='/images/interest/banner.png' />
+
+    <!-- 标签-列表 -->
+    <custom-multiple-choose-group max='3' name='interest' class='label-list' bindchange='interestChange'>
+      <!-- 标签-元素 -->
+      <custom-multiple-choose wx:for='{{interest.list}}' wx:key='{{index}}'>
+        <!-- 标签-元素-选中 -->
+        <view slot='checked' class='button button-checked'>
+          {{item.name}}
+          <custom-image class='label-item-icon' src='/images/interest/interest-decrease.png' />
+        </view>
+        <!-- 标签-元素-未选中 -->
+        <view slot='unchecked' class='button button-unchecked'>
+          {{item.name}}
+          <custom-image class='label-item-icon' src='/images/interest/interest-increase.png' />
+        </view>
+      </custom-multiple-choose>
+    </custom-multiple-choose-group>
+
+    <!-- 表单-提交 -->
+    <button disabled='{{interest.value.length<=0}}' class='button button-clear button-checked form-submit' form-type='submit'>选好了，进入首页</button>
+  </form>
+</container>

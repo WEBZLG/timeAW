@@ -1,0 +1,5 @@
+<!-- 商品列表 -->
+<container id='container' binderror='init'>
+  <commodity-item wx:for="{{list}}" info="{{item}}" wx:key="index"></commodity-item>
+  <view class="no-more" wx:if="{{finished}}">— 我是有底线的 —</view>
+</container>

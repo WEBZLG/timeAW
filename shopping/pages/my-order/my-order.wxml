@@ -1,0 +1,17 @@
+<container id='container' binderror='init'>
+  <view class="tabs">
+    <view class="tab" wx:for="{{statusList}}" wx:key="index">
+      <view class="tab-line {{active==item.idx?'active':''}}" bind:tap="handleTabClick" data-id="{{item.idx}}">
+        {{item.status}}
+      </view>
+    </view>
+    <!-- <view class="empty-box"></view> -->
+  </view>
+  <view class="order-container" wx:if="{{orderList.length}}">
+    <order-item bind:reset="resetInit" wx:for="{{orderList}}" order="{{item}}" wx:key="index"></order-item>
+    <view class="baseline" wx:if="{{finished}}">我是有底线的</view>
+  </view>
+  <view wx:else class="empty">
+    <image class="empty-img" src="../../images/empty.png" />
+  </view>
+</container>

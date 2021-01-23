@@ -1,0 +1,166 @@
+/* components/dynamic-item/dynamic-item.wxss */
+.dynamic-item {
+  margin-bottom: 20rpx;
+  background-color: #FFFFFF;
+  padding-bottom: 20rpx;
+}
+.userInfo {
+  padding: 0 24rpx;
+  padding-top: 36rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.userInfo-avatar {
+  position: absolute;
+  left: 26rpx;
+  top: 20rpx;
+  z-index: 999;
+}
+.avatar {
+  border: 4rpx solid #ffffff;
+}
+
+.user-left {
+  margin-left: 110rpx;
+}
+
+.user-right {
+  margin-top: 25rpx;
+  font-size: 22rpx;
+  color: #aeaeaa;
+}
+/* 用户昵称 */
+.user-name {
+  font-size: 30rpx;
+  color: #131313;
+}
+
+/* 用户分类 */
+.user-class {
+  font-size: 20rpx;
+  color: #ff6600;
+}
+
+/* 中间视频，图片 */
+
+.media-video {
+  margin: 7rpx 20rpx;
+  height: 450rpx;
+}
+/* 分享-元素-图片 */
+.share-item-picture {
+  margin: auto;
+  width: 720rpx;
+}
+.share-item-picture-type1 {
+  width: 100%;
+  height: 400rpx;
+}
+.share-item-picture-type2 {
+  width: 480rpx;
+}
+.share-item-picture-type3 {
+  width: 100%;
+}
+/* 图片轮播图 */
+.media-image {
+  margin: 7rpx 20rpx;
+  position: relative;
+}
+.media-swiper-image {
+  min-height: 450rpx;
+}
+.swiper-image {
+  width: 100%;
+}
+/* 自定义数字指示器 */
+.number-indicator {
+  height: 25rpx;
+  width: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 25rpx;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16rpx;
+  line-height: 25rpx;
+  z-index: 999;
+}
+/* 文字描述 */
+.content {
+  margin-top: 20rpx;
+}
+.share-item-content {
+  margin: 10rpx 20rpx;
+  font-size: 28rpx;
+  display: block;
+  color: #2f2f2f;
+} 
+
+/* 分享-元素-发布日期 */
+.share-item-date {
+  font-size: 20rpx;
+  color: #999;
+  margin: 10rpx 20rpx;
+}
+
+.operation {
+  margin: 0 20rpx;
+  display: flex;
+}
+/* 保存 */
+.save {
+  color: #969696;
+  font-size: 24rpx;
+}
+/* 收藏 */
+.collection {
+  margin-left: 37rpx;
+  display: flex;
+  align-items: center;
+}
+/* 菜单-元素 */
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+.menu-item-icon {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 6rpx;
+}
+
+/* 分享至 */
+.share-to {
+  margin-left: 114rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #131313;
+  font-weight: 500;
+}
+.wechat-icon {
+  height: 33rpx;
+  width: 33rpx;
+  margin-left: 41rpx;
+}
+
+.share-to-friend {
+  height: 33rpx;
+  width: 33rpx;
+  margin-left: 41rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+button[plain]{ 
+  border:0 
+}
+.share-to-friend-icon {
+  margin-left: 0;
+  position: absolute;
+}

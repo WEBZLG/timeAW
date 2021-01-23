@@ -1,0 +1,2 @@
+<!-- 标签-元素 -->
+<view class='tag-item' wx:for='{{list}}' wx:key='id'>{{item.name}}</view>

@@ -1,0 +1,15 @@
+<wxs src='./custom-scroll.wxs' module='customScroll' />
+<scroll-view scroll-y='{{true}}' bindtouchstart='{{customScroll.touchstart}}' bindtouchend='{{customScroll.touchend}}' bindtouchmove='{{customScroll.touchmove}}' bindscrolltolower='onReachBottom' class='scroll-view' change:prop='{{customScroll.stop}}' prop='{{loadend}}' change:refresh='{{customScroll.refresh}}' refresh='{{refresh}}'>
+
+  <!-- 外框区域 -->
+  <view class='scroll-view-outer'>
+
+    <!-- 加载区域 -->
+    <custom-loading class='scroll-view-loading' id='loading' bindanimationend='animationEnd' bindanimationstart='{{customScroll.stop}}' />
+
+    <!-- 滚动区域 -->
+    <view class='scroll-view-inner'>
+      <slot></slot>
+    </view>
+  </view>
+</scroll-view>

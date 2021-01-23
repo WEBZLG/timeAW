@@ -1,0 +1,3 @@
+  <container class='container' binderror='init'>
+    <list-vertical class='list-vertical' detail='/pages/order-detail/order-detail' options='order_id' list='{{order.list}}' />
+  </container>

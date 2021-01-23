@@ -1,0 +1,73 @@
+<container id='container' binderror='init'>
+
+  <!-- 设置 -->
+  <navigator wx:if='{{setup}}' class='setup' url='/pages/dean-home/dean-home'>
+    <custom-image type='icon' src='/images/public/setup.png' />
+  </navigator>
+
+  <!-- 导师-横幅 -->
+  <view class='tutor-banner'>
+    <custom-image src='{{tutor.bgm_image || "/images/tutor/banner.jpg"}}' />
+  </view>
+
+  <!-- 导师-中部 -->
+  <view class='tutor-body'>
+
+    <!-- 导师-详情 -->
+    <view class='tutor-detail'>
+      <!-- 用户信息 -->
+      <view class='userInfo'>
+        <!-- 用户信息-头像 -->
+        <avatar class='userInfo-avatar' src='{{tutor.thumb}}' />
+        <!-- 用户信息-详情 -->
+        <view class='userInfo-detail'>
+          <!-- 用户信息-昵称 -->
+          <view class='userInfo-nickname'>{{tutor.name}}</view>
+          <!-- 用户信息-称号 -->
+          <view class='userInfo-title'>{{tutor.label}}</view>
+        </view>
+      </view>
+      <!-- 导师-关注 -->
+      <block wx:if='{{!setup}}'>
+        <view class='tutor-follow custom-solid-button' wx:if='{{follow==0}}' bindtap='follow'>
+          <custom-image src='/images/public/plus.png' /> 关注
+        </view>
+        <view class='tutor-follow custom-sub-button' wx:if='{{follow==1}}' bindtap='follow'>
+          已关注
+        </view>
+      </block>
+    </view>
+
+    <!-- 导师-标签 -->
+    <view class='tutor-tag-list'>
+      <block wx:if='{{tutor.labels1 || tutor.labels2 || tutor.labels3 || tutor.labels4 || tutor.labels5}}'>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels1}}'>{{tutor.labels1}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels2}}'>{{tutor.labels2}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels3}}'>{{tutor.labels3}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels4}}'>{{tutor.labels4}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels5}}'>{{tutor.labels5}}</view>
+      </block>
+      <block wx:else>
+        <view class='tutor-tag-item'>Ta暂未编写称谓</view>
+      </block>
+    </view>
+
+    <!-- 导师-数据 -->
+    <view class='tutor-data-list'>
+      <view class='tutor-data-item'>
+        <view class='tutor-data-item-value'>{{tutor.hot}}</view>
+        <view class='tutor-data-item-title'>热度</view>
+      </view>
+      <view class='tutor-data-item'>
+        <view class='tutor-data-item-value'>{{tutor.fans}}</view>
+        <view class='tutor-data-item-title'>粉丝</view>
+      </view>
+      <view class='tutor-data-item'>
+        <view class='tutor-data-item-value'>{{course.list.length}}</view>
+        <view class='tutor-data-item-title'>课程</view>
+      </view>
+    </view>
+  </view>
+
+  <list-vertical class='course-list' list='{{course.list}}'></list-vertical>
+</container>

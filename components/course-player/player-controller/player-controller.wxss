@@ -1,0 +1,61 @@
+:host {
+  display: block;
+}
+
+/* 课程-封面 */
+.course-cover {
+  width: 475rpx;
+  height: 650rpx;
+  margin: auto;
+}
+
+
+
+/* 菜单-列表 */
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+/* 菜单-元素 */
+.menu-item {
+  background-color: transparent;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+
+  font-size: 32rpx;
+  text-align: center;
+  width: 120rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #666;
+  position: relative;
+  animation-name: tab-nav-normal;
+  animation-fill-mode: both;
+  animation-duration: 200ms;
+}
+.menu-item::after {
+  display: none;
+}
+/* 菜单-元素 */
+.menu-item-active {
+  font-weight: bold;
+  color: #404040!important;
+  background-color: transparent!important;
+  animation-name: tab-nav-active;
+  animation-duration: 400ms;
+}
+.menu-item-active::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12rpx;
+  margin: auto;
+  height: 8rpx;
+  width: 32rpx;
+  border-radius: 8rpx;
+  background-color: var(--main);
+}

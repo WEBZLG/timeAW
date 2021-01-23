@@ -1,0 +1,39 @@
+<view class="applicationAuthority">
+
+	<!-- 元素列表 -->
+	<view class="applicationAuthority-list">
+		<view class="applicationAuthority-item">
+			<view class="applicationAuthority-item-body">
+				<view class="applicationAuthority-item-title">真实姓名</view>
+				<input class="applicationAuthority-item-scanner applicationAuthority-item_input" bindinput="onInput" data-name="realname" placeholder="输入真实姓名" maxlength="12" />
+			</view>
+		</view>
+		<view class="applicationAuthority-item">
+			<view class="applicationAuthority-item-body">
+				<view class="applicationAuthority-item-title">身份证号</view>
+				<input class="applicationAuthority-item-scanner applicationAuthority-item_input" bindinput="onInput" data-name="idcard" type="idcard" placeholder="输入身份证号" />
+			</view>
+		</view>
+		<view class="applicationAuthority-item">
+			<view class="applicationAuthority-item-body">
+				<view class="applicationAuthority-item-title">微信号（绑定过银行卡）</view>
+				<input class="applicationAuthority-item-scanner applicationAuthority-item_input" bindinput="onInput" data-name="wxcode" placeholder="输入微信号" />
+			</view>
+		</view>
+		<view class="applicationAuthority-item">
+			<view class="applicationAuthority-item-body">
+				<view class="applicationAuthority-item-title">手机号</view>
+				<input class="applicationAuthority-item-scanner applicationAuthority-item_input" bindinput="onInput" data-name="phone" placeholder="输入手机号" type="number" maxlength="11" />
+			</view>
+		</view>
+		<view class="applicationAuthority-item">
+			<view class="applicationAuthority-item-title">访问二维码认证身份</view>
+			<view class="applicationAuthority-item-body">
+				<custom-image menu class="applicationAuthority-item-qr" type="cover" src="https://res.wx.qq.com/op_res/BbVNeczA1XudfjVqCVoKgfuWe7e3aUhokktRVOqf_F0IqS6kYR--atCpVNUUC3zr" />
+			</view>
+		</view>
+	</view>
+	<view class="applicationAuthority-button-group">
+		<button class="applicationAuthority-submit button-clear" bindtap="onSubmit">提交</button>
+	</view>
+</view>

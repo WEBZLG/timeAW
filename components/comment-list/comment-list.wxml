@@ -1,0 +1,32 @@
+<container class='container' binderror='init'>
+  <!-- 热门评论 -->
+  <view class='comment-section'>
+    <!-- 评论-顶部 -->
+    <view class='comment-header'>
+      <!-- 评论-图标 -->
+      <image class='comment-icon' mode='aspectFit' src='./images/hot.png' />
+      <!-- 评论-顶部 -->
+      <view class='comment-title'>热门评论</view>
+    </view>
+    <!-- 评论-列表 -->
+    <view class='comment-list'>
+      <!-- 评论-元素 -->
+      <comment-item class='comment-item' wx:for='{{comment.hot}}' item='{{item}}' wx:key='id' />
+    </view>
+  </view>
+  <!-- 全部评论 -->
+  <view class='comment-section'>
+    <!-- 评论-顶部 -->
+    <view class='comment-header'>
+      <!-- 评论-图标 -->
+      <image class='comment-icon' mode='aspectFit' src='./images/all.png' />
+      <!-- 评论-顶部 -->
+      <view class='comment-title'>全部评论</view>
+    </view>
+    <!-- 评论-列表 -->
+    <view class='comment-list'>
+      <!-- 评论-元素 -->
+      <comment-item class='comment-item' wx:for='{{comment.all}}' item='{{item}}' wx:key='id' />
+    </view>
+  </view>
+</container>

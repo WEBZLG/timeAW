@@ -1,0 +1,144 @@
+.daoshi{
+	padding: 20rpx;
+	overflow: hidden;
+}
+.daoshi_a{
+	width: 120rpx;
+	height: 120rpx;
+	text-align: center;
+	box-sizing: border-box;
+	border:1px solid #f60;
+	border-radius: 50%;
+	float: left;
+	margin-top: 10rpx;
+}
+.daoshi_a image{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.daoshi_b{
+	width: calc( 100% - 320rpx );
+	height: 140rpx;
+	float: left;
+	padding: 0 20rpx; 
+}
+.daoshi_b_a{
+	width: 100%;
+	height: 50rpx;
+	line-height: 50rpx;
+	padding-top: 33rpx;
+	font-size: 24rpx;
+	color: #999;
+	overflow: hidden;
+}
+.daoshi_b_a view{
+	font-size: 36rpx;
+	color: #272844;
+	font-weight: bold;
+	float: left;
+	line-height: 70rpx;
+	margin-right: 10rpx;
+}
+.daoshi_b_b{
+	height: 40rpx;
+	line-height: 40rpx;
+	overflow: hidden;
+	background: url('https://cm.chineseglory.cn/images/icon3.png') no-repeat left center;
+	background-size: 24rpx;
+	padding-left: 40rpx;
+	font-size: 24rpx;
+	color: #ff6600;
+}
+.daoshi_c{
+	width: 120rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	float: right;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 20rpx;
+	border: 1px solid #ff6600;
+	font-size: 24rpx;
+	color: #ff6600;
+	margin-top:52rpx;
+}
+.content_box{
+	width: calc( 100% - 40rpx );
+	border-top:10rpx solid #f6f6f6;
+	height: auto;
+	overflow: hidden;
+	padding: 20rpx;
+}
+.content_a{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 10rpx;
+}
+.content_a_video{
+	width: 100%;
+	height: 420rpx;
+	overflow: hidden;
+	border-radius: 10rpx;
+}
+.content_b{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 10rpx;
+}
+.content_b_audio{
+	width: 100%;
+	height: 80rpx;
+	overflow: hidden;
+}
+.audio_box{
+	width: 100%;
+	height: 120rpx;
+	background: url('https://cm.chineseglory.cn/images/bg4.png') no-repeat center center;
+	background-size: cover;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+	padding: 20rpx;
+}
+.audio_a{
+	width: 80rpx;
+	height: 80rpx;
+	text-align: center;
+	float: left;
+}
+.audio_a image{
+	width: 70rpx;
+	height: 70rpx;
+	margin: 5rpx;
+}
+.audio_b{
+	width: calc( 100% - 160rpx );
+	height: 80rpx;
+	float: left;
+}
+.audio_c{
+	width: 80rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	float: right;
+	font-size: 24rpx;
+	color: #fff;
+}
+
+
+
+.content_c{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	line-height: 44rpx;
+	text-align: justify;
+}
+.content_c text{
+	font-size: 30rpx;
+	color: #999999;
+}

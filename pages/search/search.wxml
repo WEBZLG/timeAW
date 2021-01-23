@@ -1,0 +1,54 @@
+<container id='container' binderror='init'>
+
+  <!-- 搜索 -->
+  <search id='search' bindsearch='submit' />
+
+  <!-- <view class='search_top_box'>
+    <form id='search' bindsubmit="submit">
+      <view class='search_top_a fl'>
+        <view class='search_top_a_a fl'></view>
+        <input class='search_top_a_b fr' name='keyword' placeholder='请输入内容' />
+      </view>
+      <view class='search_top_b fr'>
+        <button form-type='submit'>搜索</button>
+      </view>
+    </form>
+  </view> -->
+  <view class='search_box'>
+    <view class='search_a' wx:if='{{history.length}}'>
+      <view class='search_a1'>搜索记录</view>
+      <view class='search_a2' bindtap='clearHistory'>清除历史</view>
+    </view>
+    <view class='search_b'>
+      <!---->
+      <block wx:for="{{history}}" wx:key="{{index}}">
+        <view class='search_b1' bindtap='tagSearch' data-keyword="{{item.keywords}}">{{item.keywords}}</view>
+      </block>
+      <!---->
+    </view>
+    <view class='search_a'>
+      <view class='search_a1'>热门搜索</view>
+    </view>
+    <view class='search_c'>
+      <!---->
+      <block wx:for="{{hot}}" wx:key="{{index}}">
+        <view class='search_c_a' bindtap='tagSearch' data-keyword="{{item.name}}">
+          <block wx:if="{{index==0}}">
+            <view class='search_c_a1 hot1'>{{index+1}}</view>
+          </block>
+          <block wx:elif="{{index==1}}">
+            <view class='search_c_a1 hot2'>{{index+1}}</view>
+          </block>
+          <block wx:elif="{{index==2}}">
+            <view class='search_c_a1 hot3'>{{index+1}}</view>
+          </block>
+          <block wx:else>
+            <view class='search_c_a1'>{{index+1}}</view>
+          </block>
+          <view class='search_c_a2'>{{item.name}}</view>
+        </view>
+      </block>
+      <!---->
+    </view>
+  </view>
+</container>

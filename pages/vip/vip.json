@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "会员课程",
+	"usingComponents": {
+    "vip-panel": "/components/vip-panel/vip-panel",
+    "vip-list": "/components/vip-list/vip-list",
+    "courseApply": "/components/courseApply/courseApply",
+    "custom-popup": "/components/custom-popup/custom-popup"
+  }
+}

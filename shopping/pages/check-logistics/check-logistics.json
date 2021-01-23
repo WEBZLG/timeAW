@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "查看物流",
+  "usingComponents": {
+    "van-steps": "../../components/vant-weapp/steps/index"
+  }
+}

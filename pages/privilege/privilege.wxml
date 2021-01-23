@@ -1,0 +1,24 @@
+<container id='container' binderror='init' style='background-image: url({{background}})'>
+
+  <!-- 海报 -->
+  <custom-image class='privilege-poster' type='poster' src='{{poster}}' />
+
+  <!-- 权益列表 -->
+  <view id='privilege-list' class='privilege-list'>
+    <navigator class='privilege-item' url="/pages/vip/vip">
+      <custom-image type='poster' src='/images/privilege/add-chuangmei.png' style="border-radius: 10rpx;"/>
+    </navigator>
+     
+    <block wx:for='{{privilege.list}}' wx:key='{{index}}'>
+      <navigator url='/pages/privilege-detail/privilege-detail?id={{item.shop_id}}' class='privilege-item'>
+        <custom-image wx:if='{{item.shop_id==3}}' type='poster' src='/images/privilege/card-1.png' style="border-radius: 10rpx;"/>
+        <custom-image wx:elif='{{item.shop_id==4}}' type='poster' src='/images/privilege/card-2.png' style="border-radius: 10rpx;"/>
+      </navigator>
+    </block>
+  </view>
+
+  <!-- 底部 -->
+  <button class='button-clear privilege-footer' bindtap='obtain' wx:if="{{reachbottom}}">
+    <custom-image class='privilege-footer-fixed' src='/images/privilege/footer.png' />
+  </button>
+</container>

@@ -1,0 +1,5 @@
+<!-- 加载元素-外部 -->
+<view class='loading-outer'>
+  <!-- 加载元素-内部 -->
+  <view class='loading-inner'></view>
+</view>

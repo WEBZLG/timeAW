@@ -1,0 +1,19 @@
+#container {
+  min-height: 100vh;
+}
+#tab {
+  min-height: 100vh;
+}
+#tab-nav {
+  height: 80rpx;
+  background-color: #FFF;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  font-size: 32rpx;
+  border: none;
+}
+#tab-nav .tab-nav-container {
+  width: 300rpx;
+  margin: auto;
+}

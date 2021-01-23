@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+
+/* 按钮 */
+.custom-radio {
+  border: 4rpx solid currentColor;
+  box-sizing: content-box;
+  color: #666;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  position: relative;
+  transition: all 250ms;
+}
+.custom-radio-checked {
+  color: var(--main);
+}
+
+/* 勾选 */
+.custom-radio-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  transition: all 250ms;
+  background-color: currentColor;
+  transform: scale(0);
+}
+.custom-radio-checked .custom-radio-inner {
+  transform: scale(0.6);
+}

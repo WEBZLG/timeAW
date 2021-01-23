@@ -1,0 +1,1 @@
+<view class='loading-item' wx:for='{{3}}' wx:key='index' style='animation-delay: {{index * 200}}ms'></view>

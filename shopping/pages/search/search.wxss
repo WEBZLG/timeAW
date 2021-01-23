@@ -1,0 +1,44 @@
+/* shopping/pages/search/search.wxss */
+.history{
+  padding: 34rpx 24rpx 39rpx;
+}
+.flex-bet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #000000;
+}
+.delete{
+  height: 28rpx;
+  width: 28rpx;
+}
+.delete image{
+  height: 100%;
+  width: 100%;
+}
+.history-item{
+  display: inline-block;
+  padding: 12rpx 23rpx;
+  font-size: 24rpx;
+  color: #7c7c7c;
+  border-radius: 31rpx;
+  background-color: #f5f6fa;
+  margin: 15rpx;
+}
+/* 暂无数据 */
+.empty {
+  margin-top: 50%;
+  box-sizing: border-box;
+  padding: 30rpx 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty-img {
+  height: 302rpx;
+  width: 489rpx;
+}

@@ -1,0 +1,68 @@
+page{
+	background: #efefef;
+}
+.set_box{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	background: #fff;
+	margin-top: 20rpx;
+}
+.set{
+	width: calc( 100% - 40rpx );
+	height: 60rpx;
+	line-height: 60rpx;
+	padding: 15rpx 20rpx;
+	border-bottom: 1px solid #efefef;
+}
+.set_a{
+	width: 30%;
+	height: 60rpx;
+	float: left;
+	font-size: 34rpx;
+	color: #272844;
+}
+.set_b{
+	width: 70%;
+	height: 60rpx;
+	float: right;
+	font-size: 28rpx;
+	color: #999999;
+	text-align: right;
+}
+.r{
+	width: 60rpx;
+	height: 60rpx;
+	float: right;
+	background: url('https://cm.chineseglory.cn/images/icon31.png') no-repeat center center;
+	background-size: 100%;
+	margin-right: -20rpx;
+}
+.set1{
+	width: calc( 100% - 40rpx );
+	height: 80rpx;
+	line-height: 80rpx;
+	padding: 15rpx 20rpx;
+	border-bottom: 1px solid #efefef;
+}
+.set1_a{
+	width: 30%;
+	height: 80rpx;
+	float: left;
+	font-size: 34rpx;
+	color: #272844;
+}
+.set1_b{
+	width: 70%;
+	height: 80rpx;
+	float: right;
+	font-size: 28rpx;
+	color: #999999;
+	text-align: right;
+}
+.set1_b image{
+	width: 80rpx;
+	height: 80rpx;
+	float: right;
+	border-radius: 50%;
+}

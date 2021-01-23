@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "audio-player": "../audio-player/audio-player",
+    "video-player": "../video-player/video-player"
+  }
+}

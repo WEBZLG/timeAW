@@ -1,0 +1,39 @@
+#container {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 20rpx;
+  background-repeat: repeat;
+}
+
+/* 海报 */
+.privilege-poster {
+  width: 100%;
+}
+
+/* 权益列表 */
+.privilege-item {
+  margin: 50rpx;
+}
+.privilege-item custom-image {
+  width: 100%;
+  box-shadow: 0 0 30rpx 0 rgba(78, 36, 15, 0.25);
+}
+
+/* 底部 */
+.privilege-footer {
+  width: 650rpx;
+  height: 94rpx;
+  position: fixed;
+  margin: 40rpx auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 47rpx;
+  overflow: hidden;
+  box-shadow: 0 0 40rpx 0 rgba(0, 0, 0, 0.4);
+}
+.privilege-footer-fixed {
+  height: 100%;
+  width: 100%;
+}

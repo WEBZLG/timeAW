@@ -1,0 +1,24 @@
+<container id='container' binderror='init'>
+  <tab id='tab' bindchange='tabChange'>
+    <tab-content class='tab-content'>
+      <tab-content-item wx:for='{{poster.list}}' wx:key='*this' slot='{{index}}'>
+        <poster-detail class='poster-detail' bindposter='getPoster' />
+      </tab-content-item>
+    </tab-content>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item class='tab-nav-item' wx:for='{{poster.list}}' wx:key='{{index}}' activeBlock='{{true}}'>
+        <view slot='default' class='poster-item'>
+          <custom-image type='icon' class='poster-item-cover' src='{{item.background}}' />
+        </view>
+        <view slot='active' class='poster-item poster-item-active'>
+          <custom-image type='icon' class='poster-item-cover' src='{{item.background}}' />
+          <custom-image type='icon' class='poster-item-checked' src='/images/poster/select.png' />
+        </view>
+      </tab-nav-item>
+    </tab-nav>
+  </tab>
+  <!-- 保存海报 -->
+  <button class='button-clear save-poster' bindtap='savePoster'>
+    <custom-image class='fill' type='icon' src='https://cm.chineseglory.cn/images/down_btn.png' />
+  </button>
+</container>

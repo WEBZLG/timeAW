@@ -1,0 +1,235 @@
+page {
+  display: block;
+  color: #404040;
+  background-color: #FFF;
+  min-height: 100vh;
+
+  /* 颜色配置 */
+  --main: #FF6600;
+  --pale: #F2F2F2;
+  --mainblue: #33BCC6;
+}
+
+/* 打满工具 */
+.fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 居中工具 */
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* 自定义副按钮 */
+.custom-sub-button {
+  border-radius: 40rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  background-color: #CECECE;
+}
+
+/* 自定义空心按钮 */
+.custom-hollow-button {
+  border-radius: 40rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  background-color: var(--main);
+}
+
+/* 自定义实心按钮 */
+.custom-solid-button {
+  border-radius: 40rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  background-color: var(--main);
+}
+
+button.custom-solid-button::before,
+button.custom-hollow-button::before,
+button.custom-sub-button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+button.custom-solid-button::after,
+button.custom-hollow-button::after,
+button.custom-sub-button::after {
+  display: none;
+}
+
+button.custom-solid-button[disabled] {
+  color: #FFF;
+  background-color: var(--main);
+}
+
+button.custom-hollow-button[disabled] {
+  color: #404040;
+  background-color: transparent;
+}
+
+button.custom-solid-button[disabled]::before,
+button.custom-hollow-button[disabled]::before {
+  opacity: 1;
+}
+
+/* 清空按钮 */
+.button-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: inherit;
+  border-radius: 0;
+  font-size: inherit;
+  background-color: transparent;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.button-clear::after {
+  display: none;
+}
+
+/* 清空单选框 */
+.radio-clear {
+  display: block;
+  position: relative;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.radio-clear .wx-radio-input {
+  width: initial;
+  height: initial;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+}
+
+.radio-clear .wx-radio-input.wx-radio-input-checked {
+  background-color: #FFF !important;
+}
+
+.radio-clear .wx-radio-input.wx-radio-input-checked::before {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  transform: initial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #1AAD16;
+}
+
+/* 清空多选框 */
+.checkbox-clear {
+  display: block;
+  position: relative;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.checkbox-clear .wx-checkbox-input {
+  width: initial;
+  height: initial;
+  box-sizing: border-box;
+  border-color: currentColor;
+  color: #1AAD16;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+}
+
+.checkbox-clear .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: #FFF !important;
+}
+
+.checkbox-clear .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 40%;
+  height: 40%;
+  content: '';
+  display: block;
+  transform: initial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: currentColor;
+}
+
+/* 清空导航 */
+.navigator-hover {
+  background-color: initial;
+  opacity: initial;
+}
+
+
+
+/* 通用-导航 */
+.default-nav {
+  height: 80rpx;
+  font-size: 24rpx;
+  color: #999;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+
+.default-nav .tab-nav-inner {
+  width: fit-content;
+  margin: auto;
+}
+
+.default-nav .tab-nav-underline {
+  height: 4rpx !important;
+  width: 40% !important;
+  border-radius: 2rpx;
+}
+
+.default-nav-item {
+  padding: 0 40rpx;
+}

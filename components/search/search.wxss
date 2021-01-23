@@ -1,0 +1,55 @@
+:host {
+  display: block;
+}
+
+/* 搜索-容器 */
+.search-container {
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  position: relative;
+}
+
+/* 搜索-交互 */
+.search-scanner {
+  flex: 1;
+  background-color: var(--pale);
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* 搜索-图标 */
+.search-icon {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 20rpx;
+}
+
+/* 搜索-输入 */
+.search-input {
+  flex: 1;
+  height: 100%;
+}
+
+/* 搜索-按钮 */
+.search-button {
+  color: var(--main);
+  font-size: 28rpx;
+  height: 100%;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+/* 搜索-禁用 */
+.search-disabled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}

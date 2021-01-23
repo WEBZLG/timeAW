@@ -1,0 +1,52 @@
+/* pages/record/record.wxss */
+.list {
+  min-height: 100vh;
+  padding: 0 24rpx;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  padding-bottom: 1rpx;
+  /* box-sizing: border-box; */
+}
+.list-item {
+  margin-top: 20rpx;
+  padding: 37rpx 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.money {
+  color: #fc6306;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.date {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #8c8c8c;
+}
+.item-right {
+  font-size: 26rpx;
+  color: #020202;
+}
+
+.not-more {
+  text-align: center;
+  margin: 20rpx 0;
+  color: #8c8c8c;
+  font-size: 24rpx;
+}
+
+/* 暂无数据 */
+.empty {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty image {
+  height: 263rpx;
+  width: 508rpx;
+}

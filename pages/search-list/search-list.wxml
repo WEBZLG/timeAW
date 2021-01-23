@@ -1,0 +1,17 @@
+<container id='container' binderror='init'>
+
+  <!-- 搜索 -->
+  <search id='search' value='{{keyword}}' bindsearch='search' />
+
+  <!-- tab -->
+  <tab id='tab' bindchange='tabChange'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item class='tab-nav-item' wx:for='{{category.list}}' wx:key='{{index}}'>{{item.title}}</tab-nav-item>
+    </tab-nav>
+    <tab-content>
+      <tab-content-item wx:for='{{category.list}}' wx:key='{{index}}' slot='{{index}}'>
+        <search-list class='search-list' bindsuccess='searchSuccess' category='{{item.id}}' keyword='{{keyword}}' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

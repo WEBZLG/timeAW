@@ -1,0 +1,1 @@
+<rich-text class='rich-text' wx:if='{{status}}' nodes='{{_content}}' space='ensp'></rich-text>

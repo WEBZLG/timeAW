@@ -1,0 +1,47 @@
+/* 容器 */
+#container {
+  padding-bottom: 1rpx;
+  min-height: 100vh;
+}
+
+
+
+/* 选项卡 */
+#tab {
+  min-height: 100vh;
+}
+
+/* 选项卡-导航 */
+#tab-nav {
+  height: 130rpx;
+  text-align: center;
+  background-color: #FFF;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+.tab-nav-item {
+  position: relative;
+}
+.tab-nav-active {
+  color: var(--main);
+}
+.tab-nav-attention {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #f43530;
+  border-radius: 50%;
+  position: absolute;
+  top: 5rpx;
+  right: 0;
+  z-index: 1001;
+}
+.tab-nav-icon {
+  width: 70rpx;
+  height: 70rpx;
+  margin: auto;
+}
+.tab-nav-title {
+  margin: 10rpx 0;
+  font-size: 24rpx;
+}

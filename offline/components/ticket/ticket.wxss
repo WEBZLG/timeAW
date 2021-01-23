@@ -1,0 +1,85 @@
+/* offline/components/ticket/ticket.wxss */
+.ticket {
+  margin-bottom: 18rpx;
+  height: 286rpx;
+  position: relative;
+}
+.ticket-bg {
+  height: 286rpx;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.ticket-info {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+.reserved {
+  padding-top: 47rpx;
+  padding-left: 30rpx;
+  color: #ffffff;
+}
+/* 课程名称 */
+.course-name {
+  margin-bottom: 25rpx;
+  width: 430rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/* 课程信息 */
+.course-info {
+  font-size: 22rpx;
+  margin-bottom: 6rpx;
+}
+
+/* 未预约的门票 */
+.unReserved {
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+  color: #ffffff;
+}
+.logo {
+  height: 64rpx;
+  width: 136rpx;
+}
+.ticket-type {
+  width: 430rpx;
+  margin-top: 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.btn-icon {
+  margin-top: 32rpx;
+  width: 130rpx;
+  height: 42rpx;
+}
+
+/* 右侧二维码 */
+.ticket-right {
+  padding-right: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  font-size: 22rpx;
+  color: #ffffff;
+}
+.qrcode {
+  margin: 5rpx 0;
+  height: 160rpx;
+  width: 160rpx;
+}
+
+.appointment-status {
+  /*height: 20rpx;*/
+}

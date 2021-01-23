@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "创建直播间",
+  "usingComponents": {
+    "step": "/wxLive/components/step/step",
+    "custom-switch": "/components/custom-switch/custom-switch",
+    "dateTime": "/wxLive/components/dateTime/dateTime"
+  }
+}

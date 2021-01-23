@@ -1,0 +1,50 @@
+/* pages/write-off/write-off.wxss */
+#container {
+  padding: 0 24rpx;
+  height: 100vh;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.record {
+  margin-top: 40rpx;
+  height: 177rpx;
+  background-color: #ffffff;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+}
+
+.person {
+  flex: 1;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #fe742c;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.right {
+  margin-left: 20rpx;
+  color: #454545;
+}
+.left-img {
+  margin-left: 23rpx;
+  margin-right: 10rpx;
+  height: 31rpx;
+  width: 31rpx;
+}
+
+.empty {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty image {
+  height: 263rpx;
+  width: 508rpx;
+}

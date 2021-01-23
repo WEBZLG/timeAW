@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "商品列表",
+  "usingComponents": {
+    "commodity-item": "../../components/commodity-item/commodity-item"
+  }
+}

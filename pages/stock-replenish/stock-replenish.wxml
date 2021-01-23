@@ -1,0 +1,51 @@
+<view class="top_box">
+  <image src="{{replenish.get_thumb}}" mode='aspectFill'></image>
+</view>
+<view class="info_box">
+  <view class='info_a'>¥
+    <text>{{replenish.get_money}}</text>
+  </view>
+  <view class='info_b'>
+    <view class='info_b1a'>{{replenish.get_title}}</view>
+    <view class='info_b1b'>{{replenish.get_description}}</view>
+  </view>
+</view>
+<view class='num_box'>
+  <view class='num_a'>学习卡数量</view>
+  <view class='num_b'>
+    <view class='num_b_in'>
+      <view class='jian' bindtap='decrease'>-</view>
+      <view class='num'>{{count}}</view>
+      <view class='jia' bindtap='increase'>+</view>
+    </view>
+  </view>
+</view>
+<view class='xinxi_box'>
+  <view class='xinxi_a'>打款截图
+    <text>*</text>
+  </view>
+  <view class='xinxi_b'>
+    <view class="xinxi_b1" wx:if="{{!picture}}">
+      <button class='choose_btn' type="default" size="mini" bindtap="chooseImage">选择图片</button>
+    </view>
+    <view class='xinxi_b2' wx:else>
+      <!-- 图片缩略图  -->
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{picture}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage"></view>
+        </view>
+    </view>
+  </view>
+</view>
+<view class='dan_box'>
+  <view class='dan_a'>
+    <text>
+		出卡人级别：{{superior.group_name}}\n
+		出卡人姓名：{{superior.name}}\n
+		出卡人电话：{{superior.mobile}}
+		</text>
+  </view>
+</view>
+<view class='btn_box'>
+  <button class='custom-solid-button btn' bindtap='submit'>提交申请</button>
+</view>

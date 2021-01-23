@@ -1,0 +1,52 @@
+.dateTime {}
+
+/* 阴影 */
+.dateTime-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+}
+
+.dateTime-picker {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1002;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.dateTime-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #fefefe;
+}
+
+.dateTime-picker-button {
+  padding: 20rpx 40rpx;
+  font-size: 32rpx;
+}
+
+.dateTime-picker-confirm {
+  color: #07c160;
+}
+
+.dateTime-picker-date,
+.dateTime-picker-time {
+  width: 100%;
+  height: 200rpx;
+  padding: 20rpx 0;
+}
+
+.picker-item {
+  text-align: center;
+}

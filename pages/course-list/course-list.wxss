@@ -1,0 +1,9 @@
+#container {
+  min-height: 100vh;
+  overflow: auto;
+  padding-bottom: 1rpx;
+}
+.course-list {
+  margin: 40rpx;
+  /* padding-bottom: 20rpx; */
+}

@@ -1,0 +1,23 @@
+{
+  "navigationBarTitleText": "课程详情",
+	"usingComponents": {
+    "courseApply": "/components/courseApply/courseApply1",
+    "custom-popup": "/components/custom-popup/custom-popup",
+    "coursePart-list": "/components/coursePart-list/coursePart-list",
+    "course-poster": "/components/course-poster/course-poster",
+    "comment-list": "/components/comment-list/comment-list",
+    "player-controller": "/components/course-player/player-controller/player-controller",
+    "avatar": "/components/avatar/avatar",
+    "popup": "/components/popup/popup",
+    "cdkey": "/components/cdkey/cdkey",
+    "tab": "/components/tab/tab",
+    "tab-nav": "/components/tab/tab-nav",
+    "tab-nav-item": "/components/tab/tab-nav-item",
+    "tab-content": "/components/tab/tab-content",
+    "tab-content-item": "/components/tab/tab-content-item",
+    "table": "/components/table/table",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "avatar": "/components/avatar/avatar",
+    "custom-text": "/components/custom-text/custom-text"
+  }
+}

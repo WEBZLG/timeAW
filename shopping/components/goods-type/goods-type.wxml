@@ -1,0 +1,115 @@
+<!--shopping/components/goods-type/goods-type.wxml-->
+<view>
+  <view class="type-item">
+    <!-- 热销榜单 -->
+    <view class="caption flex-bet">
+      <view class="title">热销榜单</view>
+      <view class="more" data-cid="{{hotSaleList.category_id}}" catchtap="onMore">
+        <text>查看更多</text> 
+        <view class="r-icon"><image src="../../images/right-raw.png"></image></view>
+      </view>
+    </view>
+    <view class="overhidden">
+      <scroll-view scroll-x class="scroll-container">
+        <view class="inlineflex">
+          <view class="scroll-item" wx:for="{{hotSaleList.res}}" wx:key="index" data-id="{{item.id}}"
+            catchtap="goodsDetail">
+            <view class="pic-box">
+              <image src="{{item.thumb}}"></image>
+            </view>
+            <view class="goods-desc">
+              <view class="goods-title">{{item.name}}</view>
+              <view class="godds-price">零售价:￥{{item.money}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 爆款推荐 -->
+    <view class="tj-background">
+      <image src="../../images/tjbg.png"></image>
+      <view class="content-box">
+        <view class="unit">
+          <view class="title">爆品推荐</view>
+          <view class="en">Recommended goods</view>
+        </view>
+        <!-- 轮播图 -->
+        <view class='hot-swiper'>
+          <swiper class='carousel_swiper'  autoplay="true" interval='3000' circular='true'>
+            <block wx:for="{{hotreList.res}}" wx:key="index">
+              <swiper-item bindtap='chomeCarouselClick' data-url='{{item.thumb}}'>
+                <view class="{{item.length==3?'flex-evn':'tj-goods'}}">
+                  <view class="tj-item" wx:for="{{item}}" wx:for-item="gitem" wx:key="index" data-id="{{gitem.id}}"
+                    catchtap="goodsDetail">
+                    <view class="pic-box">
+                      <image src="{{gitem.thumb}}"></image>
+                    </view>
+                    <view class="goods-desc">
+                      <view class="goods-title">{{gitem.name}}</view>
+                      <view class="godds-price">拿货价:￥{{gitem.money}}</view>
+                    </view>
+                  </view>
+                </view>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+        <view class="view-more" data-cid="{{hotreList.category_id}}" catchtap="onMore">
+          <image src="../../images/more-btn.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 三大分类 -->
+    <view class="type-list">
+      <block wx:for="{{liveList}}" wx:key="index">
+        <view class="caption flex-bet">
+          <view class="title">{{item.name}}</view>
+          <view class="more" data-cid="{{item.id}}" catchtap="onMore">
+            <text>查看更多</text> 
+            <view class="r-icon"><image src="../../images/right-raw.png"></image></view>
+          </view>
+        </view>
+        <!-- banner图 -->
+        <view class='carousel'>
+          <image class="carouselImg" src='{{item.image}}' mode='aspectFill'></image>
+        </view>
+        <view class="overhidden">
+          <scroll-view scroll-x class="scroll-container">
+            <view class="inlineflex">
+              <view class="scroll-item" wx:for="{{item.goods}}" wx:for-item="gitem" wx:key="index"
+                data-id="{{gitem.id}}" catchtap="goodsDetail">
+                <view class="pic-box">
+                  <image src="{{gitem.thumb}}"></image>
+                </view>
+                <view class="goods-desc">
+                  <view class="goods-title">{{gitem.name}}</view>
+                  <view class="godds-price">零售价:￥{{gitem.money}}</view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </block>
+    </view>
+    <!-- 为你推荐 -->
+    <view>
+      <view class="caption flex-bet">
+        <view class="title">为你推荐</view>
+        <view class="more"></view>
+      </view>
+      <view class="goods-list">
+        <view class="list-item flex" wx:for="{{recommendList}}" wx:key="index" data-id="{{item.id}}"
+          catchtap="goodsDetail">
+          <view class="list-pic-box">
+            <image src="{{item.thumb}}"></image>
+          </view>
+          <view class="description">
+            <view class="list-title">{{item.name}}</view>
+            <view class="specs">{{item.slogan}}</view>
+            <view class="price">零售价:￥{{item.money}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

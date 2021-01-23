@@ -1,0 +1,69 @@
+<!-- 动态 item -->
+<!-- 用户信息 -->
+<view class="dynamic-item">
+  <view class="userInfo">
+    <!-- 头像 -->
+    <view class="userInfo-avatar">
+      <avatar class="avatar" src='{{share.author.thumb}}' />
+    </view>
+    <view class="user-left">
+      <!-- 用户昵称 -->
+      <view class="user-name">{{share.author.name}}</view>
+      <!-- 用户分类 -->
+      <view class="user-class">
+        <block wx:for='{{share.share_name}}' wx:key='*this'>#{{item}}#</block>
+      </view>
+    </view>
+    <view wx:if="{{share.share_times != 0}}" class="user-right">{{share.share_times}}次分享</view>
+  </view>
+  <!-- 视频，图片 -->
+  <view class="media">
+    <custom-video class='media-video' cover='{{share.share_images[0]}}' src='{{share.video}}' wx:if="{{share.is_video=='1'}}" />
+    <view class="media-image" wx:else>
+      <swiper class="media-swiper-image" circular="{{true}}" indicator-dots="{{false}}" bind:change="handleChange" interval="{{3000}}" duration="{{500}}">
+        <block wx:for="{{share.share_images}}" wx:key="index">
+          <swiper-item>
+            <!-- <image bindtap='preview' data-preview='{{share.share_images}}' mode='widthFix' class="swiper-image" src="{{item}}" /> -->
+            <image binderror="errImg" src="{{item}}" class="swiper-image" mode="aspectFill" bindtap='previewImg' data-previewurl='{{share.share_images}}'
+            data-currenturl='{{item}}'/>
+            <!-- <custom-image class='swiper-image' type='cover' src='{{item}}' bindtap='previewImg' data-index='{{index}}' data-previewurl='{{share.share_images_thumb}}' bindlongpress='delete' /> -->
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="number-indicator">{{current}}/{{share.share_images.length}}</view>
+    </view>
+  </view>
+  <!-- 文字描述 -->
+  <view class="content">
+    <custom-text class='share-item-content' text='{{share.share_content}}' line='3' />
+  </view>
+  <!-- 时间 -->
+  <view class='share-item-date'>{{share.share_time1}}</view>
+  <!-- 操作 -->
+  <view class="operation">
+    <!-- 保存 -->
+    <view class="save menu-item" data-isVideo="{{share.is_video}}" data-isTips="{{false}}" bind:tap="handleSaveClick">
+      <image class='save-icon menu-item-icon' mode='aspectFit' src='./icon/save.png' />
+      保存至相册
+    </view>
+    <!-- 收藏 -->
+    <view class="collection">
+      <view class='save menu-item' bindtap='favorite' wx:if='{{share.is_collect}}'>
+        <image class='menu-item-icon' mode='aspectFit' src='./icon/collection.png' />
+        素材收藏
+      </view>
+      <view class='save menu-item' bindtap='favorite' wx:else>
+        <image class='menu-item-icon' mode='aspectFit' src='./icon/unCollection.png' />
+        素材收藏
+      </view>
+    </view>
+    <!-- 分享到朋友圈，分享给朋友 -->
+    <view class="share-to">
+      <view class="share-to-content">分享至：</view>
+      <image class='wechat-icon' data-isTips="{{true}}" data-content="{{share.share_content}}" data-isVideo="{{share.is_video}}" bind:tap="handleSaveClick" mode='aspectFit' src='./icon/wechat-moments.png' />
+      <button data-content="{{share.share_content}}" class="share-to-friend" plain="true" open-type="share" bind:tap="handleShareClick">
+        <image class='wechat-icon share-to-friend-icon' mode='aspectFit' src='./icon/weChat.png' />
+      </button>
+    </view>
+  </view>
+</view>

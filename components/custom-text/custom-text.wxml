@@ -1,0 +1,9 @@
+<view class='custom-text-outer' style='max-height: {{status=="hide" || status=="none"?"calc(" + line + " * " + lineHeight + ")": "initial"}}'>
+  <text class='custom-text-content' style='line-height: {{lineHeight}};'>{{text}}</text>
+</view>
+<view class='custom-text-button custom-text-show' bindtap='show' wx:if='{{status=="hide"}}'>
+  {{showText}}
+</view>
+<view class='custom-text-button custom-text-hide' bindtap='hide' wx:elif='{{status=="show"}}'>
+  {{hideText}}
+</view>

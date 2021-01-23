@@ -1,0 +1,13 @@
+<view class="box_bg" style="background: url('{{datas}}') no-repeat center center;background-size: cover;">
+	<block wx:for="{{list_arr}}" wx:key="{{index}}">
+		<block wx:if="{{item.shop_id==3}}">
+			<image src="https://cm.chineseglory.cn/images/dl1.png" bindtap='goDetails' data-id="3" mode='widthFix'></image>
+		</block>
+		<block wx:if="{{item.shop_id==4}}">
+			<image src="https://cm.chineseglory.cn/images/dl2.png" bindtap='goDetails' data-id="4" mode='widthFix'></image>
+		</block>
+		<block wx:if="{{item.shop_id==5}}">
+			<image src="https://cm.chineseglory.cn/images/dl3.png" bindtap='goDetails' data-id="5" mode='widthFix'></image>
+		</block>
+	</block>
+</view>

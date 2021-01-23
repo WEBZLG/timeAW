@@ -1,0 +1,38 @@
+<!-- 评论-元素 -->
+<view class='comment-item'>
+  <!-- 评论-元素-头像 -->
+  <avatar class='comment-item-avatar' src='{{item.avatar}}' />
+
+  <!-- 评论-元素-详情 -->
+  <view class='comment-item-detail'>
+    <!-- 评论-元素-昵称 -->
+    <view class='comment-item-nickname'>{{item.nickname}}</view>
+    <!-- 评论-元素-日期 -->
+    <view class='comment-item-date'>{{item.createtime}}</view>
+  </view>
+
+  <!-- 评论-元素-点赞 -->
+  <view class='comment-item-likes' bindtap='likes' wx:if='{{likes}}'>
+    <image wx:if='{{item.prise==1}}' class='comment-item-likes-icon' src='./images/unlikes.png' />
+    <image wx:else class='comment-item-likes-icon' src='./images/likes.png' />
+    {{item.zan_num}}
+  </view>
+
+  <!-- 评论-元素-内容 -->
+  <view class='comment-item-contect'>{{item.comment}}</view>
+  <!-- <custom-text class='comment-item-contect' line='{{3}}' text='{{item.comment}}' show-text='显示全文' hide-text='收起评论' /> -->
+
+  <!-- 评论-元素-底部 -->
+  <view class='comment-item-footer' wx:if='{{footer}}'>
+    <!-- 评论-元素-更多 -->
+    <view class='comment-item-more' bindtap='more'>
+      <view class='comment-item-more-text'>查看更多评论</view>
+      <image class='comment-item-more-icon' src='./images/more.png' />
+    </view>
+    <!-- 评论-元素-回复 -->
+    <view class='comment-item-reply' bindtap='reply'>
+      <image class='comment-item-reply-icon' src='./images/reply.png' />
+      <view class='comment-item-reply-text'>回复</view>
+    </view>
+  </view>
+</view>

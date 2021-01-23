@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "消息通知",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "guide": "/components/guide/guide",
+    "background-audio-popup": "/components/course-player/popup-controller/popup-controller",
+    "message-list": "/components/message-list/message-list",
+    "tab": "/components/tab/tab",
+    "tab-nav": "/components/tab/tab-nav",
+    "tab-nav-item": "/components/tab/tab-nav-item",
+    "tab-content": "/components/tab/tab-content",
+    "tab-content-item": "/components/tab/tab-content-item"
+  }
+}

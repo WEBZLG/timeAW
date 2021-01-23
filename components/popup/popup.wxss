@@ -1,0 +1,20 @@
+:host {
+  position: fixed;
+  z-index: 9001;
+}
+
+/* 蒙版 */
+.popup-mask {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+@import './center.wxss';
+@import './cart.wxss';

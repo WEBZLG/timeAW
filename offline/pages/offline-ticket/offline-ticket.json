@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "线下课门票",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ticket": "/offline/components/ticket/ticket"
+  }
+}

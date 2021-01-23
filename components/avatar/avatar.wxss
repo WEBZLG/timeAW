@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  /* box-shadow: 0 0 0rpx 2rpx #FFF, 0 0 10rpx 0 rgba(0, 0, 0, 0.4); */
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

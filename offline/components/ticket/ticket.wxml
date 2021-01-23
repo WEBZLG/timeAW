@@ -1,0 +1,45 @@
+<!-- offline/components/ticket/ticket.wxml -->
+<view class="ticket">
+  <custom-image class="ticket-bg" src="{{ticket.img_url}}"></custom-image>
+  <view class="ticket-info">
+    <!-- 左侧信息 -->
+    <view class="ticket-left">
+
+      <!-- 已预约的门票 -->
+      <view class="reserved" wx:if="{{ticket.ap_status == 4}}">
+        <!-- 课程名称 -->
+        <view class="course-name">{{ticket.name}}</view>
+        <!-- 预约时间 -->
+        <view class="appointment course-info">预约时间：{{ticket.time_name}}</view>
+        <!-- 开课时间 -->
+        <view class="start course-info">开课时间：{{ticket.time_start_name}}</view>
+        <!-- 地址 -->
+        <view class="address course-info">开课地点：{{ticket.address}}</view>
+      </view>
+
+      <!-- 未预约的门票 -->
+      <view class="unReserved" wx:else>
+        <view class="logo"></view>
+        <view class="ticket-type">{{ticket.name}}</view>
+        <!-- 三种预约按钮 -->
+        <view class="appointment-btn" data-id="{{ticket.offline_id}}" bind:tap="appointment">
+          <!-- 立即预约按钮 -->
+          <custom-image class="btn-icon" src="/offline/images/btn.png"></custom-image>
+        </view>
+      </view>
+    </view>
+    <!-- 右侧二维码 -->
+    <view class="ticket-right">
+      <view class="appointment-status" wx:if="{{ticket.qrcode}}">
+        <text wx:if="{{ticket.ap_status==1}}">已报名</text>
+<!--        <text wx:if="{{ticket.ap_status==2}}">进行中</text>-->
+<!--        <text wx:if="{{ticket.ap_status==3}}">已结束</text>-->
+        <text wx:if="{{ticket.ap_status==4}}">已预约</text>
+      </view>
+<!--      <view class="appointment-status" wx:else></view>-->
+      <custom-image wx:if="{{ticket.qrcode}}" class="qrcode" src="{{ticket.qrcode}}"></custom-image>
+      <view wx:else class="qrcode"></view>
+      <view class="log" wx:if="{{ticket.ap_status==4}}" data-id="{{ticket.id}}" bind:tap="writeOff">核销记录</view>
+    </view>
+  </view>
+</view>

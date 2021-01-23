@@ -1,0 +1,19 @@
+<!-- 课程-封面 -->
+<view hidden='{{status!="stop"}}'>
+  <custom-image type='cover' class='course-cover' src='{{course.top_thumb}}' />
+</view>
+
+<view hidden='{{status=="stop"}}'>
+
+  <!-- 菜单-列表 -->
+  <view class='menu-list' wx:if='{{partMedia=="video"}}'>
+    <button class='menu-item {{currentMedia=="audio"?"menu-item-active":""}}' disabled='{{currentMedia=="audio"}}' bindtap='toggle' data-mode='audio'>音频</button>
+    <button class='menu-item {{currentMedia=="video"?"menu-item-active":""}}' disabled='{{currentMedia=="video"}}' bindtap='toggle' data-mode='video'>视频</button>
+  </view>
+
+  <!-- 音频 -->
+  <audio-player id='audio-player' />
+
+  <!-- 视频 -->
+  <video-player id='video-player' />
+</view>

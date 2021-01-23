@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "list-vertical": "/components/list-vertical/list-vertical",
+    "tutor-list": "/components/tutor-list/tutor-list"
+  }
+}

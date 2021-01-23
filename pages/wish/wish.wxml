@@ -1,0 +1,26 @@
+<container id='container' binderror='init'>
+  <form bindsubmit='submit'>
+
+    <!-- 愿望单-列表 -->
+    <wish-list name='wishList' bindchange='count' id='wish-list' class='wish-list' value='{{wish.list}}' />
+
+    <!-- 愿望单-底部 -->
+    <view class='wish-footer'>
+      <!-- 按钮-列表 -->
+      <view class='button-list'>
+        <view class='button-item' bindtap='checkedAll' wx:if="{{isShow}}">全选</view>
+        <view class='button-item' bindtap='uncheckedAll' wx:else>全部取消</view>
+        <button data-form-type='delete' form-type='submit' class='button-clear button-item'>删除</button>
+      </view>
+      <!-- 愿望单-统计 -->
+      <view class='wish-settlement' wx:if='{{false}}'>
+        <!-- 愿望单-底部-统计 -->
+        <view class='wish-settlement-count'>共计{{count}}套课程</view>
+        <!-- 愿望单-底部-价格 -->
+        <view class='wish-settlement-price'>{{price}}</view>
+        <!-- 愿望单-底部-提交 -->
+        <button data-form-type='apply' form-type='submit' class='custom-solid-button wish-settlement-submit'>申请学习</button>
+      </view>
+    </view>
+  </form>
+</container>

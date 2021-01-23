@@ -1,0 +1,12 @@
+<wxs src='../../../utils/filter.wxs' module='filter' />
+<view hidden='{{status=="stop"}}'>
+  <!-- 播放器-视频 -->
+  <view class='player-container {{loading?"player-container-loading":""}}'>
+    <video show-center-play-btn='{{false}}' bindprogress='onProgress' bindended='ended' bindwaiting='onWaiting' bindtimeupdate='timeupdate' class='player-video' id='player-video' src='{{part.list[part.index].video}}' cover='{{part.list[part.index].cover}}' wx:if='{{status!="stop"}}' />
+    <view class='videoLoading-outer'></view>
+    <view class='videoLoading-inner'>
+      <image class='videoLoading-image' mode='aspecFit' src='/images/public/loading.gif' />
+      <view class='videoLoading-text'>视频过于精彩请稍后</view>
+    </view>
+  </view>
+</view>

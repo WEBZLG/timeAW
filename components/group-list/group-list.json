@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "list-vertical": "/components/list-vertical/list-vertical"
+  }
+}

@@ -1,0 +1,78 @@
+<container id='container' binderror='init'>
+  <view class="set_box">
+    <!-- 头部 -->
+    <view class="head">
+      <!-- 头部LOGO -->
+      <view class="headLogo">
+        <image src="../../images/mine/logo.png"></image>
+      </view>
+    <!---->
+    </view>
+    <view bindtap='wechatPut' class='set3'>
+      <view class='set_a'>绑定微信</view>
+      <block wx:if="{{userInfo.nickname}}">
+        <view class='set_b'>{{userInfo.nickname}}
+          <view class='r'></view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='set_b'>未绑定
+          <view class='r'></view>
+        </view>
+      </block>
+    </view>
+    <view bindtap='phonePut' class='set' style="margin-top: 0">
+      <view class='set_a'>更换手机号</view>
+      <block wx:if="{{userInfo.mobile}}">
+        <view class='set_b'>{{userInfo.mobile}}
+          <view class='r'></view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='set_b'>未绑定
+          <view class='r'></view>
+        </view>
+      </block>
+    </view>
+    <navigator class='set2' url='/pages/recommender/recommender'>
+      <view class='set_a'>推荐人</view>
+      <block wx:if="{{userInfo.parentid!='0'}}">
+        <view class='set_b'>{{userInfo.parent_name}}
+          <view class='r'></view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='set_b'>未绑定
+          <view class='r'></view>
+        </view>
+      </block>
+    </navigator>
+    <!---->
+  </view>
+  <view class="set_box">
+    <!---->
+    <navigator class='set' url='/pages/agreement/agreement'>
+      <view class='set_a'>用户协议</view>
+      <view class='set_b'>
+        <view class='r'></view>
+      </view>
+    </navigator>
+    <navigator class='set2' url='/pages/about/about'>
+      <view class='set_a'>关于我们</view>
+      <view class='set_b'>
+        <view class='r'></view>
+      </view>
+    </navigator>
+    <!---->
+  </view>
+  <!-- <block wx:if="{{userInfo.group_id==4}}">
+    <view class="set_box">
+      <navigator class='set' url='/pages/dean-home/dean-home'>
+        <view class='set_a'>院长主页</view>
+        <view class='set_b'>
+          <view class='r'></view>
+        </view>
+      </navigator>
+    </view>
+  </block> -->
+</container>

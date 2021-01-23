@@ -1,0 +1,17 @@
+<!-- 查看物流 -->
+<container id='container' binderror='init'>
+  <view class="logistics">
+    <view class="logistics-company left-content">
+      物流公司:
+      <text id="right-content">{{virtual_name}}</text>
+    </view>
+    <view class="logistics-number left-content">
+      物流单号:
+      <text id="right-content">{{number}}</text>
+    </view>
+  </view>
+  <view class="status">
+    <!-- direction	显示方向，可选值为 horizontal vertical -->
+    <van-steps steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="#33BCC6"></van-steps>
+  </view>
+</container>

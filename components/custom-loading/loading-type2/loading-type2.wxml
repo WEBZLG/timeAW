@@ -1,0 +1,3 @@
+<view class='loading-outer'>
+  <view class='loading-inner'></view>
+</view>

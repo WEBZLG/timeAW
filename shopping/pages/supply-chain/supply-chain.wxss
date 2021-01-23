@@ -1,0 +1,68 @@
+/* shopping/pages/supply-chain/supply-chain.wxss */
+.carousel{
+  height: 266rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin:0 24rpx;
+}
+.carousel .carouselImg{
+  border-radius: 20rpx;
+}
+swiper {
+  height: 266rpx;
+}
+image{
+  height: 100%;
+  width: 100%;
+}
+.notice{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 24rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.s-title{
+  font-size: 26rpx;
+}
+.s-icon{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 10rpx;
+}
+.s-icon image{
+  vertical-align: top;
+}
+.no-more {
+  margin-top: 45rpx;
+  text-align: center;
+  color: #B5B6B6;
+  font-size: 22rpx;
+}
+/* .van-icon-search{
+  left: 220rpx !important;
+} */
+.search-box{
+  text-align: center;
+  height: 64rpx;
+  background-color: #f5f6fa;
+  margin: 20rpx 24rpx;
+  border-radius: 64rpx;
+  border: 1px solid #f0f1f5;
+}
+.search{
+  height: 64rpx;
+  display: inline-flex;
+  align-items: center;
+  color: #bcc2cb;
+  font-size: 28rpx;
+}
+.search-icon{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 17rpx;
+}

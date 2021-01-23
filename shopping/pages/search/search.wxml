@@ -1,0 +1,23 @@
+<!--shopping/pages/search/search.wxml-->
+<container id='container' binderror='init'>
+  <!-- 搜索 -->
+  <van-search value="{{ keyword }}" shape="round" placeholder="请输入商品名称" use-action-slot bind:search="submit" bind:change="onChange">
+    <view slot="action" bind:tap="submit">搜索</view>
+  </van-search>
+  <view class="history">
+    <view class="flex-bet">
+      <view class="title">历史搜索</view>
+      <view class="delete" catchtap="clearHistory">
+        <image src="../../images/delete.png"></image>
+      </view>
+    </view>
+    <view class="flex">
+      <block wx:for="{{history}}" wx:key="index">
+        <view class="history-item" data-keyword="{{item.keywords}}" catchtap="tagSearch">{{item.keywords}}</view>
+      </block>
+    </view>
+    <view wx:if="{{history.length==0}}" class="empty">
+      <image class="empty-img" src="../../images/empty.png" />
+    </view>
+  </view>
+</container>

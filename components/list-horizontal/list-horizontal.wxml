@@ -1,0 +1,25 @@
+<view bindtap='enterCourse' data-id='{{item.id}}' class='item' wx:for='{{list}}' wx:key='id'>
+  <!-- 封面 -->
+  <custom-image class='item-cover' type='cover' src='{{item.thumb}}' />
+  <!-- 顶部 -->
+  <view class='item-header'>
+    <!-- 标题 -->
+    <view class='item-title'>{{item.name}}</view>
+    <!-- 标签 -->
+    <tag list='{{item.label}}' />
+  </view>
+  <!-- 中部 -->
+  <view class='item-body'>
+    <!-- 标题 -->
+    <view class='userInfo' catchtap='enterTutor' data-id='{{item.author.id}}'>
+      <!-- 头像 -->
+      <avatar class='userInfo-avatar' src='{{item.author.thumb}}' />
+      <!-- 昵称 -->
+      <view class='userInfo-nickname'>{{item.author.name}} | {{item.author.label}}</view>
+    </view>
+    <!-- 参加人数 -->
+    <view class='item-join'>
+      <custom-image class='item-join-icon' src='https://cm.chineseglory.cn/images/icon2.png' mode='icon' /> {{item.join_num}}
+    </view>
+  </view>
+</view>

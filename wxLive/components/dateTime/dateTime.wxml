@@ -1,0 +1,36 @@
+<view class="dateTime" wx:if="{{status}}">
+	<!-- 阴影 -->
+	<view class="dateTime-shadow"></view>
+	<!-- 选择器 -->
+	<view class="dateTime-picker">
+		<!-- 顶部 -->
+		<view class="dateTime-picker-header">
+			<view class="dateTime-picker-button dateTime-picker-cancel" bindtap="close">取消</view>
+			<view class="dateTime-picker-button dateTime-picker-confirm" bindtap="confirm">确认</view>
+		</view>
+		<!-- 日期 -->
+		<picker-view class="dateTime-picker-date" bindchange="dateChange" value="{{date.value}}" bindpickstart="start" bindpickend="end">
+			<picker-view-column>
+				<view class="picker-item" wx:for="{{date.year}}" wx:key="index">{{item}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view class="picker-item" wx:for="{{date.month}}" wx:key="index">{{item}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view class="picker-item" wx:for="{{date.day}}" wx:key="index">{{item}}</view>
+			</picker-view-column>
+		</picker-view>
+		<!-- 时间 -->
+		<picker-view class="dateTime-picker-time" bindchange="timeChange" value="{{time.value}}" bindpickstart="start" bindpickend="end">
+			<picker-view-column>
+				<view class="picker-item" wx:for="{{time.hour}}" wx:key="index">{{item}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view class="picker-item" wx:for="{{time.minute}}" wx:key="index">{{item}}</view>
+			</picker-view-column>
+			<!-- <picker-view-column>
+				<view class="picker-item" wx:for="{{time.second}}" wx:key="index">{{item}}</view>
+			</picker-view-column> -->
+		</picker-view>
+	</view>
+</view>

@@ -1,0 +1,99 @@
+:host {
+  /* margin: 0 -40rpx; */
+  width: calc(100%);
+  display: block;
+}
+
+.scroll-view {
+  width: fill-available;
+  /* margin-left:  30rpx; */
+}
+
+/* 列表 */
+
+.home-list {
+  display: flex;
+  flex-wrap: nowrap;
+  /* padding: 0 40rpx; */
+  width: fit-content;
+  /* width: max-content; */
+}
+
+/* 元素 */
+
+.home-item {
+  margin-top: 20rpx;
+  width: 180rpx;
+  margin-left: -10rpx;
+}
+
+/* 元素-中部 */
+
+.home-item-body {
+  margin: 10rpx;
+  margin-bottom: 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 封面 */
+
+.home-item-cover {
+  height: 130rpx;
+  width: 130rpx;
+  overflow: hidden;
+  border-radius: 70rpx;
+  border: 2rpx solid var(--main);
+  margin: auto;
+}
+
+/* 顶部 */
+
+.home-item-header {
+}
+
+/* 热度 */
+
+.home-item-hot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx 0;
+  flex: 1;
+  height: 40rpx;
+  color: #999;
+}
+
+.home-item-hot-title {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.home-item-hot-icon {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+/* 标题 */
+
+.home-item-title, .home-item-title1 {
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  margin: 10rpx 0;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  white-space: nowrap;
+}
+.home-item-title {
+  font-weight: bold;
+}
+.home-item-title1 {
+  font-size: 24rpx;
+  line-height: 28rpx;
+  height: 28rpx; 
+  color: #999;
+}

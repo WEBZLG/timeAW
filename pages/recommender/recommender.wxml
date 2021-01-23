@@ -1,0 +1,26 @@
+<view class="set_box">
+	<!---->
+	<view class='set1'>
+		<view class='set1_a'>头像</view>
+		<view class='set1_b'>
+			<image src="{{data_arr.avatar}}" mode='aspectFill'></image>
+		</view>
+	</view>
+	<view class='set'>
+		<view class='set_a'>昵称</view>
+		<view class='set_b'>{{data_arr.nickname}}</view>
+	</view>
+	<view class='set'>
+		<view class='set_a'>电话</view>
+		<view class='set_b'>{{data_arr.mobile}}</view>
+	</view>
+	<!---->
+</view>
+<view class="set_box">
+	<!---->
+	<view class='set'>
+		<view class='set_a'>等级</view>
+		<view class='set_b'>{{data_arr.group.name}}</view>
+	</view>
+	<!---->
+</view>

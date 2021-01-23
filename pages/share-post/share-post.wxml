@@ -1,0 +1,54 @@
+<!-- 表单 -->
+<form bindsubmit='submit'>
+  <container id='container' binderror='init'>
+
+    <!-- 顶部 -->
+    <view class='header'>
+      <!-- 标签-列表 -->
+      <custom-multiple-choose-group class='tag-list' name='tag' max='{{tag.max}}'>
+        <!-- 标签-元素 -->
+        <custom-multiple-choose wx:for='{{tag.list}}' wx:key='{{index}}'>
+          <view slot='checked' class='tag-item tag-item-checked'>
+            <custom-image src='https://cm.chineseglory.cn/images/icon3_a.png' />{{item.name}}</view>
+          <view slot='unchecked' class='tag-item tag-item-unchecked'>
+            <custom-image src='https://cm.chineseglory.cn/images/icon3.png' />{{item.name}}</view>
+        </custom-multiple-choose>
+      </custom-multiple-choose-group>
+    </view>
+
+    <!-- 中部 -->
+    <view class='body'>
+      <!-- 发布 -->
+      <button class='submit button-clear' form-type='submit'>发布</button>
+      <!-- 内容 -->
+      <textarea placeholder='这一刻的想法...' value='{{content}}' class='content' name='description' maxlength='500'></textarea>
+      <!-- 选择 -->
+      <view class='choose' bindtap='choose' wx:if='{{picture.list.length==0 && video.list.length==0}}'>
+        <custom-image type='icon' class='choose-icon' src='/images/share-post/choose.png' /> 添加素材
+      </view>
+      <!-- 图片-列表 -->
+      <picture-list name='picture' preview choose max='9' size='4' class='picture-list' data-type='picture' binddelete='delete' bindchoose='post' value='{{picture.list}}' wx:if='{{picture.list.length>0}}' />
+      <!-- 视频-列表 -->
+      <video-list name='video' choose max='1' size='4' class='video-list' data-type='video' binddelete='delete' bindchoose='post' value='{{video.list}}' wx:if='{{video.list.length>0}}' />
+    </view>
+  </container>
+</form>
+
+<!-- 弹窗 -->
+<custom-popup id='form-Success' class='form-popup'>
+  <!-- 自定义提示框-外框 -->
+  <view class='form-success-container'>
+    <custom-image class='form-success-background' type='poster' src='/images/course-detail/popup-background2.png' />
+    <!-- 中间文字部分 -->
+    <view class="form-content">
+      <view class="form-title">发布成功</view>
+      <view class="form-msg">请耐心等待官方审核</view>
+    </view>
+    <view class="form-btn">
+      <view class="goOnBtn" bindtap='goOn'>继续发布</view>
+      <view class="finishBtn" bindtap='finish'>完成</view>
+    </view>
+    <custom-image class='form-cancel-button' src='/images/course-detail/popup-cancel.png' bindtap='goOn' />
+    <custom-image class='form-success-button' src='/images/course-detail/popup-confirm.png' bindtap='finish' />
+  </view>
+</custom-popup>

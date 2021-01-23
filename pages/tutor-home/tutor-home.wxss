@@ -1,0 +1,293 @@
+#container {
+  overflow: auto;
+  min-height: 100vh;
+  /* background-color: #F2F2F2; */
+}
+
+
+
+/* 设置 */
+.setup {
+  position: absolute;
+  z-index: 1001;
+  top: 20rpx;
+  right: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.setup custom-image {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* tab-nav */
+#tab {
+  background-color: #FFF;
+}
+.default-nav-item .tab-nav-item-inner {
+  font-size: 28rpx;
+  animation-name: tab-nav-normal;
+  animation-fill-mode: both;
+  animation-duration: 200ms;
+}
+.default-nav-item .tab-nav-active {
+  animation-name: tab-nav-active;
+  animation-duration: 400ms;
+}
+
+
+
+/* 课程-容器 */
+#course-container {
+  background-color: #F2F2F2;
+}
+/* 素材-容器 */
+#material-container {
+  background-color: #F2F2F2;
+}
+/* 导师-容器 */
+#tutor-container {
+  background-color: #FFF;
+}
+
+
+
+/* 课程-列表 */
+.course-list {
+  margin: 0 20rpx;
+}
+
+
+
+/* 导师-横幅 */
+.tutor-banner {
+  height: 504rpx;
+}
+.tutor-banner custom-image {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* 导师-中部 */
+.tutor-body {
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  background-color: #FFF;
+  position: relative;
+  z-index: 1;
+  /* margin-top: 20rpx; */
+  /* margin-top: -80rpx; */
+}
+
+
+
+/* 导师-详情 */
+.tutor-detail {
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+}
+
+/* 导师-关注 */
+.tutor-follow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  width: 140rpx;
+  padding: 0;
+  height: 50rpx;
+  font-size: 24rpx;
+}
+.tutor-follow custom-image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+
+
+/* 用户 */
+.userInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 0;
+  height: 100%;
+}
+/* 用户-详情 */
+.userInfo-detail {
+  flex: 1;
+  width: 0;
+  margin: 0 20rpx;
+}
+/* 用户-头像 */
+.userInfo-avatar {
+  flex-shrink: 0;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 4rpx solid #FFF;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.4);
+  align-self: flex-end;
+}
+/* 用户-昵称 */
+.userInfo-nickname {
+  font-size: 32rpx;
+  min-height: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 用户-称号 */
+.userInfo-title {
+  font-size: 24rpx;
+  min-height: 40rpx;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+/* 导师-标签 */
+.tutor-tag-list {
+  margin: 20rpx 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+
+
+/* 导师-数据 */
+.tutor-data-list {
+  display: flex;
+  margin: 20rpx 30rpx 0;
+  padding-bottom: 20rpx;
+  align-items: center;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+/* 导师-数据-元素 */
+.tutor-data-item {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+.tutor-data-item:not(:last-of-type)::after {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: translateX(2rx);
+  width: 2rpx;
+  height: 50%;
+  background-color: #F2F2F2;
+}
+/* 导师-数据-元素-值 */
+.tutor-data-item-value {
+  color: var(--main);
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+/* 导师-数据-元素-标题 */
+.tutor-data-item-title {
+  color: #999;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+/* 导师-内容 */
+.tutor-content {
+  margin: 20rpx;
+}
+
+/* 导师-视频 */
+.tutor-video {
+  height: 400rpx;
+  width: fill-available;
+  margin: 20rpx;
+}
+
+/* 导师-音频 */
+.tutor-audio {
+  width: fill-available;
+  margin: 20rpx;
+}
+
+
+
+/* 标签-导航 */
+#tagNav {
+  min-height: 60rpx;
+  width: auto;
+  padding: 10rpx;
+  background-color: #FFF;
+}
+#tagNav .tab-nav-underline {
+  display: none;
+}
+#tagNav .tab-nav-list-inner {
+  height: initial!important;
+  flex-wrap: wrap!important;
+}
+.tagNav-item {
+  padding: 0;
+  flex: 0;
+}
+.tagNav-item-default {
+  margin: 10rpx;
+  font-size: 24rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 12rpx;
+  border-radius: 20rpx;
+  width: fit-content;
+  background-color: #F2F2F2;
+}
+.tagNav-item-default custom-image {
+  width: 24rpx;
+  height: 24rpx;
+}
+.tagNav-item-active {
+  background-color: var(--main);
+  color: #FFF;
+}
+
+
+
+/* 动画 */
+@keyframes tab-nav-active {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes tab-nav-normal {
+  0% {
+  }
+  100% {
+    transform: scale(1);
+  }
+}

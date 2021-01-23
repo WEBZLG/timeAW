@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "全国沙龙巡回",
+  "usingComponents": {
+    "course-synopsis": "/offline/components/course-synopsis/course-synopsis"
+  }
+}

@@ -1,0 +1,47 @@
+<!--shopping/pages/shopping-cart/shopping-cart.wxml-->
+
+<container id='container' binderror='init'>
+  <view class="exit flex-bet" wx:if="{{cartList.length>0}}">
+    <view></view>
+    <view catchtap="onExit">{{exit}}</view>
+  </view>
+  <view class="goods-list">
+    <van-checkbox-group value="{{ result }}" bind:change="onChangeCheck">
+      <block wx:for="{{cartList}}" wx:key="index">
+        <view class="goods-item flex">
+          <view class="check-box">
+            <van-checkbox name="{{item.goods_id+'-'+item.size_id}}" checked-color="#33bcc6"></van-checkbox>
+          </view>
+          <view class="goods-text">
+            <van-card tag="" desc="规格：{{item.size}}" title="{{item.goods_name}}" thumb="{{item.goods_thumb}}"   data-id="{{item.goods_id}}" catchtap="goodsDetail">
+              <view slot="bottom">
+                <view class="flex-bet">
+                  <view class="price">￥{{item.money}}</view>
+                </view>
+              </view>
+            </van-card>
+            <view class="stepper">
+              <van-stepper value="{{ item.goods_num }}" min="{{item.siglebuyleast}}" max="{{item.stock}}" bind:change="onChangeNum" data-least="{{item.siglebuyleast}}"  data-index="{{index}}" />
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class="no-more" wx:if="{{finished}}">— 我是有底线的 —</view>
+    </van-checkbox-group>
+    <view wx:if="{{cartList.length==0}}" class="empty">
+      <image class="empty-img" src="../../images/empty.png" />
+    </view>
+    
+  </view>
+    <van-submit-bar price="{{ totalPrice }}" button-text="去结算({{checkGoods.length}})" button-type="info" bind:submit="onSubmit"
+      button-class="submit" bar-class="bar-class" price-class="price-stype" wx:if="{{isexit==false&&cartList.length>0}}">
+      <van-checkbox value="{{ checkedAll }}" checked-color="#33bcc6" bind:change="onChangeAll">全选</van-checkbox>
+    </van-submit-bar>
+    <view class="bottom flex-bet"  wx:if="{{isexit==true&&cartList.length>0}}">
+      <view>
+        <van-checkbox value="{{ checkedAll }}" checked-color="#33bcc6" bind:change="onChangeAll">全选</van-checkbox>
+      </view>
+      <view class="delete" catchtap="onDelete">删除({{checkGoods.length}})</view>
+    </view>
+
+</container>

@@ -1,0 +1,40 @@
+page {
+  height: 100%;
+}
+#container{
+  height: 100%;
+  background: #f5f5f5;
+  padding-bottom: 0.1rpx;
+}
+
+.tab {
+  display: flex;
+  padding-bottom: 18rpx;
+  background: #ffffff;
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  
+}
+.tab-name {
+  font-size: 28rpx;
+  color: #aaaaaa;
+  padding: 15rpx 0
+}
+.active-line {
+  margin: 0 auto;
+  width: 96rpx;
+  height: 7rpx;
+  background: #ec6d2a;
+  border-radius: 7px;
+}
+.active {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* 门票列表 */
+.ticket-list {
+  padding: 15rpx 24rpx;
+}

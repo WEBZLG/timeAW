@@ -1,0 +1,116 @@
+:host {
+  display: block;
+  overflow: auto;
+}
+
+
+/* vip-选中 */
+.vip-checked {
+  background-color: #F8EDE7;
+}
+
+
+
+/* vip-元素 */
+.vip-item {
+  border-radius: 20rpx;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.2);
+  margin: 20rpx;
+  padding: 20rpx;
+  position: relative;
+  display: flex;
+}
+/* vip-元素-选中 */
+.vip-item-checked {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+}
+/* vip-元素-详情 */
+.vip-item-detail {
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 260rpx;
+}
+/* vip-元素-底部 */
+.vip-item-footer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* vip-元素-封面 */
+.vip-item-cover {
+  width: 190rpx;
+  height: 260rpx;
+  display: block;
+  border-radius: 20rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+/* vip-元素-标题 */
+.vip-item-title {
+  font-size: 32rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* vip-元素-简介 */
+.vip-item-description {
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  line-height: 40rpx;
+  height: 80rpx;
+}
+/* vip-元素-标签 */
+.vip-item-tag {
+  margin-top: 34rpx;
+}
+/* vip-元素-导师 */
+.vip-item-author {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 菜单-列表 */
+.menu-list {
+  display: flex;
+  flex-shrink: 0;
+}
+/* 菜单-元素 */
+.menu-item {
+  line-height: 50rpx;
+  padding: 0 10rpx;
+  background-color: var(--main);
+  color: #FFF;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+.menu-item:not(:last-of-type) {
+  margin-right: 15rpx;
+}
+
+/* 已拥有 */
+.owned {
+  background-color: #e6e6e6;
+}
+.menu-item1 {
+  line-height: 50rpx;
+  padding: 0 10rpx;
+  background-color: #bcbcbc;
+  color: #FFF;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}

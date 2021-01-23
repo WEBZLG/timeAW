@@ -1,0 +1,34 @@
+/* 选项卡-导航 */
+:host {
+  display: block;
+  flex-grow: 0;
+  height: 60rpx;
+  color: #404040;
+  width: 100%;
+  font-size: 32rpx;
+}
+
+/* 选项卡-导航-容器 */
+.tab-nav-container {
+  height: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.tab-nav-container::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* 选项卡-导航-列表 */
+.tab-nav-list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+
+  width: fill-available;
+  position: relative;
+}

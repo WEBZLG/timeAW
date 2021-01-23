@@ -1,0 +1,427 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.container {
+  background-color: #FFF;
+  flex-grow: 1;
+}
+
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.kecheng_box{
+	width: 100%;
+	overflow: hidden;
+	padding-top: 20rpx;
+}
+.kecheng_a{
+	width: calc( 100% - 60rpx );
+	height: 420rpx;
+	background: url('https://cm.chineseglory.cn/images/bg1.png') no-repeat center center;
+	background-size: cover;
+	padding: 20rpx 30rpx 0 30rpx;
+}
+.ph{
+	width: 100%;
+	height: 120rpx;
+	margin-bottom: 20rpx;
+	background: #fff;
+	border-radius: 10rpx;
+	box-sizing: border-box;
+	padding: 10rpx;
+}
+.ph_a{
+	width: 80rpx;
+	height: 100rpx;
+}
+.icon8{
+	background: url('https://cm.chineseglory.cn/images/icon8.png') no-repeat center center;
+	background-size: 70%;
+}
+.icon9{
+	background: url('https://cm.chineseglory.cn/images/icon9.png') no-repeat center center;
+	background-size: 70%;
+}
+.icon10{
+	background: url('https://cm.chineseglory.cn/images/icon10.png') no-repeat center center;
+	background-size: 70%;
+}
+.ph_b{
+	width: 80rpx;
+	height: 100rpx;
+}
+.ph_b image{
+	width: 80rpx;
+	height: 100rpx;
+	border-radius: 5rpx;
+}
+.ph_c{
+	width: calc( 100% - 400rpx );
+	height: 100rpx;
+	line-height: 100rpx;
+	padding: 0 20rpx;
+	color: #272844;
+	font-size: 27rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ph_d{
+	width: 200rpx;
+	height: 100rpx;
+	text-align: center;
+	padding: 10rpx 0;
+}
+.ph_d1{
+	width: 200rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #ff6600;
+	font-size: 32rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ph_d2{
+	width: 200rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #999999;
+	font-size: 24rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.kecheng_b{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.show{
+	display:block;
+}
+.hidden{
+	display:none;
+}
+.ph1{
+	width: calc( 100% - 20rpx );
+	height: 100rpx;
+	background: #fff;
+	padding: 20rpx 0 20rpx 20rpx;
+	border-bottom: 1px solid #eee;
+}
+.ph1_a{
+	width: 40rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	color: #272844;
+	text-align: center;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.ph1_b{
+	width: 80rpx;
+	height: 100rpx;
+}
+.ph1_b image{
+	width: 100%;
+	height: 100rpx;
+	border-radius: 5rpx;
+}
+.ph1_c{
+	width: calc( 100% - 360rpx );
+	height: 100rpx;
+	line-height: 100rpx;
+	padding: 0 20rpx;
+	color: #272844;
+	font-size: 27rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ph1_d{
+	width: 200rpx;
+	height: 100rpx;
+	text-align: center;
+	padding: 10rpx 0;
+}
+.ph1_d1{
+	width: 200rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #272844;
+	font-size: 32rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ph1_d2{
+	width: 200rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #999999;
+	font-size: 24rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.daoshi_box{
+	width: 100%;
+	overflow: hidden;
+	padding-top: 20rpx;
+}
+.daoshi_a{
+	width: calc( 100% - 60rpx );
+	height: 420rpx;
+	background: url('https://cm.chineseglory.cn/images/bg1.png') no-repeat center center;
+	background-size: cover;
+	padding: 20rpx 30rpx 0 30rpx;
+}
+.ds_box{
+	width: 100%;
+	height: 300rpx;
+	background: #fff;
+	border-radius: 10rpx;
+	margin-top: 100rpx; 
+}
+.ds{
+	width: 30%;
+	height: 300rpx;
+	background: url('https://cm.chineseglory.cn/images/bg2.png') no-repeat top right;
+	background-size: 12rpx auto;
+}
+.ds1{
+	width: 40%;
+	height: 380rpx;
+	background: #fff;
+	border-radius: 10rpx;
+	margin-top: -80rpx; 
+}
+.ds2{
+	width: 30%;
+	height: 300rpx;
+	background: url('https://cm.chineseglory.cn/images/bg3.png') no-repeat top left;
+	background-size: 12rpx auto;
+}
+.ds_a{
+	width: 100%;
+	height: auto;
+	margin-top: 20rpx;
+	text-align: center;
+	background: url('https://cm.chineseglory.cn/images/icon12.png') no-repeat top center;
+	background-size: 58rpx 40rpx;
+	padding-top: 40rpx;
+}
+.ds_a image{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	border:2px solid #ebe9f4;
+	margin-top: -5rpx;
+}
+
+.ds_b{
+	width:100%;
+	height: 34rpx;
+	text-align: center;
+	line-height: 34rpx;
+	overflow: hidden;
+	font-size: 26rpx;
+	color: #999;
+}
+.ds_b view{
+	width: 32rpx;
+	height: 32rpx;
+	display: inline-block;
+	background: url('https://cm.chineseglory.cn/images/icon3.png') no-repeat center center;
+	background-size: 80%;
+	vertical-align: text-top;
+}
+.ds_c{
+	width:100%;
+	padding: 5rpx 0 0 0;
+	height: 40rpx;
+	text-align: center;
+	line-height: 40rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 32rpx;
+	color: #272844;
+	font-weight: bold;
+}
+.ds_d{
+	width:100%;
+	height: 40rpx;
+	text-align: center;
+	line-height: 40rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 24rpx;
+	color: #999;
+}
+
+.ds1_a{
+	width: 100%;
+	height: auto;
+	margin-top: 20rpx;
+	text-align: center;
+	background: url('https://cm.chineseglory.cn/images/icon11.png') no-repeat top center;
+	background-size: 72rpx 50rpx;
+	padding-top: 50rpx;
+}
+.ds1_a image{
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+	border:2px solid #ffda13;
+	margin-top: -5rpx;
+}
+.ds1_b{
+	width:100%;
+	height: 34rpx;
+	text-align: center;
+	line-height: 34rpx;
+	overflow: hidden;
+	font-size: 26rpx;
+	color: #999;
+}
+.ds1_b view{
+	width: 32rpx;
+	height: 32rpx;
+	display: inline-block;
+	background: url('https://cm.chineseglory.cn/images/icon3.png') no-repeat center center;
+	background-size: 80%;
+	vertical-align: text-top;
+}
+.ds1_c{
+	width:100%;
+	padding: 5rpx 0 0 0;
+	height: 40rpx;
+	text-align: center;
+	line-height: 40rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 34rpx;
+	color: #272844;
+	font-weight: bold;
+}
+.ds1_d{
+	width:100%;
+	height: 40rpx;
+	text-align: center;
+	line-height: 40rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 24rpx;
+	color: #999;
+}
+
+.ds2_a{
+	width: 100%;
+	height: auto;
+	margin-top: 20rpx;
+	text-align: center;
+	background: url('https://cm.chineseglory.cn/images/icon13.png') no-repeat top center;
+	background-size: 58rpx 40rpx;
+	padding-top: 40rpx;
+}
+.ds2_a image{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	border:2px solid #f8a76f;
+	margin-top: -5rpx;
+}
+.ph2{
+	width: calc( 100% - 20rpx );
+	height: 100rpx;
+	background: #fff;
+	padding: 20rpx 0 20rpx 20rpx;
+	border-bottom: 1px solid #eee;
+}
+.ph2_a{
+	width: 40rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	color: #272844;
+	text-align: center;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.ph2_b{
+	width: 100rpx;
+	height: 100rpx;
+}
+.ph2_b image{
+	width: 100%;
+	height: 100rpx;
+	border-radius: 50%;
+}
+.ph2_c{
+	width: calc( 100% - 360rpx );
+	height: 100rpx;
+	line-height: 100rpx;
+	padding: 0 10rpx;
+	color: #272844;
+	font-size: 30rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ph2_c1{
+	width:100%;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #272844;
+	font-size: 30rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 10rpx;
+}
+.ph2_c2{
+	width:100%;
+	height: 38rpx;
+	line-height: 38rpx;
+	color: #999;
+	font-size: 24rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ph2_d{
+	width: 200rpx;
+	height: 100rpx;
+	text-align: center;
+	padding: 10rpx 0;
+}
+.ph2_d1{
+	width: 200rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #272844;
+	font-size: 32rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ph2_d2{
+	width: 200rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #999999;
+	font-size: 24rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}

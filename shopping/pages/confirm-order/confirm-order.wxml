@@ -1,0 +1,72 @@
+<container id='container' binderror='init'>
+  <view class="box">
+    <!-- 选择地址 -->
+    <view class="choose-address">
+      <!-- 姓名和电话 -->
+      <view class="fullname-phone">
+        <view class="full-name">{{address.name}}</view>
+        <view class="phone">{{address.mobile}}</view>
+      </view>
+      <!-- 详细地址 -->
+      <view class="address" wx:if="{{address.address=='暂无收货地址'}}">{{address.address}}</view>
+      <view class="address" wx:else>
+        {{address.region+address.city+address.xian+address.address}}
+      </view>
+      <!-- 右侧图标 -->
+      <view class="jump-address-list" bind:tap="jumpAddressList">
+        <text class="iconfont icon-gengduo-left-copy"></text>
+      </view>
+      <!-- 底部彩带 -->
+      <view class="coloured-ribbon-container">
+        <view class="coloured-ribbon" wx:for="{{20}}" wx:key="index">
+          <view class="parallelogram blue">
+            <view></view>
+          </view>
+          <view class="parallelogram red">
+            <view></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 产品详情 -->
+    <block wx:for="{{goods}}" wx:key="index">
+      <view class="introduction">
+        <view class="introduction-left">
+          <image class="thumb" src="{{item.thumb}}" />
+        </view>
+        <view class="introduction-right">
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-specs">规格: {{item.size_name}}</view>
+          <view class="money-number">
+            <text class="money">零售价：￥{{item.money}}</text>
+            <text class="number iconfont icon-cheng">{{item.num}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 微信支付 -->
+    <view class="wechat-pay">
+      <view class="iconfont icon-weixinzhifu"></view>
+      <view class="wechat-pay-content">微信支付</view>
+    </view>
+    <!-- 费用 -->
+    <view class="money">
+      <view class="need-money money-item">
+        <text class="need-money-left">需付款</text>
+        <text class="need-money-right">￥{{order.single_money}}</text>
+      </view>
+      <view class="freight money-item">
+        <text class="freight-left">快递费用</text>
+        <text class="freight-right">￥{{order.post_money}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="bottom">
+    <view class="bottom-left">
+      <text id="totle">合计:</text>
+      ￥{{order.total_money}}
+    </view>
+    <view class="bottom-right" bind:tap="payNow">立即支付</view>
+  </view>
+</container>

@@ -1,0 +1,72 @@
+#container {
+  overflow: auto;
+  min-height: 100vh;
+
+}
+
+
+/* 板块 */
+home-panel {
+  margin: 20rpx 0;
+  padding: 0 20rpx;
+  width: fill-available;
+}
+
+
+
+/* 搜索 */
+#search {
+  margin: 20rpx;
+}
+
+
+
+/* 轮播 */
+.swiper {
+  height: 260rpx;
+}
+/* 轮播-内部 */
+.swiper-inner {
+  transform: scale(0.92);
+	border-radius: 20rpx;
+  overflow: hidden;
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+/* 轮播-激活 */
+.swiper-active {
+  transform: scale(1);
+}
+
+
+
+/* 导航 */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30rpx 0;
+}
+/* 导航-元素 */
+.nav-item {
+  width: calc(100% / 4);
+  margin: 10rpx 0;
+}
+/* 导航-元素-图标 */
+.nav-item-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+}
+/* 导航-元素-标题 */
+.nav-item-title {
+  text-align: center;
+  font-size: 28rpx;
+}
+
+
+
+/* 会员专区 */
+.vip {
+  margin: 0 50rpx;
+}

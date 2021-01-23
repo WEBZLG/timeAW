@@ -1,0 +1,24 @@
+<!--shopping/pages/search-list/search-list.wxml-->
+<container id='container' binderror='init'>
+  <!-- 搜索 -->
+  <van-search value="{{ keyword }}" shape="round" placeholder="请输入商品名称" use-action-slot bind:search="submit"
+    bind:change="onChange">
+    <view slot="action" bind:tap="init">搜索</view>
+  </van-search>
+  <view class="goods-list">
+    <block wx:for="{{datalist}}" wx:key="index" >
+      <view class="goods-item" data-id="{{item.id}}" catchtap="goodsDetail">
+        <view class="goods-text">
+          <van-card tag="" desc="{{item.slogan}}" title="{{item.name}}" thumb="{{item.thumb}}">
+            <view slot="bottom">
+              <view class="price">￥{{item.money}}</view>
+            </view>
+          </van-card>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{datalist.length==0}}" class="empty">
+      <image class="empty-img" src="../../images/empty.png" />
+    </view>
+  </view>
+</container>

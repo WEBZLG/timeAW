@@ -1,0 +1,5 @@
+<view class="specs">
+  <view class="specs-item {{index==active?'active':''}}" wx:for="{{specs}}" wx:key="index" data-index="{{index}}" data-specs="{{item}}" bind:tap="handleSpecsClick">
+    {{item.name}}
+  </view>
+</view>

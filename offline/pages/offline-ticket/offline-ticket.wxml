@@ -1,0 +1,20 @@
+<container id='container' binderror='init'>
+  <view class="tab">
+    <view
+        class="tab-item"
+        wx:for="{{tabList}}"
+        wx:key="index"
+        data-index="{{index}}"
+        data-id="{{item.id}}"
+        bindtap="handleTabClick"
+    >
+      <view class="tab-name {{active===index?'active':''}}">{{item.name}}</view>
+      <view class="active-line" wx:if="{{active===index}}"></view>
+    </view>
+  </view>
+
+  <!-- 门票列表 -->
+  <view class="ticket-list">
+    <ticket wx:for="{{ticketList}}" ticket="{{item}}" wx:key="index"></ticket>
+  </view>
+</container>

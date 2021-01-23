@@ -1,0 +1,57 @@
+<view class="live-card-header" bindtap="nav">
+	<!-- 封面 -->
+	<custom-image class="live-card-cover" type="cover" src="{{detail.show_img_text}}" />
+	<!-- 状态_播放中 -->
+	<view class="live-card-status live-card-status_living" wx:if="{{detail.live_status==101}}">
+		<image class="live-card-status-icon" mode="aspectFit" src="./images/spectrum.png" />
+		{{detail.flag}}
+	</view>
+	<!-- 状态_待开播 -->
+	<view class="live-card-status  live-card-status_preparing" wx:elif="{{detail.live_status==102}}">
+		<image class="live-card-status-icon" mode="aspectFit" src="./images/spectrum.png" />
+		{{detail.flag}}
+	</view>
+	<!-- 状态_播放完成 -->
+	<view class="live-card-status live-card-status_finished" wx:elif="{{detail.live_status==103}}">
+		<image class="live-card-status-icon" mode="aspectFit" src="./images/spectrum.png" />
+		{{detail.flag}}
+	</view>
+	<!-- 状态_禁播 -->
+	<view class="live-card-status live-card-status_ban" wx:elif="{{detail.live_status==104}}">
+		<image class="live-card-status-icon" mode="aspectFit" src="./images/spectrum.png" />
+		{{detail.flag}}
+	</view>
+	<!-- 状态_暂停 -->
+	<view class="live-card-status live-card-status_pause" wx:elif="{{detail.live_status==105}}">
+		<image class="live-card-status-icon" mode="aspectFit" src="./images/spectrum.png" />
+		{{detail.flag}}
+	</view>
+	<!-- 状态_异常 -->
+	<view class="live-card-status live-card-status_abnormal" wx:elif="{{detail.live_status==106}}">
+		<image class="live-card-status-icon" mode="aspectFit" src="./images/spectrum.png" />
+		{{detail.flag}}
+	</view>
+	<!-- 状态_已过期 -->
+	<view class="live-card-status live-card-status_overdue" wx:elif="{{detail.live_status==107}}">
+		<image class="live-card-status-icon" mode="aspectFit" src="./images/spectrum.png" />
+		{{detail.flag}}
+	</view>
+</view>
+<!-- 底部 -->
+<view class="live-card-footer">
+	<view class="live-card-left">
+		<!-- 标题 -->
+		<view class="live-card-title">{{detail.name}}</view>
+		<!-- 详情 -->
+		<!-- <view class="live-card-detail">
+			<avatar class="live-card-avatar" src="{{detail.anchor_img_text}}" />
+			{{detail.anchor_name}}
+			 |
+				{{detail.anchor_img_text}}
+		</view> -->
+	</view>
+	<button bindtap="share" data-detail="{{detail}}" class="live-card-share button-clear">
+		<custom-image class="live-card-share-icon" type="icon" src="/images/public/wxApp-share.png" />
+		分享
+	</button>
+</view>

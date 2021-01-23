@@ -1,0 +1,15 @@
+<!-- 视频-列表 -->
+<view class='video-list'>
+  <!-- 视频-元素 -->
+  <view class='video-item' style='padding: calc(100% / 12 / 2 * {{size}});' wx:for='{{value}}' wx:key='{{index}}'>
+    <view class='video-item-inner'>
+      <video class='video-item-cover' type='cover' src='{{item}}' data-index='{{index}}' bindlongpress='delete' />
+    </view>
+  </view>
+  <!-- 视频-选择 -->
+  <view class='video-item video-choose' style='padding: calc(100% / 12 / 2 * {{size}});' wx:if='{{choose && max>value.length}}' bindtap='post'>
+    <view class='video-item-inner'>
+      <image class='video-item-icon' mode='aspectFit' src='./images/video.png' />添加视频
+    </view>
+  </view>
+</view>

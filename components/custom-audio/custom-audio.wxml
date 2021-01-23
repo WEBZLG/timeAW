@@ -1,0 +1,15 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<!-- 播放器-容器 -->
+<view class='player-container'>
+  <!-- 播放器-按钮 -->
+  <view class='player-button'>
+    <image wx:if='{{status=="play"}}' src='./images/pause.png' class='player-button-icon' bindtap='pause' />
+    <image wx:elif='{{status=="pause"}}' src='./images/play.png' class='player-button-icon' bindtap='play' />
+  </view>
+  <!-- 播放器-进度条 -->
+  <view class='player-progress'>
+    <slider bindchange='progressChange' bindchanging='progressChanging' step='1' backgroundColor='#999' activeColor='#FFFFFF' block-color='#FFFFFF' block-size='20rpx' value='{{timeChange.status?timeChange.time:time}}' max='{{duration}}' />
+  </view>
+  <!-- 播放器-时间 -->
+  <view class='player-time'>{{filter.secondToMinute(time)}}</view>
+</view>

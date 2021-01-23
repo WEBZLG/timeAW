@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "list-vertical-item": "/components/list-vertical-item/list-vertical-item",
+    "tag": "/components/tag/tag"
+  }
+}

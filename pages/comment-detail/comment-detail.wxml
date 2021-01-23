@@ -1,0 +1,17 @@
+<container id='container' binderror='init'>
+  <!-- 评论-评论 -->
+  <comment-item item='{{comment.primary}}' footer='{{false}}' bindinit='eventInit' />
+
+  <!-- 评论-顶部 -->
+  <view class='comment-header'>
+    <custom-image type='cover' src='/images/comment-detail/reply.png' /> 回复（{{comment.list.length}}）
+  </view>
+  <!-- 评论-列表 -->
+  <view class='comment-list'>
+    <!-- 评论-元素 -->
+    <comment-item wx:for='{{comment.list}}' wx:key='id' item='{{item}}' footer='{{false}}' likes='{{false}}' />
+  </view>
+</container>
+
+<!-- 回复 -->
+<view class='reply' bindtap='reply'>写回复...</view>

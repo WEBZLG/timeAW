@@ -1,0 +1,49 @@
+#container {
+  min-height: 100vh;
+  display: flex;
+  background-color: #FFF;
+  flex-direction: column;
+}
+
+input {
+  height: 60rpx;
+}
+input, textarea {
+  border: 2rpx solid #F2F2F2;
+  line-height: 40rpx;
+  padding: 10rpx;
+  width: calc(100% - 10rpx * 2);
+  font-size: 28rpx;
+}
+
+
+/* 用户信息 */
+.userInfo {
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+/* 用户信息-元素 */
+.userInfo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+/* 用户信息-元素-标题 */
+.userInfo-item-title {
+  width: 180rpx;
+  line-height: 60rpx;
+}
+.userInfo-item-body {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* 提交 */
+.submit {
+  width: 645rpx;
+  height: 94rpx;
+  border-radius: 47rpx;
+  margin: 40rpx auto;
+}

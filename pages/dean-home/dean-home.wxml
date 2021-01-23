@@ -1,0 +1,27 @@
+<container id='container' binderror='init'>
+
+  <!-- 用户信息 -->
+  <view class='userInfo'>
+    <view class='userInfo-item'>
+      <view class='userInfo-item-title'>头像</view>
+      <view class='userInfo-item-body'>
+        <avatar src='{{dean.thumb}}' />
+      </view>
+    </view>
+    <view class='userInfo-item'>
+      <view class='userInfo-item-title'>姓名</view>
+      <view class='userInfo-item-body'>{{dean.name}}</view>
+    </view>
+    <view class='userInfo-item'>
+      <view class='userInfo-item-title'>标签</view>
+      <view class='userInfo-item-body'>{{dean.label}}</view>
+    </view>
+    <!-- <view class='userInfo-item'>
+      <view class='userInfo-item-title'>个人风采</view>
+      <view class='userInfo-item-body'>{{dean.description}}</view>
+    </view> -->
+  </view>
+
+  <!-- 提交 -->
+  <button class='custom-solid-button submit' bindtap='deanPut'>修改</button>
+</container>

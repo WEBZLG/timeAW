@@ -1,0 +1,21 @@
+<scroll-view class='scroll-view' scroll-x='{{true}}'>
+  <!-- 列表 -->
+  <view class='home-list'>
+    <!-- 导航 -->
+    <navigator url='/pages/tutor-home/tutor-home?id={{item.id}}' class='home-item' wx:for='{{list}}' wx:key='id'>
+      <!-- 封面 -->
+      <custom-image class='home-item-cover' type='cover' src='{{item.thumb}}' />
+      <!-- 顶部 -->
+      <view class='home-item-header'>
+        <!-- 热度 -->
+        <view class='home-item-hot'>
+          <custom-image class='home-item-hot-icon' src='https://cm.chineseglory.cn/images/icon3.png' />
+          <view class='home-item-hot-title'>{{item.hot}}</view>
+        </view>
+        <!-- 标题 -->
+        <view class='home-item-title'>{{item.name}}</view>
+        <view class='home-item-title1'>{{item.label}}</view>
+      </view>
+    </navigator>
+  </view>
+</scroll-view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "list-vertical": "/components/list-vertical/list-vertical",
+    "table": "/components/table/table",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

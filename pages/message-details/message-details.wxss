@@ -1,0 +1,43 @@
+#container {
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.message-box {
+  min-height: 550rpx;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.red-spot {
+  height: 6rpx;
+  width: 6rpx;
+  background-color: #ff6801;
+}
+.message-title {
+  margin-left: 12rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  font-weight: bold;
+  color: #000000;
+}
+/* 时间日期 */
+.message-time {
+  margin-top: 18rpx;
+  color: #a5a5a5;
+  font-size: 22rpx;
+}
+
+/* 消息内容 */
+.message {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  text-indent: 2em;
+}

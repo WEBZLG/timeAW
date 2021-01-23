@@ -1,0 +1,88 @@
+:host {
+  display: block;
+  height: 100%;
+  position: relative;
+  background-color: inherit;
+}
+
+/* 重试 */
+.retry-container {
+  background-color: inherit;
+  width: 100%;
+  min-height: 500rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 重试 */
+.retry {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* 重试-标题 */
+.retry-title {
+  margin: auto;
+  width: fit-content;
+  max-width: 710rpx;
+  margin-bottom: 20rpx;
+}
+/* 重试-按钮 */
+.retry-button {
+  margin: auto;
+  width: 160rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #404040;
+  border: 2rpx solid #CCC;
+  background-color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+
+/* 加载 */
+.init-container {
+  background-color: inherit;
+  width: 100%;
+  min-height: 500rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.init-content {
+
+}
+
+/* 空 */
+.empty-container {
+  width: 100%;
+  min-height: 500rpx;
+  height: 100%;
+}
+.empty-content {
+  width: 500rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* 底部 */
+.footer {
+  display: block;
+  padding: 20rpx;
+  font-size: 24rpx;
+  color: #CCC;
+  text-align: center;
+}

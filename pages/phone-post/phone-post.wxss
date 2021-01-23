@@ -1,0 +1,4 @@
+@import '../../auth.wxss';
+#container {
+  min-height: 100vh;
+}

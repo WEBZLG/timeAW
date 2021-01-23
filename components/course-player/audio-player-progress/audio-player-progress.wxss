@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+/* 时间 */
+.time {
+  width: 80rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #FF6600;
+}
+
+/* 进度 */
+.slider {
+  flex-grow: 1;
+}

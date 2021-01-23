@@ -1,0 +1,304 @@
+<view class="daoshi">
+	<view class="daoshi_a">
+		<image src="{{data_arr.author.thumb}}" mode='aspectFill'></image>
+	</view>
+	<view class="daoshi_b">
+		<view class="daoshi_b_a">{{data_arr.author.name}} | {{data_arr.author.label}}</view>
+		<view class="daoshi_b_b">热度：{{data_arr.author.hot}}</view>
+	</view>
+	<block wx:if="{{data_arr.is_like==0}}">
+		<view class="daoshi_c" bindtap='like_fuc' data-id="{{data_arr.author.id}}" data-is_like="{{details.course.is_like}}">关 注</view>
+	</block>
+	<block wx:else>
+		<view class="daoshi_c" bindtap='unlike_fuc' data-id="{{data_arr.author.id}}" data-is_like="{{details.course.is_like}}">已关注</view>
+	</block>
+</view>
+<view class='content_box'>
+	<block wx:if="{{data_arr.author.a_v==1}}">
+		<block wx:if="{{data_arr.author.a_position==1}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+		<block wx:if="{{data_arr.author.v_position==1}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+	</block>
+	<block wx:else>
+		<block wx:if="{{data_arr.author.v_position==1}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+		<block wx:if="{{data_arr.author.a_position==1}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+	</block>
+	<view class='content_c'>
+		<view class="bgView">
+      <rich content='{{content}}' />
+		</view>
+	</view>
+	<block wx:if="{{data_arr.author.a_v==1}}">
+		<block wx:if="{{data_arr.author.a_position==2}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+		<block wx:if="{{data_arr.author.v_position==2}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+	</block>
+	<block wx:else>
+		<block wx:if="{{data_arr.author.v_position==2}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+		<block wx:if="{{data_arr.author.a_position==2}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+	</block>
+	<view class='content_c'>	
+		<view class="bgView">
+      <rich content='{{content2}}' />
+		</view>
+	</view>
+	<block wx:if="{{data_arr.author.a_v==1}}">
+		<block wx:if="{{data_arr.author.a_position==3}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+		<block wx:if="{{data_arr.author.v_position==3}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+	</block>
+	<block wx:else>
+		<block wx:if="{{data_arr.author.v_position==3}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+		<block wx:if="{{data_arr.author.a_position==3}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+	</block>
+	<view class='content_c'>	
+		<view class="bgView">
+      <rich content='{{content3}}' />
+		</view>
+	</view>
+	<block wx:if="{{data_arr.author.a_v==1}}">
+		<block wx:if="{{data_arr.author.a_position==4}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+		<block wx:if="{{data_arr.author.v_position==4}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+	</block>
+	<block wx:else>
+		<block wx:if="{{data_arr.author.v_position==4}}">
+			<!--视频-->
+			<block wx:if="{{data_arr.author.video_file!=''}}">
+				<view class='content_a'>
+					<video id="myVideo" class='content_a_video' bindplay="bindplay" src="{{data_arr.author.video_file}}" enable-danmu controls>
+					</video>
+				</view>
+			</block>
+			<!--视频END-->
+		</block>
+		<block wx:if="{{data_arr.author.a_position==4}}">
+			<!--音频-->
+			<block wx:if="{{data_arr.author.audio_file!=''}}">
+				<view class='content_b' style='display:none;'>
+					<audio id="myAudio" src="{{data_arr.author.audio_file}}" bindtimeupdate="audioUpdate" objectFit="fill" controls loop></audio>
+				</view>
+				<view class='content_b'>
+					<!---->
+					<view class='audio_box'>
+						<view class='audio_a'>
+							<image src='{{playStates ? "https://cm.chineseglory.cn/images/icon43.png" : "https://cm.chineseglory.cn/images/icon42.png"}}' class='video-controls-icon' bindtap='audioOpreation'></image>
+						</view>
+						<view class='audio_b'>
+							<slider bindchange="sliderChange" bindchanging="sliderChanging" step="1" value="{{sliderValue}}" backgroundColor="#2d323a" activeColor="#ffffff" block-color="#ffffff" block-size='20rpx'  />
+						</view>
+						<view class='audio_c'>{{audiotime}}</view>
+					</view>
+					<!---->
+				</view>
+			</block>
+			<!--音频END-->
+		</block>
+	</block>
+</view>

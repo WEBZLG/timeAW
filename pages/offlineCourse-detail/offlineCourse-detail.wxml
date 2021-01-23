@@ -1,0 +1,79 @@
+<container id='container' binderror='init'>
+	<!-- 课程-顶部 -->
+	<view class='course-header'>
+		<!-- 课程-封面 -->
+		<custom-image type='cover' class='course-cover' src='{{course.thumb}}'></custom-image>
+		<!-- 课程-详情 -->
+		<view class='course-detail'>
+			<!-- 课程-标题 -->
+			<view class='course-title'>{{course.title}}</view>
+			<!-- 课程-导师 -->
+			<view class='course-tutor'>课程导师：{{course.author.name}}</view>
+			<!-- 课程-地址 -->
+			<view class='course-cols'>
+				<custom-image type='icon' class='course-cols-icon' src='/images/offlineCourse/address.png'></custom-image>
+				<view class='course-cols-text'>{{course.address}}</view>
+			</view>
+			<!-- 课程-日期 -->
+			<view class='course-cols'>
+				<custom-image type='icon' class='course-cols-icon' src='/images/offlineCourse/date.png'></custom-image>
+				<view class='course-cols-text'>{{course.open}}</view>
+			</view>
+			<!-- 课程-人数 -->
+			<view class='course-cols'>
+				<custom-image type='icon' class='course-cols-icon' src='/images/offlineCourse/count.png'></custom-image>
+				<view class='course-cols-text'>{{course.pnum}}</view>
+			</view>
+		</view>
+	</view>
+	<!-- 课程-中部 -->
+	<view class='course-body'>
+		<!-- 选项卡 -->
+		<tab id='tab'>
+			<tab-nav id='tab-nav' class='default-nav'>
+				<tab-nav-item class='default-nav-item'>课程介绍</tab-nav-item>
+				<tab-nav-item class='default-nav-item'>导师介绍</tab-nav-item>
+			</tab-nav>
+			<tab-content id='tab-content'>
+				<tab-content-item slot='0'>
+					<rich content='{{course.courseintro}}'></rich>
+				</tab-content-item>
+				<tab-content-item slot='1'>
+					<rich content='{{course.authorintro}}' />
+				</tab-content-item>
+			</tab-content>
+		</tab>
+	</view>
+	<!-- 课程-底部 -->
+	<!-- <view class='course-footer'>
+		<view class='course-action' bindtap='seat' wx:if='{{course.ap_status==1}}'>
+			<text wx:if="{{course.seat_fee>0}}">预约席位(席位费{{course.seat_fee}})</text>
+			<text wx:if="{{course.seat_fee==0}}">预约席位(免费)</text>
+		</view>
+		<view wx:else>
+			<view class='course-action' bindtap='openQrcode' wx:if='{{course.status==1 && course.ap_status==2}}'>已预约（点击查看二维码）</view>
+			<view class='course-action course-action-disabled' wx:if='{{course.status==2}}'>已结束</view>
+		</view>
+	</view> -->
+	<view class="course-footer">
+		<view class='course-action course-action-disabled' wx:if='{{course.status==2}}'>已结束</view>
+		<view wx:else>
+			<view class='course-action' bindtap='openQrcode' wx:if='{{course.status==1 && course.ap_status==2}}'>已预约（点击查看二维码）</view>
+			<view class='course-action'  wx:if='{{course.ap_status==1}}'>
+				<view wx:if="{{!end}}" bindtap='seat'>
+					<text wx:if="{{course.seat_fee>0}}">预约席位(席位费{{course.seat_fee}})</text>
+					<text wx:if="{{course.seat_fee==0}}">预约席位(免费)</text>
+				</view>
+				<view wx:else>
+					<text>报名已结束</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 课程-二维码 -->
+	<custom-popup id='qrcode' shadowClose='{{true}}'>
+		<view class='qrcode-image'>
+			<custom-image src='{{qrcode}}' />
+		</view>
+	</custom-popup>
+</container>

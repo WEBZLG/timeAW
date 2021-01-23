@@ -1,0 +1,19 @@
+<!-- 图片-列表 -->
+<view class='pictrue-list'>
+  <!-- 图片-元素 -->
+  <view class='pictrue-item' style='padding: calc(100% / 12 / 2 * {{size}});' wx:for='{{value}}' wx:key='*this'>
+    <!-- 图片-元素-内部 -->
+    <view class='pictrue-item-inner'>
+      <!-- 图片-元素-封面 -->
+      <custom-image class='pictrue-item-cover' type='cover' src='{{item}}' bindtap='preview' data-index='{{index}}' bindlongpress='delete' />
+    </view>
+    <!-- 图片-元素-删除 -->
+    <image src='./images/delete.png' wx:if='{{choose}}' mode='aspectFit' class='pictrue-item-delete' data-index='{{index}}' bindtap='delete' />
+  </view>
+  <!-- 图片-选择 -->
+  <view class='pictrue-item pictrue-choose' style='padding: calc(100% / 12 / 2 * {{size}});' wx:if='{{choose && max>value.length}}' bindtap='post'>
+    <view class='pictrue-item-inner'>
+      <image class='pictrue-item-icon' mode='aspectFit' src='./images/pictrue.png' />添加照片
+    </view>
+  </view>
+</view>

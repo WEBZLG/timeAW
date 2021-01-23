@@ -1,0 +1,18 @@
+<!--pages/record/record.wxml-->
+<!-- 提现记录 -->
+<container id='container' binderror='init'>
+  <view class="empty" wx:if="{{empty}}">
+    <image src="../../images/public/empty.png"></image>
+  </view>
+  <view class="list" wx:else>
+    <view class="list-item" wx:for="{{recordList}}" wx:key="index">
+      <view class="item-left">
+        <view class="money">-{{item.money}}元</view>
+        <view class="date">{{item.add_time}}</view>
+      </view>
+      <view class="item-right">提现方式：{{'微信提现'}}</view>
+    </view>
+
+    <view class="not-more" wx:if="{{finished}}">没有更多了</view>
+  </view>
+</container>

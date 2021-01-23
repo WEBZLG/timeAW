@@ -1,0 +1,111 @@
+:host {
+  display: block;
+}
+
+
+
+/* 课程-封面 */
+.course-cover {
+  width: 475rpx;
+  height: 650rpx;
+  margin: auto;
+}
+
+
+
+/* 视频加载-外框 */
+.videoLoading-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9001;
+  display: none;
+}
+.player-container-loading .videoLoading-outer {
+  display: block;
+}
+/* 视频加载-内部 */
+.videoLoading-inner {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  position: absolute;
+  top: -100rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1002;
+  display: none;
+}
+/* 视频加载-图片 */
+.videoLoading-image {
+  width: 140rpx;
+  height: 140rpx;
+  margin: auto;
+  display: block;
+}
+/* 视频加载-文字 */
+.videoLoading-text {
+  position: relative;
+  top: -10rpx;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 24rpx;
+  text-align: center;
+  margin: auto;
+}
+.player-container-loading .videoLoading-inner {
+  display: block;
+}
+
+
+
+/* 播放器-外框 */
+.player-container {
+  position: relative;
+  width: 100%;
+  height: 422rpx;
+  background-color: #000;
+}
+
+
+
+/* 播放器-视频 */
+.player-video {
+  width: 100%;
+  height: 422rpx;
+  display: block;
+}
+.player-container-loading .player-video {
+  filter: blur(5px);
+}
+
+
+
+/* 动画 */
+@keyframes tab-nav-active {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes tab-nav-normal {
+  0% {
+  }
+  100% {
+    transform: scale(1);
+  }
+}

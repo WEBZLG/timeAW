@@ -1,0 +1,77 @@
+<container id='container' class="order-details" binderror='init'>
+  <!-- 顶部订单状态 -->
+  <view class="order-status {{statusObj[orderStatus].statusColor}}">
+    <view class="order-status-content">{{statusObj[orderStatus].statusContent}}</view>
+    <!-- 未付款  需付款 -->
+    <view class="unpaid small-content" wx:if="{{orderStatus==0}}">需付款: ￥{{order.money}}</view>
+    <view class="small-content" id="two-line" wx:else>
+      <view class="order-number">订单编号：{{order.order_id}}</view>
+      <view class="order-time">下单时间：{{order.createtime}}</view>
+    </view>
+  </view>
+  <!-- 收货人 -->
+  <view class="consignee">
+    <view class="iconfont icon-locationicon location-icon"></view>
+    <view class="consignee-name">收货人：{{order.shouhuo_name}} {{order.shouhuo_mobile}}</view>
+    <view class="consignee-address">
+      收货地址：{{order.address}}
+    </view>
+  </view>
+  <!-- 快递 -->
+  <view class="express" wx:if="{{orderStatus!=0 && orderStatus!=1 && orderStatus!=-1}}" bind:tap="handleSeeLogistics">
+    <view class="iconfont icon-locationicon express-icon"></view>
+    <view class="express-left">
+      <view class="express-company">快递公司：{{order.virtual_name}}</view>
+      <view class="express-number">快递单号：{{order.virtual_sn}}</view>
+    </view>
+    <view class="express-right">
+      <text class="iconfont icon-gengduo-left-copy"></text>
+    </view>
+  </view>
+  <!-- 订单商品 -->
+  <view class="order-goods">
+    <!-- 商品名称 规格 价格 -->
+    <view class="order-goods-details">
+      <view class="order-goods-details-left">
+        <image class="thumb" src="{{goods.thumb}}" />
+      </view>
+      <view class="order-goods-details-right">
+        <view class="goods-name">{{goods.name}}</view>
+        <view class="goods-specs">规格:{{goods.size_name}}</view>
+        <view class="goods-money">
+          <view class="goods-money-left">零售价:￥{{goods.money}}</view>
+          <view class="goods-money-right iconfont icon-cheng">{{order.buy_num}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 总金额 -->
+    <view class="totle-money list-form">
+      <view class="form-left">支付金额总额</view>
+      <view class="form-right">￥{{order.money}}</view>
+    </view>
+    <!-- 快递费 -->
+    <view class="express-fee list-form">
+      <view class="form-left">快递运费</view>
+      <view class="form-right">￥{{order.postage}}</view>
+    </view>
+    <!-- 支付方式 -->
+    <view class="pay-way list-form">
+      <view class="form-left">支付方式</view>
+      <view class="form-right">微信付款</view>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <!-- 待付款 -->
+  <view class="button-group" wx:if="{{orderStatus==0}}">
+    <view class="btn solid-btn" bind:tap="payNow">立即付款</view>
+    <view class="btn empty-btn" bind:tap="cancelOrder">取消订单</view>
+  </view>
+  <!-- 已完成 -->
+  <view class="button-group" wx:if="{{orderStatus==6}}">
+    <view class="btn solid-btn" bind:tap="contactCustomerService">联系客服</view>
+  </view>
+  <!-- 待签收 -->
+  <view class="button-group" wx:if="{{orderStatus==2}}">
+    <view class="btn solid-btn" bind:tap="confirmReceipt">确定收货</view>
+  </view>
+</container>

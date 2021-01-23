@@ -1,0 +1,55 @@
+<!--shopping/pages/supply-chain/supply-chain.wxml-->
+<container id='container' binderror='init'>
+  <!-- 搜索 -->
+  <!-- <van-search value="" disabled input-align="center" shape="round" placeholder="请输入商品名称" catchtap="onSearch"/> -->
+  <view class="search-box" catchtap="onSearch">
+    <view class="search">
+      <view class="search-icon">
+        <image src="../../images/search.png"></image>
+      </view>
+      <view>请输入商品名称</view>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class='carousel'>
+    <swiper class='carousel_swiper' indicator-dots="true" indicator-color="#ffffff" indicator-active-color="#4eb8b8"
+      autoplay="true" interval='2000' circular='true'>
+      <block wx:for="{{bannerList}}" wx:key="key">
+        <swiper-item bindtap='chomeCarouselClick' data-url='{{item.thumb}}'>
+          <image class="carouselImg" src='{{item.thumb}}' mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 一件代发等 -->
+  <view class="notice">
+    <view class="flex">
+      <view class="s-icon">
+        <image src="../../images/success.png"></image>
+      </view>
+      <view class="s-title">直播精选</view>
+    </view>
+    <view class="flex">
+      <view class="s-icon">
+        <image src="../../images/success.png"></image>
+      </view>
+      <view class="s-title">工厂直采</view>
+    </view>
+    <view class="flex">
+      <view class="s-icon">
+        <image src="../../images/success.png"></image>
+      </view>
+      <view class="s-title">云仓现货</view>
+    </view>
+    <view class="flex">
+      <view class="s-icon">
+        <image src="../../images/success.png"></image>
+      </view>
+      <view class="s-title">一件代发</view>
+    </view>
+  </view>
+  <!-- 商品分类 -->
+  <goods-type hotSaleList="{{hotSaleList}}" hotreList="{{hotreList}}" liveList="{{liveList}}"
+    recommendList="{{recommendList}}"></goods-type>
+  <view class="no-more" wx:if="{{finished}}">— 我是有底线的 —</view>
+</container>

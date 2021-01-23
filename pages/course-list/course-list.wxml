@@ -1,0 +1,4 @@
+<container id='container' binderror='init'>
+  <list-horizontal wx:if='{{options.mode==0}}' class='course-list' list='{{course.list}}' />
+  <list-vertical wx:else class='course-list' list='{{course.list}}' style="margin: 0 20rpx;" />
+</container>

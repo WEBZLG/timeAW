@@ -1,0 +1,8 @@
+<form bindsubmit='post'>
+  <view class='form'>
+    <!-- 回复内容 -->
+    <textarea class='comment' maxlength='200' name='comment' placeholder='快快与同学们分享一下课程学习心得吧！'></textarea>
+    <!-- 提交 -->
+    <button form-type='submit' class='submit button-clear'>提交</button>
+  </view>
+</form>

@@ -1,0 +1,59 @@
+.item {
+  padding: 15rpx;
+  margin-bottom: 16rpx;
+  border: 1px solid #EBEBEB;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.item-left {
+  height: 200rpx;
+  width: 200rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.item-left image {
+  height: 200rpx;
+  width: 200rpx;
+}
+
+.item-right {
+  padding-bottom: 10rpx;
+  flex: 1;
+  margin-left: 18rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  width: 430rpx;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.introduction {
+  width: 430rpx;
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #C1C1C1;
+  overflow: hidden;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+}
+
+.price {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #33bcc6;
+  font-weight: bold;
+}

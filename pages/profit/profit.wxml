@@ -1,0 +1,87 @@
+<!-- pages/profit/profit.wxml -->
+<container id='container' binderror='init'>
+  <!-- 提现 -->
+  <view class="withdrawal">
+    <view class="withdrawal-title">
+      <view class="withdrawal-title-left">账户余额将提现到微信余额</view>
+      <view class="withdrawal-title-right">
+        累积收益:
+        <text>{{userInfo.income_all}}</text>
+      </view>
+    </view>
+    <view class="input-money">
+      <text class="money-icon">￥</text>
+      <input placeholder="0" placeholder-class="placeholder" />
+    </view>
+    <view class="balance-wechat">
+      <view class="balance">
+        账户余额:
+        <text>￥{{userInfo.money}}</text>
+      </view>
+      <view class="withdrawal-type">
+        <view class="type-content">提现方式</view>
+        <custom-image class="wechat" src="/images/mine/wechat.png"></custom-image>
+        <text>微信</text>
+      </view>
+    </view>
+    <view class="withdrawal-btn" bind:tap="withdrawal">提现</view>
+  </view>
+  <view class="tag">
+    <view class="tag-item" bind:tap="handleTagClick" data-type="1">
+      <text class="{{current==1?'active':''}}">收益记录</text>
+    </view>
+    <view class="tag-item" bind:tap="handleTagClick" data-type="2">
+      <text class="{{current==2?'active':''}}">提现记录</text>
+    </view>
+  </view>
+  <!-- 执招获利 -->
+  <view class="profit" wx:if="{{current == 1}}">
+    <!-- 空数据 -->
+    <view class="empty" wx:if="{{empty}}">
+      <image src="../../images/public/empty1.png"></image>
+    </view>
+    <view class="list" wx:else>
+      <view class="list-item" wx:for="{{list}}" wx:key="index">
+        <view class="item-left">
+          <!-- 头像 -->
+          <view class="item-left-avatar">
+            <image class="avatar" src="{{item.avatar}}" />
+          </view>
+          <view class="item-left-content">
+            <!-- 左侧姓名 -->
+            <view class="item-left-name">
+              <view class="item-left-name-content">
+                <view class="item-left-name-content-groupname">{{item.relationsign}}</view>
+                <view class="kuohao">(<view class="item-left-name-content-name">{{item.nickname}}</view>)</view>
+              </view>
+              <view class="item-left-group">{{item.groupname}}</view>
+            </view>
+            <!-- 左侧时间 -->
+            <view class="item-left-contro">{{item.contro}}</view>
+            <view class="item-left-date">{{item.add_time}}</view>
+          </view>
+        </view>
+        <view class="item-right">+{{item.money}}元</view>
+      </view>
+      <view class="not-more" wx:if="{{finished}}">没有更多了</view>
+      <view class="load-more" wx:else>上拉加载更多</view>
+    </view>
+  </view>
+  <!-- 提现记录 -->
+  <view class="withdrawal-log"  wx:if="{{current == 2}}">
+    <view class="empty" wx:if="{{empty}}">
+      <image src="../../images/public/empty.png"></image>
+    </view>
+    <view class="withdrawal-list" wx:else>
+      <view class="withdrawal-list-item" wx:for="{{list}}" wx:key="index">
+        <view class="withdrawal-item-left">
+          <view class="withdrawal-money">-{{item.money}}元</view>
+          <view class="withdrawal-date">{{item.add_time}}</view>
+        </view>
+        <view class="withdrawal-item-right">提现方式：{{'微信提现'}}</view>
+      </view>
+      <view class="withdrawal-not-more" wx:if="{{finished}}">没有更多了</view>
+      <view class="load-more" wx:else>上拉加载更多</view>
+    </view>
+  </view>
+</container>

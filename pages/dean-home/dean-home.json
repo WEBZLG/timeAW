@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "院长信息",
+  "usingComponents": {
+    "avatar": "/components/avatar/avatar"
+  }
+}

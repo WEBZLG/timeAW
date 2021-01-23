@@ -1,0 +1,15 @@
+<block wx:if='{{status}}'>
+  <!-- 蒙版 -->
+  <view class='popup-mask' bindtap='close'></view>
+  <!-- 外框 -->
+  <view class='popup-container'>
+    <form bindsubmit='submit'>
+      <view class='popup-body'>
+        <image class="tan-icon" src="../../images/mine/tan.png" />
+        <view class="content">学习码兑换</view>
+        <input class='cdkey-input' name='{{index}}' wx:for="{{codenum}}" placeholder-class="placeholder" placeholder='输入学习码' />
+        <button class='button-clear cdkey-submit' form-type='submit'>兑换</button>
+      </view>
+    </form>
+  </view>
+</block>

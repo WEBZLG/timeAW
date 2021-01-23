@@ -1,0 +1,35 @@
+<form bindsubmit='submit'>
+  <container id='container' binderror='init'>
+
+    <!-- 用户信息 -->
+    <view class='userInfo'>
+      <view class='userInfo-item'>
+        <view class='userInfo-item-title'>头像</view>
+        <view class='userInfo-item-body'>
+          <chosePicture name='avatar' value='{{dean.thumb}}' />
+        </view>
+      </view>
+      <view class='userInfo-item'>
+        <view class='userInfo-item-title'>姓名</view>
+        <view class='userInfo-item-body'>
+          <input name='name' value='{{dean.name}}' />
+        </view>
+      </view>
+      <view class='userInfo-item'>
+        <view class='userInfo-item-title'>标签</view>
+        <view class='userInfo-item-body'>
+          <input name='label' value='{{dean.label}}' />
+        </view>
+      </view>
+      <!-- <view class='userInfo-item'>
+        <view class='userInfo-item-title'>个人风采</view>
+        <view class='userInfo-item-body'>
+          <textarea name='description' value='{{dean.description}}'></textarea>
+        </view>
+      </view> -->
+    </view>
+
+    <!-- 提交 -->
+    <button class='custom-solid-button submit' form-type='submit'>保存</button>
+  </container>
+</form>

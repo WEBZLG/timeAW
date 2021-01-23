@@ -1,0 +1,22 @@
+<!--pages/my-order/my-order.wxml-->
+<!-- <text>pages/my-order/my-order.wxml</text> -->
+<container id='container' binderror='init'>
+  <view class="list">
+    <view class="item" wx:for="{{orderList}}" wx:key="id">
+      <view class="date">{{item.createtime}}</view>
+      <image class="order-img" show-menu-by-longpress="{{true}}" src="{{item.pic}}" />
+      <view class="bottom-content">
+        <view class="hand-img">
+          <image src="../../images/mine/hand.png" />
+          <image src="../../images/mine/hand.png" />
+        </view>
+        <text class="save-img">长按上方图片保存社群卡，提交至助手号方可进群</text>
+         <view class="hand-img">
+          <image src="../../images/mine/hand.png" />
+          <image src="../../images/mine/hand.png" />
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{isShow}}" class="not-more">我是有底线的</view>
+  </view>
+</container>

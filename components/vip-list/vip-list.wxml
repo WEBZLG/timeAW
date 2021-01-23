@@ -1,0 +1,58 @@
+<!-- vip-元素 -->
+<view bindtap='{{item.order_status==1?"":"selectCourse"}}' class='vip-item {{item.checked?"vip-checked":""}} {{item.order_status==1?"owned":""}}' wx:for='{{value}}' wx:key='index' data-index='{{index}}'>
+
+  <!-- vip-元素-选中 -->
+  <image type='icon' src='./images/checked.png' class='vip-item-checked' hidden='{{!item.checked}}' />
+
+  <!-- vip-元素-封面 -->
+  <custom-image catchtap='enterCourse' data-id='{{item.id}}' type='cover' src='{{item.top_thumb}}' class='vip-item-cover' />
+
+  <!-- vip-详情 -->
+  <view class='vip-item-detail'>
+    <!-- vip-元素-标题 -->
+    <view class='vip-item-title'>{{item.name}}</view>
+    <!-- vip-元素-简介 -->
+    <view class='vip-item-description'>{{item.description}}</view>
+    <!-- vip-元素-标签 -->
+    <tag class='vip-item-tag' list='{{item.label}}' />
+    <!-- vip-元素-底部 -->
+    <view class='vip-item-footer'>
+      <!-- vip-元素-导师 -->
+      <view class='vip-item-author'>{{item.author.name}} | {{item.author.label}}</view>
+      <!-- 浮动按钮 -->
+      <view class='menu-list'>
+        <!-- 导师详情 -->
+        <view wx:if="{{item.order_status==0}}" catchtap='enterTutor' data-id='{{item.author.id}}' class='menu-item'>导师详情</view> 
+        <view wx:if="{{item.order_status==1}}" class="menu-item1">已拥有此课程</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 已拥有的课程 -->
+<view class='vip-item owned' wx:for='{{owned}}' wx:key='{{index}}' data-index='{{index}}'>
+
+<!-- vip-元素-封面 -->
+<custom-image catchtap='enterCourse' data-id='{{item.id}}' type='cover' src='{{item.top_thumb}}' class='vip-item-cover' />
+
+<!-- vip-详情 -->
+<view class='vip-item-detail'>
+  <!-- vip-元素-标题 -->
+  <view class='vip-item-title'>{{item.name}}</view>
+  <!-- vip-元素-简介 -->
+  <view class='vip-item-description'>{{item.description}}</view>
+  <!-- vip-元素-标签 -->
+  <tag class='vip-item-tag' list='{{item.label}}' />
+  <!-- vip-元素-底部 -->
+  <view class='vip-item-footer'>
+    <!-- vip-元素-导师 -->
+    <view class='vip-item-author'>{{item.author.name}} | {{item.author.label}}</view>
+    <!-- 浮动按钮 -->
+    <view class='menu-list'>
+      <view class="menu-item1">已拥有此课程</view>
+    </view>
+  </view>
+</view>
+
+</view>

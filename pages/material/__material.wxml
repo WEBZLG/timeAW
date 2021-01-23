@@ -1,0 +1,19 @@
+<container id='container' binderror='init'>
+  <tab id='tab' bindchange='tabChange'>
+    <tab-nav id='tagNav'>
+      <tab-nav-item class='tagNav-item' activeBlock='{{true}}' wx:for='{{tag.list}}' wx:key='{{index}}'>
+        <view class='tagNav-item-default' slot='default'>
+          <custom-image src='https://cm.chineseglory.cn/images/icon3.png' /> {{item.name}}
+        </view>
+        <view class='tagNav-item-default tagNav-item-active' slot='active'>
+          <custom-image src='https://cm.chineseglory.cn/images/icon3_a.png' /> {{item.name}}
+        </view>
+      </tab-nav-item>
+    </tab-nav>
+    <tab-content>
+      <tab-content-item wx:for='{{tag.list}}' wx:key='{{index}}' slot='{{index}}'>
+        <share-material-list class='share-material-list' tag='{{item.id}}' userId='{{userInfo.id}}' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

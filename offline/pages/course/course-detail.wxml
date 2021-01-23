@@ -1,0 +1,78 @@
+<!--offline/pages/course/course-detail.wxml-->
+
+<container id='container' binderror='init'>
+  <view class="course-top">
+    <!-- 左侧课程缩略图 -->
+    <view class="course-top-left">
+      <custom-image class="thumbnail" src="{{course.thumb}}"></custom-image>
+    </view>
+    <!-- 右侧课程简介 -->
+    <view class="course-top-right">
+      <!-- 课程标题 -->
+      <view class="course-title">{{course.title}}</view>
+      <!-- 课程简介 -->
+      <view class="course-synopsis">{{course.description}}</view>
+    </view>
+  </view>
+
+  <!-- 课程详情 -->
+  <view class="course-details">
+    <view class="course-details-title">课程详情</view>
+    <view class="course-details-body">
+<!--       <course-poster content="{{course.author.content}}"></course-poster>-->
+      <rich-text nodes="{{course.author.content}}"></rich-text>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="course-bottom">
+    <view class="bottom-btn" bindtap="signUp" wx:if="{{isShow}}">课程报名</view>
+    <view class="bottom-btn" bindtap="appointment" wx:else>预约席位</view>
+  </view>
+
+
+
+	<van-popup class="popup" show="{{popup}}" position="bottom" custom-style="height: 735rpx;" bind:close="onClose">
+    <view class="to-top-overflow">
+      <custom-image class="popup-thumbnail" src="{{course.thumb}}"></custom-image>
+    </view>
+    <view class="course-title popup-course-title">{{course.title}}</view>
+    <view class="surplus">
+      <custom-image class="surplus-icon" src="/offline/pages/course/images/person.png"></custom-image>
+      <text class="surplus-content">剩余席位:</text>
+      <text class="surplus-number">{{num}}</text>
+    </view>
+
+    <!-- 选择时间 -->
+    <view class="choice">
+      <view class="choice-content">选择时间：</view>
+      <scroll-view class="time-list" scroll-x="true">
+        <view
+            class="time-item {{active===index?'active':''}} {{item.is_buy==='1'?'time-disable':''}}"
+            data-disable="{{item.is_buy==1}}"
+            wx:for="{{timeList}}"
+            data-index="{{index}}"
+            data-address="{{item.address}}"
+            data-num="{{item.num}}"
+            data-timeid="{{item.id}}"
+            bindtap="choiceTime"
+            wx:key="index"
+        >{{item.name}}</view>
+      </scroll-view>
+
+      <view class="location">
+        <custom-image class="surplus-icon" src="/offline/pages/course/images/location.png"></custom-image>
+        <text>上课地址: </text>
+        <text>{{choiceAddress}}</text>
+      </view>
+
+      <view class="appointment-btn" bindtap="popupBtn">
+        <text>预约席位</text>
+        <text>100元</text>
+      </view>
+
+      <!-- 备注 -->
+      <view class="remarks">*席位费到场之后可退回</view>
+    </view>
+  </van-popup>
+</container>

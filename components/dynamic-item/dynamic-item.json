@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "avatar": "/components/avatar/avatar",
+    "picture-list": "/components/picture-list/picture-list",
+    "custom-text": "/components/custom-text/custom-text",
+    "custom-video": "/components/custom-video/custom-video",
+    "custom-image": "/components/custom-image/custom-image"
+  }
+}

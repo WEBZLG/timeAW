@@ -1,0 +1,42 @@
+<container id='container' class="vip-node" binderror='init'>
+  <form bindsubmit='submit'>
+    <!-- 顶部 -->
+    <view class='vip-header'>
+      <!-- 横幅 -->
+      <custom-image class='vip-banner' type='poster' src='/images/vip/banner.jpg' />
+      <!-- 按钮 -->
+      <custom-image wx:if="{{shareopen=='1'}}" class='vip-obtain' type='icon' src='/images/vip/obtain.png' bindtap='obtain' />
+      <button wx:if="{{shareopen=='0'}}" open-type="share" type="primary" class='vip-obtain'>
+        <custom-image  class='vip-share' type='icon' src='/images/vip/share.png' />
+      </button>
+    </view>
+    <!-- vip列表 -->
+    <vip-panel id='vip-list' class='vip-list vip-panel' title='/images/vip/title-1new.png'>
+      <!-- <vip-list list='{{notOwnList}}' owned="{{ownedList}}" name='vipList' bindchecked='checked' /> -->
+      <vip-list value='{{dataList}}' name='vipList' bindchecked='checked' />
+    </vip-panel>
+    <!-- 说明 -->
+    <vip-panel class='vip-panel' title='/images/vip/title-2.png'>
+      <view decode='{{true}}' space='nbsp' class='vip-about'>
+        时间与崇尚圈-以帮助1000万创业者时间与崇尚创富创未来为使命，始终坚持为顾客创价值、为员工创发展、为社会创贡献。用线上线下相结合的赋能方式，为创业者提供营销、管理、超级IP打造等课程，无论你是个体还是品牌，入围时间与崇尚生态，携手共时间与崇尚好未来。
+      </view>
+    </vip-panel>
+    <!-- 底部 -->
+    <button class='button-clear vip-footer' form-type='submit' wx:if="{{notOwnList.length != 0}}">
+      <custom-image class='vip-footer-fixed' src='/images/vip/footer.png' />
+      <view class='vip-footer-price'>{{price}}/年</view>
+    </button>
+  </form>
+
+  <!-- 您已购买所有主营课 -->
+  <custom-popup class='form-popup no-stock'>
+    <!-- 自定义提示框（失败）-外框 -->
+    <view class='form-success-container'>
+      <image class='vip-popup-bg' src='../../images/vip/no-stock.png' />
+      <view class="purchased">您已购买所有主营课</view>
+      <image class='vip-popup-btn' bind:tap="confirm" src='../../images/vip/confirm.png' />
+    </view>
+  </custom-popup>
+  <!-- 申请课程 -->
+  <courseApply bind:reset="resetInit" stock="{{user_stock}}" id='courseApply' />
+</container>

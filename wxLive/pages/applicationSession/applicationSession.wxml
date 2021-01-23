@@ -1,0 +1,209 @@
+<view class="applicationSession">
+	<view class="step">
+		<!-- 步骤 -->
+		<step active="{{step.value}}" step="{{step.list}}" />
+	</view>
+	<block wx:if="{{step.value==0}}">
+		<!-- 元素列表 -->
+		<view class="applicationSession-list">
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-title">直播类型</view>
+				<view class="applicationSession-item-body">
+					<view class="applicationSession-item-scanner applicationSession-item_radioGroup">
+						<custom-switch wx:for="{{form.type.list}}" :key="index" class="applicationSession-item_radio" bindchange="radioChange" checked="{{item.value==form.type.value}}" data-value="{{item.value}}" data-name="type">{{item.title}}</custom-switch>
+					</view>
+				</view>
+				<view class="applicationSession-item-footer">
+					<block wx:if="{{item.value==form.type.value}}" wx:for="{{form.type.list}}" :key="index">
+						{{item.intro}}
+						<!-- <view bindtap="tipOpen" wx:if="{{item.tip}}" data-content="{{item.tip}}">?</view> -->
+					</block>
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body">
+					<view class="applicationSession-item-title">直播间标题</view>
+					<input class="applicationSession-item-scanner applicationSession-item_input" bindinput="onInput" data-name="title" value="{{form.title}}" placeholder="输入标题" maxlength="14" />
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body">
+					<view class="applicationSession-item-title">开播时间</view>
+					<input class="applicationSession-item-scanner applicationSession-item_input" value="{{form.beginTime}}" disabled bindtap="beginOpen" data-name="beginTime" placeholder="选择开播时间" />
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body">
+					<view class="applicationSession-item-title">结束时间</view>
+					<input class="applicationSession-item-scanner applicationSession-item_input" value="{{form.endTime}}" disabled bindtap="endOpen" data-name="endTime" placeholder="选择结束时间" />
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body">
+					<view class="applicationSession-item-title">主播昵称</view>
+					<input class="applicationSession-item-scanner applicationSession-item_input" bindinput="onInput" data-name="nickname" value="{{form.nickname}}" placeholder="输入主播昵称" maxlength="15" />
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body">
+					<view class="applicationSession-item-title">主播微信账号</view>
+					<input class="applicationSession-item-scanner applicationSession-item_input" bindinput="onInput" data-name="wxcode" value="{{form.wxcode}}" placeholder="输入主播微信账号" />
+				</view>
+				<view class="applicationSession-item-footer">
+					每个直播间需要绑定一个用作核实主播身份，不会展示给观众。
+				</view>
+			</view>
+			<view class="applicationSession-item" wx:if="{{form.type.value==0}}">
+				<view class="applicationSession-item-body">
+					<view class="applicationSession-item-title">直播副号</view>
+					<input class="applicationSession-item-scanner applicationSession-item_input" bindinput="onInput" data-name="subwxcode" value="{{form.subwxcode}}" placeholder="输入直播副号" />
+				</view>
+				<view class="applicationSession-item-footer">
+					直播时，直播副号能在主播端进行推送商品，抽奖等操作。仅从主播端小程序进入时，副号身份才生效。若从观众端进入，副号身份不生效
+				</view>
+			</view>
+			<view class="applicationSession-item" wx:if="{{form.subwxcode.length}}">
+				<view class="applicationSession-item-title">直播副号需进行认证，访问二维码认证身份</view>
+				<view class="applicationSession-item-body">
+					<custom-image menu class="applicationSession-item-qr" type="cover" src="https://res.wx.qq.com/op_res/9rSix1dhHfK4rR049JL0PHJ7TpOvkuZ3mE0z7Ou_Etvjf-w1J_jVX0rZqeStLfwh" />
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-title">官方收录</view>
+				<view class="applicationSession-item-body">
+					<!-- <radio-group class="applicationSession-item-scanner applicationSession-item_radioGroup" bindchange="radioChange" data-name="official">
+						<radio wx:for="{{form.official.list}}" class="applicationSession-item_radio" checked="{{item.value==form.official.value}}" value="{{item.value}}" color="#31bfc3">{{item.title}}</radio>
+					</radio-group> -->
+					<view class="applicationSession-item-scanner applicationSession-item_radioGroup">
+						<custom-switch wx:for="{{form.official.list}}" class="applicationSession-item_radio" bindchange="radioChange" checked="{{item.value==form.official.value}}" data-value="{{item.value}}" data-name="official">{{item.title}}</custom-switch>
+					</view>
+				</view>
+				<view class="applicationSession-item-footer">
+					开启后本场直播将有可能被官方推荐。此项设置在直播间建设完成后可在控制台内修改。
+				</view>
+			</view>
+		</view>
+		<view class="applicationSession-button-group">
+			<button class="applicationSession-submit button-clear" bindtap="next">下一步</button>
+		</view>
+	</block>
+	<block wx:if="{{step.value==1}}">
+		<!-- 元素列表 -->
+		<view class="applicationSession-list">
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body applicationSession-item_cover">
+					<view class="applicationSession-item_cover-image" style="height: 716rpx">
+						<custom-image type="cover" wx:if="{{form.coverImage.temp}}" src="{{form.coverImage.temp}}" />
+						<custom-image type="cover" wx:else src="/wxLive/images/coverImage.png" />
+
+						<view class="formCover-footer">
+							<custom-image class="formCover-footer-coverComment" type="cover" src="/wxLive/images/coverComment.png" wx:if="{{form.comment}}" />
+							<custom-image class="formCover-footer-button" type="cover" src="/wxLive/images/coverGoods.png" wx:if="{{form.goods}}" />
+							<custom-image class="formCover-footer-button" type="cover" src="/wxLive/images/coverServer.png" />
+							<custom-image class="formCover-footer-button" type="cover" src="/wxLive/images/coverShare.png" wx:if="{{form.share}}" />
+							<custom-image class="formCover-footer-button" type="cover" src="/wxLive/images/coverLike.png" wx:if="{{form.like}}" />
+						</view>
+					</view>
+					<view class="applicationSession-item_cover-detail">
+						<view class="applicationSession-item-title">直播间背景墙</view>
+						<view class="applicationSession-item-footer">直播间背景墙是每个直播间的默认背景建议尺寸：1080像素*1920像素，图片大小不超过2M</view>
+						<view class="applicationSession-item-upload" bindtap="imageChange" data-name="coverImage">上传图片</view>
+
+						<view class="applicationSession-item-title">直播间功能</view>
+						<view class="applicationSession-item-body">
+							<custom-switch class="applicationSession-item_switch" checked="{{form.comment}}" bindchange="switchChange" data-name="comment">评论</custom-switch>
+						</view>
+						<view class="applicationSession-item-body">
+							<custom-switch class="applicationSession-item_switch" checked="{{form.goods}}" bindchange="switchChange" data-name="goods">商品货架</custom-switch>
+						</view>
+						<view class="applicationSession-item-body">
+							<custom-switch class="applicationSession-item_switch" checked="{{form.share}}" bindchange="switchChange" data-name="share">分享</custom-switch>
+						</view>
+						<view class="applicationSession-item-body">
+							<custom-switch class="applicationSession-item_switch" checked="{{form.like}}" bindchange="switchChange" data-name="like">点赞</custom-switch>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-title">拓展功能</view>
+				<view class="applicationSession-item-body">
+					<custom-switch type="checkbox" class="applicationSession-item_switch" checked="{{form.playback}}" bindchange="switchChange" data-name="playback">回放</custom-switch>
+				</view>
+				<view class="applicationSession-item-body">
+					<custom-switch type="checkbox" class="applicationSession-item_switch" checked="{{form.service}}" bindchange="switchChange" data-name="service">客服</custom-switch>
+				</view>
+				<view class="applicationSession-item-footer">回放功能需要直播组件更新到1.0.5以上才生效</view>
+			</view>
+		</view>
+		<view class="applicationSession-button-group">
+			<button class="applicationSession-back button-clear" bindtap="back">上一步</button>
+			<button class="applicationSession-submit button-clear" bindtap="next">下一步</button>
+		</view>
+	</block>
+	<block wx:if="{{step.value==2}}">
+		<!-- 元素列表 -->
+		<view class="applicationSession-list">
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body applicationSession-item_cover">
+					<view class="applicationSession-item_cover-image" style="height: 288rpx">
+						<custom-image class="applicationSession-item_cover-image-background" type="icon" src="/wxLive/images/shareImage.jpg" />
+						<custom-image class="applicationSession-item_cover-image-foreground" type="cover" style="top: 74rpx; left: 64rpx; width: 208rpx; height: 168rpx" wx:if="{{form.shareImage.temp}}" type="cover" src="{{form.shareImage.temp}}" />
+					</view>
+					<view class="applicationSession-item_cover-detail">
+						<view class="applicationSession-item-title">分享卡片样式</view>
+						<view class="applicationSession-item-footer">
+							<text decode="{{true}}">直播间背景墙是每个直播间的默认背景
+								建议尺寸：1080像素*1920像素
+								图片大小不超过2M</text>
+						</view>
+						<view class="applicationSession-item-upload" bindtap="imageChange" data-name="shareImage">上传图片</view>
+					</view>
+				</view>
+			</view>
+			<view class="applicationSession-item">
+				<view class="applicationSession-item-body applicationSession-item_cover">
+					<view class="applicationSession-item_cover-image" style="height: 168rpx">
+						<custom-image class="applicationSession-item_cover-image-background" type="icon" src="/wxLive/images/channelImage.jpg" />
+						<custom-image class="applicationSession-item_cover-image-foreground" type="cover" style="border-top-left-radius: 8rpx; border-bottom-left-radius: 8rpx; top: 10rpx; left: 10rpx; width: 162rpx; height: 150rpx;" wx:if="{{form.channelImage.temp}}" src="{{form.channelImage.temp}}" />
+					</view>
+					<view class="applicationSession-item_cover-detail">
+						<view class="applicationSession-item-title">购物直播频道样式</view>
+						<view class="applicationSession-item-footer">
+							<text decode="{{true}}">官方推荐的小程序直播将会出现在购物直播频道内
+
+							图片建议大小为800*800像素
+							图片大小不超过300KB
+							图片内容遵循平台规范后更容易被推荐
+							</text>
+						</view>
+						<view class="applicationSession-item-upload" bindtap="imageChange" data-name="channelImage">上传图片</view>
+					</view>
+				</view>
+			</view>
+			<!-- <view class="applicationSession-item">
+				<view class="applicationSession-item-body applicationSession-item_cover">
+					<view class="applicationSession-item_cover-image" style="height: 192rpx">
+						<custom-image class="applicationSession-item_cover-image-background" type="icon" src="/wxLive/images/showImage.png" />
+						<custom-image class="applicationSession-item_cover-image-foreground" type="cover" style="border-radius: 8rpx; top: 12rpx; left: 17rpx; width: 290rpx; height: 121rpx;" wx:if="{{form.showImage.temp}}" src="{{form.showImage.temp}}" />
+					</view>
+					<view class="applicationSession-item_cover-detail">
+						<view class="applicationSession-item-title">直播间展示图</view>
+						<view class="applicationSession-item-footer">
+							<text decode="{{true}}">该图片展示在直播列表页面中
+							图片建议大小为 700像素 * 320像素
+							图片大小不超过1M</text>
+						</view>
+						<view class="applicationSession-item-upload" bindtap="imageChange" data-name="showImage">上传图片</view>
+					</view>
+				</view>
+			</view> -->
+		</view>
+		<view class="applicationSession-button-group">
+			<button class="applicationSession-back button-clear" bindtap="back">上一步</button>
+			<button class="applicationSession-submit button-clear" bindtap="onSubmit">创建</button>
+		</view>
+	</block>
+</view>
+<dateTime id="begin" bindconfirm="beginChange" />
+<dateTime id="end" bindconfirm="endChange" />

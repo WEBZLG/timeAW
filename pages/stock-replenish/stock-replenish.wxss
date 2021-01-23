@@ -1,0 +1,215 @@
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.show{
+	display:block;
+}
+.hidden{
+	display:none;
+}
+.top_box{
+	width: 100%;
+	height: auto;
+  padding: 60rpx 0;
+}
+.top_box image{
+	width: 556rpx;
+	height: 368rpx;
+  display: block;
+  margin: auto;
+}
+.info_box{
+	padding: 0 20rpx;
+	height: auto;
+	padding-bottom: 10rpx;
+	overflow: hidden;
+	background: #fff;
+	border-top:1px solid #eee;
+}
+.info_a{
+	width: 100%;
+	height: auto;
+	font-size: 26rpx;
+	color: #ff6600;
+}
+.info_a text{
+	font-size: 50rpx;
+	font-weight: bold;
+}
+.info_b{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 8rpx;
+}
+.info_b1{
+	width: 68%;
+	height: auto;
+	overflow: hidden;
+}
+.info_b1a{
+	width: 100%;
+	height: auto;
+	line-height: 42rpx;
+	overflow: hidden;
+	font-size: 34rpx;
+	color: #272844;
+	font-weight: bold;
+	padding-bottom: 8rpx;
+}
+.info_b1b{
+	width: 100%;
+	height: auto;
+	line-height: 34rpx;
+	overflow: hidden;
+	font-size: 24rpx;
+	color: #999;
+}
+.num_box{
+	width: calc( 100% - 40rpx );
+	height: auto;
+	padding: 10rpx 20rpx;
+	border-top: 1px solid #eee; 
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+}
+.num_a{
+	float: left;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 32rpx;
+	color: #272844;
+	font-weight: bold;
+}
+.num_b{
+	float: right;
+	height: auto;
+}
+.num_b_in{
+	height: 60rpx;
+	line-height: 60rpx;
+	border: 1px solid #eee;
+	border-radius: 10rpx;
+	float: right;
+}
+.jian{
+	width: 60rpx;
+	height: 60rpx;
+	text-align: center;
+	font-size: 34rpx;
+	color: #272844;
+	float: left;
+}
+.jia{
+	width: 60rpx;
+	height: 60rpx;
+	text-align: center;
+	font-size: 34rpx;
+	color: #272844;
+	float: left;
+}
+.num{
+	width: 120rpx;
+	height: 60rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: #272844;
+	float: left;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+.dan_box{
+	padding: 20rpx;
+	overflow: hidden;
+}
+.dan_a{
+	height: auto;
+	border-radius: 10rpx;
+	border:1px solid #eee;
+	padding: 0 20rpx 20rpx 20rpx;
+	line-height: 28rpx;
+}
+.dan_a text{
+	font-size: 30rpx;
+	color: #666;
+	word-break: break-all;
+}
+.btn_box{
+	background: #fff;
+}
+.btn{
+	width:645rpx;
+	height:94rpx;
+  border-radius: 47rpx;
+	margin: 40rpx auto;
+}
+.xinxi_box{
+	padding: 20rpx;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+.xinxi_a{
+	width: 25%;
+	height: auto;
+	line-height: 60rpx;
+	float: left;
+	font-size: 32rpx;
+	color: #272844;
+	font-weight: bold;
+}
+.xinxi_a text{
+	font-size: 24rpx;
+	color: #f00;
+}
+.xinxi_b{
+	width: 75%;
+	height: auto;
+	float: left;
+}
+.xinxi_b1{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.choose_btn{
+	width:248rpx;
+	height: 58rpx;
+	border:1px solid #eee;
+	border-radius: 10rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: #272844;
+	float: right;
+	background-color: #fff;
+}
+.choose_btn::after{
+	border:0;
+	color: #272844;
+}
+.xinxi_b2{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.q-image-wrap{
+	width: 320rpx;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+.q-image{
+	width: 320rpx;
+	height: 260rpx;
+}
+.q-image-remover{
+	width: 32rpx;
+	height: 32rpx;
+	background: url('https://cm.chineseglory.cn/images/icon65.png') no-repeat center center;
+	background-size: 100%;
+	position: absolute;
+	top: 10rpx;
+	right: 10rpx;
+}

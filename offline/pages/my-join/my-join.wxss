@@ -1,0 +1,62 @@
+/* offline/pages/my-join/my-join.wxss */
+.tab {
+  display: flex;
+  padding-bottom: 18rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  
+}
+.tab-name {
+  font-size: 28rpx;
+  color: #aaaaaa;
+  padding: 15rpx 0
+}
+.active-line {
+  margin: 0 auto;
+  width: 96rpx;
+  height: 7rpx;
+  background: #ec6d2a;
+  border-radius: 7px;
+}
+.active {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* 课程列表 */
+.course-list {
+  margin-top: 7rpx;
+  padding: 0 24rpx;
+}
+.course-item {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+}
+
+.thumbnail {
+  height: 250rpx;
+  width: 180rpx;
+}
+
+.item-right {
+  margin-left: 30rpx; 
+}
+.course-title {
+  width: 420rpx;
+  margin-bottom: 80rpx;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: #010101;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.grey-style {
+  color: #949494;
+  font-size: 22rpx;
+}

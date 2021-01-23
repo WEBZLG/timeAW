@@ -1,0 +1,122 @@
+<container id='container' binderror='init'>
+
+  <!-- 设置 -->
+  <navigator wx:if='{{setup}}' class='setup' url='/pages/dean-home/dean-home'>
+    <custom-image type='icon' src='/images/public/setup.png' />
+  </navigator>
+
+  <!-- 导师-横幅 -->
+  <view class='tutor-banner'>
+    <custom-image src='{{tutor.bgm_image || "/images/tutor/banner.jpg"}}' />
+  </view>
+
+  <!-- 导师-中部 -->
+  <view class='tutor-body'>
+
+    <!-- 导师-详情 -->
+    <view class='tutor-detail'>
+      <!-- 用户信息 -->
+      <view class='userInfo'>
+        <!-- 用户信息-头像 -->
+        <avatar class='userInfo-avatar' src='{{tutor.thumb}}' />
+        <!-- 用户信息-详情 -->
+        <view class='userInfo-detail'>
+          <!-- 用户信息-昵称 -->
+          <view class='userInfo-nickname'>{{tutor.name}}</view>
+          <!-- 用户信息-称号 -->
+          <view class='userInfo-title'>{{tutor.label}}</view>
+        </view>
+      </view>
+      <!-- 导师-关注 -->
+      <block wx:if='{{!setup}}'>
+        <view class='tutor-follow custom-solid-button' wx:if='{{follow==0}}' bindtap='follow'>
+          <custom-image src='/images/public/plus.png' /> 关注
+        </view>
+        <view class='tutor-follow custom-sub-button' wx:if='{{follow==1}}' bindtap='follow'>
+          已关注
+        </view>
+      </block>
+    </view>
+
+    <!-- 导师-标签 -->
+    <view class='tutor-tag-list'>
+      <block wx:if='{{tutor.labels1 || tutor.labels2 || tutor.labels3 || tutor.labels4 || tutor.labels5}}'>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels1}}'>{{tutor.labels1}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels2}}'>{{tutor.labels2}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels3}}'>{{tutor.labels3}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels4}}'>{{tutor.labels4}}</view>
+        <view class='tutor-tag-item' wx:if='{{tutor.labels5}}'>{{tutor.labels5}}</view>
+      </block>
+      <block wx:else>
+        <view class='tutor-tag-item'>Ta暂未编写称谓</view>
+      </block>
+    </view>
+
+    <!-- 导师-数据 -->
+    <view class='tutor-data-list'>
+      <view class='tutor-data-item'>
+        <view class='tutor-data-item-value'>{{tutor.hot}}</view>
+        <view class='tutor-data-item-title'>热度</view>
+      </view>
+      <view class='tutor-data-item'>
+        <view class='tutor-data-item-value'>{{tutor.fans}}</view>
+        <view class='tutor-data-item-title'>粉丝</view>
+      </view>
+      <view class='tutor-data-item'>
+        <view class='tutor-data-item-value'>{{course.list.length}}</view>
+        <view class='tutor-data-item-title'>课程</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 导师-tab -->
+  <tab id='tab' bindchange='tabChange'>
+    <tab-nav class='default-nav'>
+      <tab-nav-item class='default-nav-item'>课程列表</tab-nav-item>
+      <tab-nav-item class='default-nav-item' wx:if="{{tutor.user_id == userInfo.id}}">我的动态</tab-nav-item>
+      <tab-nav-item class='default-nav-item' wx:else>Ta的动态</tab-nav-item>
+      <!-- <tab-nav-item class='default-nav-item' wx:if='{{tutor.video_file || tutor.audio_file || tutor.content || tutor.content2 || tutor.content3}}'>导师详情</tab-nav-item> -->
+    </tab-nav>
+    <tab-content class='default-content'>
+      <tab-content-item slot='0'>
+        <!-- 课程列表-内容 -->
+        <container id='course-container' binderror='init'>
+          <list-vertical class='course-list' list='{{course.list}}' />
+        </container>
+      </tab-content-item>
+      <!-- 动态 -->
+      <tab-content-item slot='1'>
+        <tab id='material-container' bindchange='materialChange'>
+          <tab-nav id='tagNav'>
+            <tab-nav-item class='tagNav-item' activeBlock='{{true}}' wx:for='{{tag.list}}' wx:key='{{index}}'>
+              <view class='tagNav-item-default' slot='default'>
+                <custom-image src='https://cm.chineseglory.cn/images/icon3.png' /> {{item.name}}
+              </view>
+              <view class='tagNav-item-default tagNav-item-active' slot='active'>
+                <custom-image src='https://cm.chineseglory.cn/images/icon3_a.png' /> {{item.name}}
+              </view>
+            </tab-nav-item>
+          </tab-nav>
+          <tab-content>
+            <tab-content-item slot="{{index}}" wx:for='{{tag.list}}' wx:key='{{index}}'>
+              <share-material-list category='my' class='share-material-list' tag='{{item.id}}' userId='{{tutor.user_id}}' />
+            </tab-content-item>
+          </tab-content>
+        </tab>
+      </tab-content-item>
+      <tab-content-item slot='2'>
+        <!-- 导师详情-内容 -->
+        <container id='tutor-container' binderror='init'>
+          <!-- 导师-音频 -->
+          <custom-audio wx:if='{{tutor.audio_file}}' class='tutor-audio' src='{{tutor.audio_file}}' duration='{{tutor.audiotime}}' />
+          <!-- 导师-内容 -->
+          <rich class='tutor-content' wx:if='{{tutor.content}}' content='{{tutor.content}}' />
+          <rich class='tutor-content' wx:if='{{tutor.content2}}' content='{{tutor.content2}}' />
+          <rich class='tutor-content' wx:if='{{tutor.content3}}' content='{{tutor.content3}}' />
+          <!-- 播放器 -->
+          <custom-video wx:if='{{tutor.video_file}}' class='tutor-video' src='{{tutor.video_file}}' cover='{{tutor.video_thumb}}' />
+        </container>
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

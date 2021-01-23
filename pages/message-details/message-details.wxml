@@ -1,0 +1,10 @@
+<container id='container' binderror='init'>
+  <view class="message-box">
+    <view class="title">
+      <view class="red-spot"></view>
+      <view class="message-title">{{message.title}}</view>
+    </view>
+    <view class="message-time">{{dateStr}}</view>
+    <view class="message">{{message.content}}</view>
+  </view>
+</container>

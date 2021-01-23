@@ -1,0 +1,99 @@
+:host {
+
+  display: block;
+   /* width: calc(100%); */
+}
+
+/* 列表 */
+.home-list {
+  display: flex;
+  flex-wrap: nowrap;
+  /* margin:0 20rpx; */
+  width: fit-content;
+}
+
+/* 元素 */
+.home-item {
+  margin: 20rpx;
+  width: 360rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.2);
+}
+
+/* 元素-中部 */
+.home-item-body {
+  margin: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 封面 */
+.home-item-cover {
+  height: 250rpx;
+  width: 100%;
+}
+
+/* 顶部 */
+.home-item-header {
+}
+
+/* 标题 */
+.home-item-title {
+  margin: 10rpx;
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 标签 */
+.home-item-tag {
+  margin: 10rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+  padding-bottom: 10rpx;
+}
+
+/* 用户 */
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+/* 用户-头像 */
+.userInfo-avatar {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 用户-昵称 */
+.userInfo-nickname {
+  margin-left: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22rpx;
+}
+
+
+
+/* 用户-加入 */
+.home-item-join {
+  display: flex;
+  align-items: center;
+}
+.home-item-join custom-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 5rpx;
+}
+.scroll-view {
+  min-width: 100%;
+
+}

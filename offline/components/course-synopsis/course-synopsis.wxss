@@ -1,0 +1,62 @@
+/* offline/components/course-synopsis/course-synopsis.wxss */
+.course-item {
+  margin-bottom: 20rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+}
+
+.item-left {
+  height: 250rpx;
+  width: 180rpx;
+}
+
+.thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
+.item-right {
+  flex: 1;
+  height: 190rpx;
+  box-shadow: #eeeeee 0px 0px 10px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-right-content {
+  margin-left: 20rpx;
+  width: 360rpx
+}
+
+.course-name {
+  font-size: 30rpx;
+  color: #010101;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.course-detail {
+  font-size: 24rpx;
+  color: #a7a7a7;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+
+.item-right-btn {
+  margin-right: 10rpx;
+  width: 115rpx;
+  height: 50rpx;
+  background-image: linear-gradient(to bottom, #fea154, #ff6601);
+  color: #ffffff;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 24px;
+}

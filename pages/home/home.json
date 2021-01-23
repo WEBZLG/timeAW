@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "时间与崇尚",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "background-audio-popup": "/components/course-player/popup-controller/popup-controller",
+    "search": "/components/search/search",
+    "guide": "/components/guide/guide",
+    "home-panel": "/components/home-panel/home-panel",
+    "list-horizontal": "/components/list-horizontal/list-horizontal",
+    "list-roll-course": "/components/list-roll-course/list-roll-course",
+    "list-roll-tutor": "/components/list-roll-tutor/list-roll-tutor",
+    "list-vertical": "/components/list-vertical/list-vertical"
+  }
+}

@@ -1,0 +1,18 @@
+<!-- 导师-元素 -->
+<navigator url='/pages/tutor-home/tutor-home?id={{item.id}}' class='tutor-item' wx:for='{{list}}' wx:key='id'>
+  <!-- 导师-元素-头像 -->
+  <avatar class='tutor-item-avatar' src='{{item.thumb}}' />
+  <!-- 导师-元素-详情 -->
+  <view class='tutor-item-detail'>
+    <!-- 导师-元素-昵称 -->
+    <view class='tutor-item-nickname'>{{item.name}}</view>
+    <!-- 导师-元素-称号 -->
+    <view class='tutor-item-designation'>{{item.label}}</view>
+    <!-- 导师-元素-热度 -->
+    <view class='tutor-item-hot'>
+      <image class='tutor-item-hot-icon' src='https://cm.chineseglory.cn/images/icon3.png' />{{item.hot}}
+    </view>
+  </view>
+  <!-- 导师-元素-进入 -->
+  <view class='tutor-item-enter'>进入主页</view>
+</navigator>

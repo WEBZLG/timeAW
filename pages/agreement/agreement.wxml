@@ -1,0 +1,3 @@
+<container id='container' binderror='init'>
+  <rich id='rich' content='{{content}}' />
+</container>

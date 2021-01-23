@@ -1,0 +1,39 @@
+<wxs src='../../../utils/filter.wxs' module='filter' />
+
+<view hidden='{{status=="stop"}}'>
+
+  <!-- 课程-封面 -->
+  <custom-image type='cover' class='course-cover' src='{{course.top_thumb}}' />
+
+  <!-- 播放器-顶部 -->
+  <view class='player-header'>
+    <!-- 播放器-进度 -->
+    <audio-player-progress duration='{{part.list[part.index].duration}}' bindseek='seek' id='audio-player-progress' />
+  </view>
+  <!-- 播放器-中部 -->
+  <view class='player-body'>
+    <!-- 播放器-上一个 -->
+    <view class='player-button-middle' bindtap='prev' wx:if='{{part.index>=1}}'>
+      <image src='./images/prev.png' mode='aspectFit' />
+    </view>
+    <!-- 播放器-上一个 -->
+    <view class='player-button-middle player-button-disabled' wx:else>
+      <image src='./images/prev.png' mode='aspectFit' />
+    </view>
+    <!-- 播放器-播放 -->
+    <view class='player-button-large' bindtap='play' hidden='{{!(status=="pause" || status=="stop")}}'>
+      <image src='./images/play.png' mode='aspectFit' />
+    </view>
+    <!-- 播放器-暂停 -->
+    <view class='player-button-large' bindtap='pause' hidden='{{!(status=="play")}}'>
+      <image src='./images/pause.png' mode='aspectFit' />
+    </view>
+    <!-- 播放器-下一个 -->
+    <view class='player-button-middle' wx:if='{{part.index+1<part.list.length}}'>
+      <image src='./images/next.png' bindtap='next' mode='aspectFit' />
+    </view>
+    <view class='player-button-middle player-button-disabled' wx:else>
+      <image src='./images/next.png' mode='aspectFit' />
+    </view>
+  </view>
+</view>

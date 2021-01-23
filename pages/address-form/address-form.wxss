@@ -1,0 +1,84 @@
+#container {
+  min-height: 100vh;
+}
+/* 占位符 */
+.input-placeholder, .textarea-placeholder, .picker-placeholder	 {
+  color: #999;
+}
+.picker-content, .picker-placeholder	 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+/* 地址-表单 */
+.address-form {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-bottom: calc(150rpx + 90rpx);
+  position: relative;
+}
+/* 地址-列表 */
+.address-list {
+  background-color: #FFF;
+}
+/* 地址-元素 */
+.address-item {
+  padding: 0 20rpx;
+  display: flex;
+  border-bottom: 2rpx solid #F2F2F2;
+  font-size: 28rpx;
+  min-height: 100rpx;
+}
+/* 地址-标题 */
+.address-title {
+  line-height: 100rpx;
+  width: 200rpx;
+}
+/* 地址-输入 */
+.address-input {
+  flex: 1;
+  text-align: left;
+}
+.address-input input {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.address-input textarea {
+  display: block;
+  width: 100%;
+  height: 200rpx;
+  padding: 30rpx 0;
+}
+.address-input picker {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* 设置默认地址 */
+.address-default {
+  display: flex;
+  font-size: 28rpx;
+  padding: 40rpx;
+  color: #999;
+}
+.address-default custom-radio {
+  margin-right: 20rpx;
+}
+
+/* 保存 */
+.address-post {
+	position: fixed;
+  bottom: 0;
+  width: 645rpx;
+  height: 94rpx;
+  border-radius: 47rpx;
+	margin: 40rpx auto;
+  left: 0;
+  right: 0;
+}

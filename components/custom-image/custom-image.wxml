@@ -1,0 +1,6 @@
+<!-- 传入图片 -->
+<image wx:if='{{panel!="error"}}' style='width: {{width}}' lazy-load='{{true}}' class='normal' mode='{{mode}}' bindtap='preview' binderror='error' bindload='load' src='{{src}}' show-menu-by-longpress='{{menu}}' />
+<!-- 图片错误 -->
+<image wx:if='{{panel=="error"}}' class='error image' mode='aspectFit' src='{{lostSrc}}' />
+<!-- 图像加载 -->
+<view class='load image' wx:if='{{panel=="loading"}}'></view>

@@ -1,0 +1,49 @@
+<container id='container' binderror='init'>
+  <view class="address_box">
+    <!--  -->
+    <block wx:for="{{address.list}}" wx:key="index">
+      <view class='address'>
+        <!-- 第一行 -->
+        <view class="addressFirst">
+          <!-- 地址icon -->
+          <view class="addressIcon" bindtap='choose_address' data-index='{{index}}'>
+            <image src="/images/address/addressIcon.png"></image>
+          </view>
+          <!-- 内容 -->
+          <view class='address_a' data-arr="{{item}}" bindtap='choose_address' data-index='{{index}}'>
+            <view class='addressName'>收货人：{{item.name}}</view>
+            <view class='addressPhone'>联系电话：{{item.mobile}}</view>
+            <view class='addressMsg'>
+              收货地址：
+              <view>{{item.region}}{{item.city}}{{item.xian}}{{item.address}}</view>
+            </view>
+          </view>
+          <!-- 箭头 -->
+          <view class="addressRight" bindtap='putAddress' data-index='{{index}}'>
+            <image src="/images/address/rightIcon.png"></image>
+          </view>
+        </view>
+        <!-- 第二行 -->
+        <view class="addressSecond">
+          <!-- 默认地址 -->
+          <view class="addressSecondIcon" wx:if="{{item.status==1}}">
+            <view class="checkIcon">
+              <image src="/images/address/checkIcon.png"></image>
+            </view>
+            <view>默认地址</view>
+          </view>
+          <!-- 占位 -->
+          <view class="addressSecondIcon" wx:else></view>
+          <!-- 按钮 -->
+          <view class="addressSecondBtn">
+            <view class='changeBtn' bindtap='putAddress' data-index='{{index}}'>编辑</view>
+            <view class='deteleBtn' bindtap="delAddress" data-index='{{index}}'>删除</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!--  -->
+  </view>
+  <view class='space120'></view>
+</container>
+<button class='custom-solid-button btn' bindtap='postAddress'>添加收货地址</button>

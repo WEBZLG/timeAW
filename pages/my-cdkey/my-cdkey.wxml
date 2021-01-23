@@ -1,0 +1,52 @@
+<!-- pages/my-cdkey/my-cdkey.wxml -->
+<container id='container' binderror='init'>
+  <!-- 头部 -->
+  <view class="stock-container">
+    <view class="stock">
+      <view class="current-stock">当前库存{{stock}}张</view>
+      <view class="generate-cdkey" bind:tap="handleGenerateClick">生成学习码</view>
+    </view>
+  </view>
+  <!-- 未使用-已使用 -->
+  <view class="selected">
+    <view class="tab" bind:tap="handleTabClick" data-current="1">
+      <text class="tab-content {{current==1?'active':''}}">未使用</text>
+    </view>
+    <view class="tab" bind:tap="handleTabClick" data-current="2">
+      <text class="tab-content {{current==2?'active':''}}">已使用</text>
+    </view>
+  </view>
+  <view class="empty" wx:if="{{empty}}">
+    <image src="../../images/public/empty.png"></image>
+  </view>
+  <!-- 兑换码列表 -->
+  <view class="cdkey-list" wx:else>
+    <view class="list-item" wx:for="{{codeList}}" wx:key="id">
+      <view class="item-left">
+        <view class="my-code-container">
+          <text class="my-code">我的学习码</text>
+          <text class="times" wx:if="{{item.times!=0}}">（已复制{{item.times}}次）</text>
+        </view>
+        <view class="study-code">{{item.code}}</view>
+      </view>
+      <view class="item-right">
+        <text class="copy" wx:if="{{current == '1'}}" data-code="{{item.code}}" data-id="{{item.id}}" bind:tap="handleCopyClick">复制学习码</text>
+        <text class="used" wx:if="{{current == '2'}}">已使用</text>
+      </view>
+    </view>
+    <view class="not-more" wx:if="{{finished}}">没有更多了</view>
+  </view>
+  <!-- 蒙层 -->
+  <view class="mask" bind:tap="close" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <!-- 弹框 -->
+  <view class="popup" wx:if="{{showModal}}">
+    <image src="../../images/mine/tan.png" />
+    <text class="choice-content">选择兑换数量</text>
+    <view class="add-subtract">
+      <view class="subtract" bind:tap="handleSubtractClick">-</view>
+      <view class="number">{{number}}</view>
+      <view class="add" bind:tap="handleAddClick">+</view>
+    </view>
+    <view class="confirm" bind:tap="handleConfirmClick">确定兑换</view>
+  </view>
+</container>

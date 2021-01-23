@@ -1,0 +1,35 @@
+<container id='container' binderror='init'>
+
+  <!-- 课程详情 -->
+  <list-vertical class='courseInfo' list='{{[course]}}' />
+
+  <!-- 订单信息 -->
+  <table class='orderInfo'>
+    <tbody>
+      <tr>
+        <td>出卡人级别</td>
+        <td>{{sender.group_name}}</td>
+      </tr>
+      <tr>
+        <td>出卡人姓名</td>
+        <td>{{sender.nickname}}</td>
+      </tr>
+      <tr>
+        <td>出卡人电话</td>
+        <td>{{sender.mobile}}</td>
+      </tr>
+      <tr>
+        <td>推荐人姓名</td>
+        <td>{{parent.nickname}}</td>
+      </tr>
+      <tr>
+        <td>推荐人等级</td>
+        <td>{{parent.group_id}}</td>
+      </tr>
+      <tr>
+        <td>提交时间</td>
+        <td>{{order.time}}</td>
+      </tr>
+    </tbody>
+  </table>
+</container>

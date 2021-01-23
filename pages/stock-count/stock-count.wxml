@@ -1,0 +1,41 @@
+<view class='tab_box'>
+	<view class="tab {{currentTab==0?'active':''}}" bindtap="stockTab" data-id="0">出卡记录</view>
+	<view class="tab {{currentTab==1?'active':''}}" bindtap="stockTab" data-id="1">补卡记录</view>
+</view>
+ <view class="empty" wx:if="{{empty}}">
+    <image src="../../images/public/empty.png"></image>
+  </view>
+<view wx:else>
+	<view class="main_box {{currentTab==0?'show':'hidden'}}">
+		<!---->
+		<view class='main'>
+			<view class='main_a'>申请人</view>
+			<view class='main_a1'>申请时间</view>
+			<view class='main_a'>申请数量(张)</view>
+		</view>
+		<block wx:for="{{count_arr.take}}" wx:key="{{index}}">
+			<view class='main'>
+				<view class='main_b'>{{item.nickname}}</view>
+				<view class='main_b1'>{{item.time}}</view>
+				<view class='main_b'>{{item.num}}</view>
+			</view>
+		</block>
+		<!---->
+	</view>
+	<view class="main_box {{currentTab==1?'show':'hidden'}}">
+		<!---->
+		<view class='main'>
+			<view class='main_a'>出卡人</view>
+			<view class='main_a1'>补卡时间</view>
+			<view class='main_a'>补卡数量(张)</view>
+		</view>
+		<block wx:for="{{count_arr.get}}" wx:key="{{index}}">
+			<view class='main'>
+				<view class='main_b'>{{item.nickname}}</view>
+				<view class='main_b1'>{{item.time}}</view>
+				<view class='main_b'>{{item.num}}</view>
+			</view>
+		</block>
+		<!---->
+	</view>
+</view>

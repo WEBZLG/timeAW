@@ -1,0 +1,14 @@
+<block wx:if='{{activeBlock}}'>
+  <view hidden='{{active==index}}' class='tab-nav-item-inner' bindtap='tap'>
+    <slot name='default'></slot>
+  </view>
+  <view hidden='{{active!=index}}' class='tab-nav-item-inner' bindtap='tap'>
+    <slot name='active'></slot>
+  </view>
+</block>
+<block wx:else>
+  <view class='tab-nav-item-inner {{active==index?"tab-nav-active":""}}' bindtap='tap'>
+    <slot></slot>
+  </view>
+  <view class='tab-nav-underline {{active==index?"tab-nav-active":""}}'></view>
+</block>

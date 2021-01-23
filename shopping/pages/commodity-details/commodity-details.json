@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "van-popup": "../../components/vant-weapp/popup/index",
+    "van-stepper": "../../components/vant-weapp/stepper",
+    "choice-specs": "../../components/choice-specs/choice-specs"
+  }
+}

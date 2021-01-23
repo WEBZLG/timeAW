@@ -1,0 +1,40 @@
+<!-- 段落 -->
+<view class='paragraph' wx:if='{{mode=="paragraph"}}'>
+  <!-- 段落-元素 -->
+  <button class='button-clear paragraph-item' wx:for='{{list}}' wx:key='id' data-index='{{index}}' bindtap='menu' open-type='{{item.openType}}'>
+    <!-- 段落-元素-内容 -->
+    <view class='paragraph-item-content'>{{item.content}}</view>
+    <!-- 段落-元素-标题 -->
+    <view class='paragraph-item-title'>{{item.title}}</view>
+  </button>
+</view>
+
+<!-- 板块 -->
+<view class='block' wx:if='{{mode=="block"}}'>
+  <!-- 板块-元素 -->
+  <button class='button-clear block-item' wx:for='{{list}}' wx:key='id' data-index='{{index}}' bindtap='menu' open-type='{{item.openType}}'>
+    <!-- 板块-元素-未读 -->
+    <view class='block-item-unread' wx:if='{{item.unread}}'></view>
+    <!-- 板块-元素-图标 -->
+    <custom-image type='icon' class='block-item-icon' src='{{item.icon}}' />
+    <!-- 板块-元素-标题 -->
+    <view class='block-item-title'>{{item.title}}</view>
+  </button>
+</view>
+
+<!-- 垂直 -->
+<view class='vertical' wx:if='{{mode=="vertical"}}'>
+  <view wx:for='{{list}}' wx:key='id' wx:if='{{item.mainCourse?mainCourse:true}}'>
+    <!-- 垂直-元素 -->
+    <button class='button-clear vertical-item' data-index='{{index}}' bindtap='menu' open-type='{{item.openType}}' wx:if="{{!item.hide}}">
+      <!-- 垂直-元素-未读 -->
+      <view class='vertical-item-unread' wx:if='{{item.unread}}'></view>
+      <!-- 垂直-元素-图标 -->
+      <custom-image type='icon' class='vertical-item-icon' src='{{item.icon}}' />
+      <!-- 垂直-元素-标题 -->
+      <view class='vertical-item-title'>{{item.title}}</view>
+      <!-- 垂直-元素-进入 -->
+      <custom-image class='vertical-item-enter' type='icon' src='/images/public/enter.png' />
+    </button>
+  </view>
+</view>

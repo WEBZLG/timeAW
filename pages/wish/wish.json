@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText": "我的想学",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "wish-list": "/components/wish-list/wish-list"
+  }
+}

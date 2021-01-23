@@ -1,0 +1,66 @@
+var clientY = 0
+var defaultTop = -100
+var marginTop = defaultTop
+var refresh = true
+
+module.exports = {
+  refresh: function(newValue, oldValue, owner, instance) {
+    refresh = newValue
+  },
+  touchstart: function(event, owner) {
+
+    // 记录上边坐标
+    clientY = event.touches[0].clientY
+
+    // 移除过渡动画
+    owner.selectComponent('.scroll-view').removeClass('scroll-view-active')
+  },
+  touchmove: function(event, owner) {
+    
+    // 判断是否准许刷新
+    if (!refresh) return
+
+    // 获取上边距离
+    marginTop = defaultTop + (event.touches[0].clientY - clientY)
+
+    if (marginTop > 0) marginTop = 0
+    else if (marginTop < defaultTop) marginTop = defaultTop
+
+
+    // 设置上边距离
+    owner.selectComponent('.scroll-view-outer').setStyle({
+      'transform': 'translateY(' + (marginTop) + 'rpx)'
+    })
+  },
+  touchend: function(event, owner) {
+
+    // 添加过渡动画
+    owner.selectComponent('.scroll-view').addClass('scroll-view-active')
+
+    // 如果有上边距离
+    if (marginTop >= 0) {
+
+      // 启动刷新
+      owner.callMethod('onPullDownRefresh')
+    } else {
+
+      // 重置下拉位置
+      marginTop = defaultTop
+
+      // 重置下拉位置
+      owner.selectComponent('.scroll-view-outer').setStyle({
+        'transform': 'translateY(' + defaultTop + 'rpx)'
+      })
+    }
+  },
+  stop: function(newValue, oldValue, owner, instance) {
+
+    // 重置下拉位置
+    marginTop = defaultTop
+
+    // 重置下拉位置
+    owner.selectComponent('.scroll-view-outer').setStyle({
+      'transform': 'translateY(' + defaultTop + 'rpx)'
+    })
+  },
+}

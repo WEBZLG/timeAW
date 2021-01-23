@@ -1,0 +1,55 @@
+:host {
+  display: block;
+}
+.guide {
+  display: flex;
+  position: fixed;
+  top: 25rpx;
+  right: 40rpx;
+  z-index: 2001;
+  width: fit-content;
+  border-radius: 10rpx;
+  background-color: #FFF;
+  filter: drop-shadow(0 0 5rpx rgba(0, 0, 0, 0.8));
+  padding: 10rpx;
+}
+
+
+
+/* 箭头 */
+.guide-arrow {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -15rpx;
+  transform: rotate(-45deg);
+  border-top-right-radius: 10rpx;
+  background-color: #FFF;
+  width: 30rpx;
+  height: 30rpx;
+  overflow: hidden;
+}
+
+
+/* 内容 */
+.guide-content {
+  font-size: 20rpx;
+  line-height: 30rpx;
+  flex: 1;
+}
+/* 内容-图标 */
+.guide-content-icon {
+  display: inline-block;
+  width: 36rpx;
+  height: 24rpx;
+  vertical-align: -4rpx;
+}
+
+
+
+/* 关闭 */
+.guide-close {
+  display: block;
+  width: 34rpx;
+  height: 34rpx;
+}

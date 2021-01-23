@@ -1,0 +1,163 @@
+@import '../../styles/iconfont.wxss';
+.order {
+  padding-bottom: 36rpx;
+  margin-bottom: 20rpx;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* 顶部订单编号和状态 */
+.order-top {
+  padding: 28rpx 18rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.order-top-left {
+  font-size: 28rpx;
+  line-height: 26rpx;
+  color: #B1B1B1;
+}
+
+.order-top-right {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  font-weight: bold;
+}
+
+.red {
+  color: #EA2516;
+}
+
+.yellow {
+  color: #F4AB2F;
+}
+
+.green {
+  color: #03CB93;
+}
+
+.blue {
+  color: #096AE3;
+}
+.violet {
+  color: #f6309b;
+}
+
+/* 中部上面信息 */
+.order-center {
+  display: flex;
+  padding: 18rpx;
+  padding-bottom: 24rpx;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+/* 左侧缩略图 */
+.order-center-left {
+  height: 218rpx;
+  width: 218rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.order-center-left image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 右侧简介 */
+.order-center-right {
+  margin-left: 18rpx;
+  display: flex;
+  flex-direction: column;
+  width: 380rpx;
+}
+
+.order-center-right view {
+  flex: 1;
+}
+
+.name {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.specs {
+  font-size: 24rpx;
+  line-height: 1;
+  color: #858585;
+}
+
+.money-number {
+  display: flex;
+  justify-content: space-between;
+}
+.money {
+  color: #33BBC5;
+  font-size: 24rpx;
+}
+.number {
+  margin-right: -40rpx;
+  text-align: right;
+  color: #868686;
+  font-size: 26rpx;
+}
+
+/* 底部统计信息 */
+.order-bottom {
+  padding: 30rpx 18rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #000000;
+}
+
+.order-bottom view {
+  flex: 1;
+}
+
+.totle-money {
+  text-align: right;
+}
+
+.blue-text {
+  color: #33BBC5;
+  font-weight: bold;
+}
+
+/* 底部按钮 */
+.button-group {
+  padding: 0 18rpx;
+  display: flex;
+  flex-direction: row-reverse
+}
+
+.btn {
+  margin-left: 30rpx;
+  padding: 17rpx 30rpx;
+  border-radius: 30px;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  box-sizing: border-box;
+}
+
+/* 空心按钮 */
+.hollow-btn {
+  border: 1px solid #33BBC5;
+  color: #33BBC5;
+
+}
+
+/* 实习按钮 */
+.solid-btn {
+  color: #ffffff;
+  background-color: #33BBC5;
+}
